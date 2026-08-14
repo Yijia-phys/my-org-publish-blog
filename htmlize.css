@@ -1,0 +1,14 @@
+/* Code syntax colors (htmlize classes) — light theme.
+   Dark-theme overrides live in style.css. */
+
+.org-comment        { color: #59627a; }
+.org-doc            { color: #59627a; }
+.org-keyword        { color: #3548cf; }
+.org-string         { color: #0a7d5f; }
+.org-builtin        { color: #721045; }
+.org-function-name  { color: #721045; }
+.org-type           { color: #005a5f; }
+.org-constant       { color: #005a5f; }
+.org-variable-name  { color: #005a5f; }
+.org-preprocessor   { color: #721045; }
+.org-escape-char    { color: #b06f2e; }

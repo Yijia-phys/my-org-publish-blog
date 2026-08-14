@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2026-08-14 Fri 14:51 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>This Week</title>
+<meta name="author" content="Yijia Zhao" />
+<meta name="description" content="Weekly plans and current projects for this site." />
+<meta name="generator" content="Org Mode" />
+<script>try{var t=localStorage.getItem('theme');if(['system','light','dark'].indexOf(t)<0)t='system';var r=t==='system'?(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;document.documentElement.setAttribute('data-theme',t);document.documentElement.setAttribute('data-resolved',r);}catch(e){}</script>
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" type="image/svg+xml" href="/image/favicon.svg">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+<script src='/js/tags.js' defer></script>
+<script src='/js/nav.js' defer></script>
+<script src='/js/search.js' defer></script>
+<script src='/js/katex-loader.js' defer></script>
+<script src='/js/theme.js' defer></script>
+</head>
+<body>
+<div id="preamble" class="status">
+<nav>
+          <a href='/index.html' title='Home'>
+            <svg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor'>
+              <path d='M3 10.5 12 3l9 7.5'/>
+              <path d='M5 9.5V21h14V9.5'/>
+            </svg>
+          </a>
+          <a href='/posts.html'>Posts</a>
+          <!-- <a href='/docs.html'>Document</a> -->
+          <!-- <a href='/cv.html'>CV</a> -->
+          <a href='/about.html'>About</a>
+          <a href='#' class='theme-toggle' title='Theme: system / light / dark' aria-label='Toggle color theme'>
+            <svg width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'>
+              <circle cx='12' cy='12' r='6'/>
+              <path d='M12 2.5v2M12 19.5v2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M2.5 12h2M19.5 12h2M6.1 17.9l-1.5 1.5M19.4 4.6l-1.5 1.5'/>
+            </svg>
+          </a>
+          <a href='#' class='nav-search' aria-label='Search' title='Search'>
+            <svg width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
+              <circle cx='11' cy='11' r='7'/>
+              <line x1='16.5' y1='16.5' x2='21' y2='21'/>
+            </svg>
+          </a>
+          <a href='https://github.com/Yijia-phys/my-org-publish-blog' target='_blank' rel='noopener' class='nav-github'>
+            <svg width='20' height='20' viewBox='0 0 24 24' fill='currentColor' aria-hidden='true'>
+              <path d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/>
+           </svg>
+         </a>
+       </nav>
+</div>
+<div id="content" class="content">
+<h1 class="title">This Week</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgaec0f20">1. This week</a></li>
+<li><a href="#orgc2d634d">2. Backlog — all candidate tasks</a>
+<ul>
+<li><a href="#org6622b0a">2.1. Core features (semi-academic blog)</a></li>
+<li><a href="#orgee09297">2.2. Experience &amp; polish</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgaec0f20" class="outline-2">
+<h2 id="orgaec0f20"><span class="section-number-2">1.</span> This week</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> Fix the H-m keybinding conflict (grip-mode steals the publish key)</li>
+<li class="on"><code>[X]</code> Fix the site-wide author meta ("i" → "Yijia Zhao": set user-full-name in publish.el)</li>
+<li class="on"><code>[X]</code> Switch pages to HTML5 doctype (org-html-doctype "html5")</li>
+<li class="on"><code>[X]</code> Drop the inlined default org CSS on every page (org-html-head-include-default-style nil)</li>
+<li class="on"><code>[X]</code> Unify the 404 page with the site: self-hosted fonts, remove quarto-color-scheme leftover, sync with data-theme</li>
+<li class="off"><code>[&nbsp;]</code> Finish the About page: fill .about-name, real GitHub / LinkedIn / ORCID links</li>
+<li class="on"><code>[X]</code> Init a git repository + .gitignore (public/, node<sub>modules</sub>/, .DS<sub>Store</sub>)</li>
+<li class="on"><code>[X]</code> Add publish-time cleanup of stale files in public/</li>
+<li class="on"><code>[X]</code> Fix the empty #+DESCRIPTION fallback bug (empty post-card &amp; RSS descriptions)</li>
+<li class="on"><code>[X]</code> Fix the htmlize theme-restore bug after publishing</li>
+<li class="on"><code>[X]</code> Parameterize publish.el paths / site URL (prep for CI auto-deploy)</li>
+<li class="off"><code>[&nbsp;]</code> Write the first real post body (ma-001)</li>
+<li class="off"><code>[&nbsp;]</code> sitemap.xml + robots.txt</li>
+<li class="on"><code>[X]</code> RSS: add &lt;author&gt; / dc:creator per item</li>
+<li class="on"><code>[X]</code> Tag filter URL sync (?tag=… + history.pushState) — shareable and indexable</li>
+<li class="on"><code>[X]</code> random-post.js: read /pagefind/pagefind-entry.json instead of scraping posts.html</li>
+<li class="on"><code>[X]</code> modal a11y (role=dialog, focus management, aria-current on nav)</li>
+<li class="off"><code>[&nbsp;]</code> Go live: point blog.yijialog.org to the host and deploy public/</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc2d634d" class="outline-2">
+<h2 id="orgc2d634d"><span class="section-number-2">2.</span> Backlog — all candidate tasks</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org6622b0a" class="outline-3">
+<h3 id="org6622b0a"><span class="section-number-3">2.1.</span> Core features (semi-academic blog)</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li class="off"><code>[&nbsp;]</code> Prev / next post navigation on article pages</li>
+<li class="off"><code>[&nbsp;]</code> Print stylesheet (@media print) — PDF-export friendly</li>
+<li class="off"><code>[&nbsp;]</code> Open Graph + Twitter Card meta (article:published<sub>time</sub>, article:tag on posts)</li>
+<li class="off"><code>[&nbsp;]</code> Per-page meta description + canonical link</li>
+<li class="off"><code>[&nbsp;]</code> Comments (Cusdis or giscus)</li>
+<li class="off"><code>[&nbsp;]</code> (Optional) citation<sub>*</sub> meta tags on posts for academic SEO</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgee09297" class="outline-3">
+<h3 id="orgee09297"><span class="section-number-3">2.2.</span> Experience &amp; polish</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li class="off"><code>[&nbsp;]</code> Mobile layout pass (table / KaTeX overflow, sticky columns, search modal)</li>
+<li class="off"><code>[&nbsp;]</code> Post images + card covers (#+COVER property → .post-cover)</li>
+<li class="off"><code>[&nbsp;]</code> Dark mode: hunt remaining contrast issues</li>
+<li class="off"><code>[&nbsp;]</code> Decide the final article naming convention</li>
+<li class="off"><code>[&nbsp;]</code> Milestone page</li>
+<li class="off"><code>[&nbsp;]</code> CV page</li>
+<li class="off"><code>[&nbsp;]</code> Document page</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

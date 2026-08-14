@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Page Not Found</title>
+
+<!-- Theme FOUC guard: keep in sync with my/site-head in publish.el. -->
+<script>try{var t=localStorage.getItem('theme');if(['system','light','dark'].indexOf(t)<0)t='system';var r=t==='system'?(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;document.documentElement.setAttribute('data-theme',t);document.documentElement.setAttribute('data-resolved',r);}catch(e){}</script>
+
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" type="image/svg+xml" href="/image/favicon.svg">
+
+<script src='/js/nav.js' defer></script>
+<script src='/js/search.js' defer></script>
+<script src='/js/theme.js' defer></script>
+
+<style>
+  /* ============================================================
+     404 page styles.
+     Design tokens (colors, fonts) come from /style.css — always
+     use var(--...) here instead of hardcoding values, so dark
+     mode, fonts and the accent color stay in sync with the site.
+     ============================================================ */
+
+  /* Local accents that the site tokens don't provide. */
+  :root {
+    --404-gold:    #f6ad55;
+    --card-shadow: 0 2px 16px rgba(20, 22, 40, .07);
+  }
+
+  :root[data-resolved="dark"] {
+    --404-gold:    #fbbf77;
+    --card-shadow: 0 2px 24px rgba(0, 0, 0, .4);
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .error-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+
+  .error-card {
+    background: var(--fill);
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    padding: 3rem 3.5rem 2.6rem;
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Pendulum figure — colors driven by CSS variables. */
+
+  .pendulum-wrap {
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 1.8rem;
+  }
+
+  .pendulum-guide  { stroke: var(--hairline); }
+  #pivot-dot       { fill: var(--primary); transition: fill 1s ease; }
+  #arm line        { stroke: var(--text); stroke-width: 2; stroke-linecap: round; }
+  #bob             { fill: var(--primary); transition: fill 1s ease; }
+  .pendulum-arc    { fill: none; stroke: var(--hairline); stroke-dasharray: 3 2; }
+  .pendulum-theta  { fill: var(--primary); }
+
+  /* Bob turns gold once the pendulum settles. */
+  body.error-stopped #bob,
+  body.error-stopped #pivot-dot { fill: var(--404-gold); }
+
+  /* Easter egg: fades in when the pendulum stops. */
+  .egg {
+    opacity: 0;
+    transition: opacity 1.4s ease;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: .82rem;
+    color: var(--404-gold);
+    margin: -.8rem 0 1.2rem;
+    letter-spacing: .01em;
+  }
+  .egg sub { font-size: .65em; }
+  body.error-stopped .egg { opacity: 1; }
+
+  /* Text */
+
+  .error-code {
+    font-family: var(--font-serif);
+    font-size: 4.8rem;
+    font-weight: 300;
+    color: var(--primary);
+    line-height: 1;
+    letter-spacing: -.02em;
+    margin-bottom: .1em;
+  }
+
+  .error-title {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: .75rem;
+  }
+
+  .error-desc {
+    font-size: .88rem;
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: .4rem;
+  }
+
+  .error-eq {
+    display: inline-block;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: .9rem;
+    color: var(--primary);
+    background: var(--tint);
+    border-radius: 4px;
+    padding: .25em .85em;
+    margin: .65rem 0 1.8rem;
+  }
+
+  .error-divider {
+    width: 28px;
+    height: 1px;
+    background: var(--hairline);
+    margin: 0 auto 1.6rem;
+  }
+
+  .error-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    background: var(--primary);
+    color: var(--fill);
+    text-decoration: none;
+    font-size: .875rem;
+    padding: .6em 1.7em;
+    border-radius: 6px;
+    transition: filter .15s ease, box-shadow .15s ease;
+  }
+  .error-btn:hover {
+    color: var(--fill);
+    filter: brightness(.94);
+    box-shadow: 0 4px 12px var(--scrim);
+  }
+  .error-btn svg { width: 13px; height: 13px; fill: currentColor; }
+
+  .error-footnote {
+    font-size: .7rem;
+    color: var(--muted);
+    opacity: .75;
+    margin-top: 2rem;
+    font-style: italic;
+  }
+
+  /* Narrow screens */
+
+  @media (max-width: 640px) {
+    .error-card { padding: 2.4rem 1.5rem 2.2rem; }
+  }
+
+  /* Reduced motion: skip the animation entirely. */
+  @media (prefers-reduced-motion: reduce) {
+    .egg { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Nav: keep in sync with my/site-nav in publish.el. -->
+<nav>
+  <a href='/index.html' title='Home'>
+    <svg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor'>
+      <path d='M3 10.5 12 3l9 7.5'/>
+      <path d='M5 9.5V21h14V9.5'/>
+    </svg>
+  </a>
+  <a href='/posts.html'>Posts</a>
+  <!-- <a href='/docs.html'>Document</a> -->
+  <!-- <a href='/cv.html'>CV</a> -->
+  <a href='/about.html'>About</a>
+  <a href='#' class='theme-toggle' title='Theme: system / light / dark' aria-label='Toggle color theme'>
+    <svg width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'>
+      <circle cx='12' cy='12' r='6'/>
+      <path d='M12 2.5v2M12 19.5v2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M2.5 12h2M19.5 12h2M6.1 17.9l-1.5 1.5M19.4 4.6l-1.5 1.5'/>
+    </svg>
+  </a>
+  <a href='#' class='nav-search' aria-label='Search' title='Search'>
+    <svg width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
+      <circle cx='11' cy='11' r='7'/>
+      <line x1='16.5' y1='16.5' x2='21' y2='21'/>
+    </svg>
+  </a>
+  <a href='https://github.com/Yijia-phys/my-org-publish-blog' target='_blank' rel='noopener' class='nav-github'>
+    <svg width='20' height='20' viewBox='0 0 24 24' fill='currentColor' aria-hidden='true'>
+      <path d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/>
+    </svg>
+  </a>
+</nav>
+
+<div class="error-wrap">
+  <div class="error-card">
+
+    <div class="pendulum-wrap">
+      <svg width="100" height="140" viewBox="0 0 100 140">
+        <!-- dashed vertical guide, in world coords -->
+        <line class="pendulum-guide" x1="50" y1="12" x2="50" y2="138"
+              stroke-width="1" stroke-dasharray="4 3"/>
+
+        <!-- pivot dot (drawn on top, fixed) -->
+        <circle id="pivot-dot" cx="50" cy="12" r="4.5"/>
+
+        <!-- everything below pivots around (50,12) -->
+        <g transform="translate(50,12)">
+          <!-- arm rotates around (0,0) = the pivot -->
+          <g id="arm">
+            <line x1="0" y1="0" x2="0" y2="104"/>
+            <circle id="bob" cx="0" cy="116" r="12"/>
+          </g>
+
+          <!-- angle arc & label (static, just decorative) -->
+          <path class="pendulum-arc" d="M0 30 A30 30 0 0 1 15.5 25.9" stroke-width="1"/>
+          <text class="pendulum-theta" x="17" y="30" font-family="Georgia,serif"
+                font-style="italic" font-size="12">θ</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Easter egg: fades in when the pendulum stops -->
+    <div class="egg">lim<sub>t → ∞</sub> θ(t) = 0 &nbsp;✓</div>
+
+    <div class="error-code">404</div>
+    <h1 class="error-title">Page Not Found</h1>
+    <p class="error-desc">
+      Like a pendulum at unstable equilibrium —<br>
+      this page exists in theory, but not in practice.
+    </p>
+    <div class="error-eq">θ̈ + (g/ℓ) sin θ = 0</div>
+    <div class="error-divider"></div>
+    <a href="/" class="error-btn">
+      <svg viewBox="0 0 20 20"><path d="M10 2L2 9h2v9h5v-5h2v5h5V9h2L10 2z"/></svg>
+      Back to Home
+    </a>
+    <p class="error-footnote">The equation of motion is well-defined. The page, less so.</p>
+  </div>
+</div>
+
+<script>
+  // Pendulum physics (rAF). No hardcoded colors here: the "settled"
+  // gold state is a class on <body>, and the stylesheet maps it to
+  // CSS variables — so dark mode and the easter egg stay in sync.
+  (function () {
+    var arm = document.getElementById('arm');
+    var angle = -28;   // degrees, starts left
+    var vel = 0.13;    // initial kick
+    var last = null;
+    var stopped = false;
+
+    // Respect reduced-motion: settle instantly.
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.body.classList.add('error-stopped');
+      return;
+    }
+
+    function tick(ts) {
+      if (last !== null) {
+        var dt = Math.min(ts - last, 40) / 1000; // seconds, capped at 40ms
+        // Simple harmonic approximation: α = -(g/l)*θ (small-angle, but feels right)
+        var acc = -0.4 * angle;
+        vel += acc * dt;
+        vel *= 0.9987;
+        angle += vel * dt * (180 / Math.PI) * 0.6;
+        // clamp so it never flips over the top
+        if (angle > 32)  { angle = 32;  vel = -Math.abs(vel); }
+        if (angle < -32) { angle = -32; vel =  Math.abs(vel); }
+      }
+      last = ts;
+      arm.setAttribute('transform', 'rotate(' + angle + ')');
+      if (!stopped && Math.abs(angle) < 0.4 && Math.abs(vel) < 0.05) {
+        stopped = true;
+        document.body.classList.add('error-stopped'); // CSS fades in the egg
+        return; // stop rAF
+      }
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  })();
+</script>
+</body>
+</html>

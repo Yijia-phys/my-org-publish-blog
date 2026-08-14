@@ -1,0 +1,861 @@
+/* ==============================
+   Common
+   ============================== */
+
+/* ---- Fonts (self-hosted) ---- */
+
+/* Serif: body text */
+
+@font-face {
+  font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/vendor/fonts/source-serif-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/vendor/fonts/source-serif-400i.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/vendor/fonts/source-serif-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/vendor/fonts/source-serif-700.woff2") format("woff2");
+}
+
+/* Sans: UI text */
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/vendor/fonts/source-sans-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/vendor/fonts/source-sans-400i.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/vendor/fonts/source-sans-600.woff2") format("woff2");
+}
+
+/* ---- Design tokens ---- */
+
+:root {
+  /* Core palette */
+    --primary:     #5a67d8;
+    --background:  #f5f6fa;
+    --fill:        #ffffff;
+    --text:        #2d2d3a;
+    --link:        #63b3ed;
+    --muted:       #7a7f8b;
+    --hairline:    #e7e8ee;
+    --code-bg:     #f6f7f9;
+    --nav-hover:   #fde68a;
+    --nav-bg:      var(--primary);
+    --nav-text:    var(--fill);
+
+    /* Typography */
+    --font-serif:  "Source Serif Pro", Georgia, "Times New Roman", serif;
+    --font-sans:   "Source Sans Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-mono:   "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+
+    /* Components */
+    --scrim:          rgba(20, 22, 40, .45);
+    --modal-shadow:   0 24px 60px rgba(20, 22, 40, .25);
+    --tag-bg:         #eef1fb;
+    --button-border:  #ddd;
+    --tint:           #eceef9;
+}
+
+/* ---- Base ---- */
+
+body {
+    color: var(--text);
+    background: var(--background);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+}
+
+
+h1 {
+    font-weight: 400;
+}
+
+a {
+    color: var(--link);
+}
+
+/* ==============================
+   Nav
+   ============================== */
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  margin: 0;
+  padding: .8rem 1.5rem;
+  background: var(--nav-bg);
+}
+
+/* Theme toggle: a plain 20px icon link like search/GitHub.
+   theme.js swaps the single SVG's content (icon = the state you'll switch to). */
+
+.theme-toggle {
+  margin-left: auto;
+}
+
+/* Search button (right-aligned) */
+
+/* Links */
+
+nav a {
+  color: var(--nav-text);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--nav-hover);
+}
+
+/* Narrow screens */
+
+@media (max-width: 640px) {
+  nav {
+    gap: 1em;
+    padding: .7rem 1rem;
+  }
+}
+
+/* ==============================
+   Search modal
+   ============================== */
+
+/* Overlay */
+
+.search-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 12vh 1rem 2rem;
+  background: var(--scrim);
+}
+
+.search-modal.hidden {
+  display: none;
+}
+
+/* Panel */
+
+.search-modal-panel {
+  width: min(36em, 100%);
+  background: var(--fill);
+  border-radius: 12px;
+  padding: 1rem 1.25rem 1.25rem;
+  box-shadow: 0 24px 60px var(--modal-shadow);
+}
+
+/* Pagefind search box follows the theme.
+   pagefind-ui.css is injected on demand and would win at equal
+   specificity, so :root:root boosts priority and remaps its variables. */
+
+:root:root {
+  --pagefind-ui-text:       var(--text);
+  --pagefind-ui-background: var(--background);
+  --pagefind-ui-border:     var(--hairline);
+  --pagefind-ui-primary:    var(--primary);
+  --pagefind-ui-tag:        var(--tag-bg);
+}
+
+/* Magnifier icon: gray in light mode, whitish in dark mode */
+
+#pagefind-search .pagefind-ui__form:before {
+  background-color: var(--muted);
+}
+
+
+/* ==============================
+   Reading column
+   ============================== */
+
+/* Container */
+
+#content {
+    max-width: 46em;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 5rem;
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text);
+}
+
+/* Titles */
+
+#content h1.title {
+    font-family: var(--font-serif);
+    font-size: 2.3rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: left;
+    margin: 1rem 0 2.5rem;
+}
+
+#content h2 {
+    font-size: 1.45rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 2.5rem 0 1rem;
+}
+
+#content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 2rem 0 .8rem;
+}
+
+#content h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 1.8rem 0 .6rem;
+}
+
+/* Prose: paragraphs & links */
+
+#content p {
+  margin: 0 0 1.25rem;
+}
+
+#content a:not(.post-card) {
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color .15s ease;
+}
+
+#content a:not(.post-card):hover {
+  border-bottom-color: var(--primary);
+}
+
+/* Lists */
+
+#content ul,
+#content ol {
+    padding-left: 1.6rem;
+}
+
+#content li {
+  margin-bottom: .35rem;
+}
+
+/* Blockquotes, rules, images */
+
+#content blockquote {
+    margin: 1.5rem 0;
+    padding: .2rem 0 .2rem 1.2rem;
+    border-left: 2px solid var(--hairline);
+    color: var(--muted);
+}
+
+#content hr {
+    border: 0;
+    border-top: 1px solid var(--hairline);
+    margin: 2.5rem 0;
+}
+
+#content img {
+    max-width: 100%;
+    height: auto;
+}
+
+#content .figure {
+  padding: 0;
+}
+
+/* Code */
+
+#content pre {
+    background: var(--code-bg);
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    margin: 1.5rem 0;
+    font-family: var(--font-mono);
+    font-size: .9rem;
+    line-height: 1.6;
+    overflow-x: auto;
+}
+
+#content p code,
+#content li code {
+  background: var(--code-bg);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  padding: .08em .35em;
+  font-size: .88em;
+}
+
+/* Code language label (org shows it on hover; restyle only) */
+
+pre.src::before {
+  background-color: var(--background);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  color: var(--muted);
+}
+
+/* To change a language label's text, override content here, e.g.:
+   pre.src-python::before { content: 'Python'; } */
+
+/* Tables */
+
+#content table {
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+#content th,
+#content td {
+    padding: .5rem .8rem;
+    border-bottom: 1px solid var(--hairline);
+    text-align: left;
+}
+
+#content th {
+    font-weight: 600;
+}
+
+
+/* ==============================
+   Posts list
+   ============================== */
+
+/* List container */
+
+.post-list {
+  display: block;
+}
+
+/* Card row */
+
+.post-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--hairline);
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-card:last-child {
+  border-bottom: none;
+}
+
+/* Left meta column */
+
+.post-meta {
+  flex: 0 0 8em;
+  font-family: var(--font-sans);
+}
+
+.post-date {
+  display: block;
+  font-size: .85rem;
+  letter-spacing: .03em;
+  color: var(--muted);
+  margin-bottom: .5rem;
+}
+
+/* Body column */
+
+.post-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.post-title {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text);
+  transition: color .15s ease;
+}
+
+.post-card:hover .post-title {
+  color: var(--primary);
+}
+
+.post-desc {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: .95rem;
+  color: var(--muted);
+  margin-top: .4rem;
+}
+
+/* Cover placeholder */
+
+.post-cover {
+  flex: 0 0 104px;
+  height: 78px;
+  border-radius: 8px;
+  background: var(--code-bg);
+  border: 1px solid var(--hairline);
+}
+
+/* Tags */
+
+.post-tags { display: block; margin-top: .5em; }
+.post-tag {
+  display: inline-block;
+  font-size: .75em;
+  padding: .1em .6em;
+  margin-right: .3em;
+  border-radius: 999px;
+  background: var(--tag-bg);
+  color: var(--primary);
+}
+
+/* Tag filter */
+
+#content:has(.tag-filter) {
+  display: grid;
+  grid-template-columns: 1fr minmax(8em, auto);
+  grid-template-rows: auto auto;
+  column-gap: 2rem;
+  max-width: 50em;
+}
+
+#content:has(.tag-filter) h1.title {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 1rem 0 2rem;
+}
+
+#content:has(.tag-filter) .tag-filter {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0;
+}
+
+#content:has(.tag-filter) .post-list {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* Filter buttons */
+
+.tag-filter button {
+  border: 1px solid var(--button-border); background: var(--fill);
+  color: var(--text);
+  border-radius: 999px; padding: .2em .8em; margin-right: .4em;
+  cursor: pointer;
+}
+.tag-filter button.active { background: var(--primary); color: var(--fill); border-color: var(--primary); }
+
+#content:has(.tag-filter) .tag-filter button {
+  display: block;
+  margin: 0 0 .4em;
+}
+
+/* RSS link: top-right of the title */
+
+#content .rss-link {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  align-self: start;
+  margin-top: 1.6rem;
+  color: #f26522;
+  text-decoration: none;
+  border-bottom: none;
+  transition: color .15s ease;
+}
+
+#content .rss-link:hover {
+  color: #c94f10;
+  border-bottom: none;
+}
+
+/* Narrow screens */
+
+@media (max-width: 640px) {
+  #content:has(.tag-filter) {
+    grid-template-columns: 1fr;
+    max-width: 46em;
+  }
+
+  #content:has(.tag-filter) h1.title {
+    grid-row: 1;
+  }
+
+  #content .rss-link {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: end;
+    margin: 0 0 .4rem;
+  }
+
+  #content:has(.tag-filter) .tag-filter {
+    grid-column: 1;
+    grid-row: 3;
+    margin: 0 0 1rem;
+  }
+
+  #content:has(.tag-filter) .tag-filter button {
+    display: inline-block;
+    margin: 0 .4em .4em 0;
+  }
+
+  #content:has(.tag-filter) .post-list {
+    grid-column: 1;
+    grid-row: 4;
+  }
+}
+
+
+/* ==============================
+   Table of contents
+   ============================== */
+
+/* Inline ToC under the title */
+
+html {
+  scroll-behavior: smooth;
+}
+
+#content #table-of-contents {
+  font-family: var(--font-sans);
+  margin: 0 0 2.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--hairline);
+}
+
+#content #table-of-contents::before {
+  content: "Contents";
+  display: block;
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: .6rem;
+}
+
+#content #table-of-contents h2 {
+  display: none;
+}
+
+/* Entries */
+
+#content #table-of-contents ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+#content #table-of-contents ul ul {
+  padding-left: 1.2em;
+  margin-top: .15rem;
+}
+
+#content #table-of-contents li {
+  margin-bottom: .3rem;
+}
+
+#content #table-of-contents a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: none;
+}
+
+#content #table-of-contents a:hover {
+  color: var(--primary);
+}
+
+/* ==============================
+   Article meta
+   ============================== */
+
+/* Reading time + last updated */
+
+.article-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 1em;
+  font-family: var(--font-sans);
+  font-size: .85rem;
+  color: var(--muted);
+  margin: -1.5rem 0 2.25rem;
+}
+
+.post-updated::before {
+  content: "·";
+  margin-right: 1em;
+}
+
+/* ==============================
+   Coming soon pages
+   ============================== */
+
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 1rem 5rem;
+}
+
+.coming-soon-label {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 .75rem;
+}
+
+.coming-soon-note {
+  font-family: var(--font-sans);
+  font-size: .95rem;
+  color: var(--muted);
+  max-width: 26em;
+  margin: 0 0 1.5rem;
+}
+
+.coming-soon-back {
+  font-family: var(--font-sans);
+  font-size: .9rem;
+}
+
+/* ==============================
+   About page
+   ============================== */
+
+/* Two-column grid + divider */
+
+#content:has(.about-left) {
+  position: relative;
+  display: grid;
+  grid-template-columns: 22em minmax(0, 1fr);
+  column-gap: 3rem;
+  max-width: 58em;
+  align-items: start;
+  background-image: linear-gradient(
+    to right,
+    transparent calc(22em + 1.5rem),
+    var(--hairline) calc(22em + 1.5rem),
+    var(--hairline) calc(22em + 1.5rem + 1px),
+    transparent calc(22em + 1.5rem + 1px)
+  );
+}
+
+#content:has(.about-left) h1.title {
+  display: none;
+}
+
+/* Left column (sticky) */
+
+#content:has(.about-left) > .about-left {
+  grid-column: 1;
+  grid-row: 1 / -1;
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+}
+
+/* Avatar */
+
+.about-avatar {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Name */
+
+.about-name {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 1rem 0 1.25rem;
+  min-height: 2.2rem;
+  text-align: center;
+}
+
+.about-links {
+  display: flex;
+  gap: .5rem;
+  justify-content: center;
+  background: var(--background);
+  padding: 0;
+}
+
+/* Link buttons */
+
+#content .about-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid var(--primary);
+  border-bottom: 1px solid var(--primary);
+  border-radius: 8px;
+  background: var(--background);
+  color: var(--primary);
+  text-decoration: none;
+  transition: border-color .15s ease, background-color .15s ease;
+}
+
+#content .about-links a:hover {
+  border-color: var(--primary);
+  background: var(--tint);
+}
+
+.about-links img {
+  width: 16px;
+  height: 16px;
+}
+
+
+/* ==============================
+   Dark theme
+   ============================== */
+
+/* data-resolved is set by theme.js (and the inline head script):
+   "dark" for an explicit dark choice or system-following dark. */
+
+:root[data-resolved="dark"] {
+  --background:   #15171e;
+  --fill:         #1d2028;
+  --text:         #e8eaf1;
+  --primary:      #9aa4ef;
+  --link:         #82b7f0;
+  --muted:        #9aa1b0;
+  --hairline:     #2a2e3a;
+  --code-bg:      #1a1d25;
+  --nav-hover:    #ffe9a3;
+  --nav-bg:       #444fb4;
+  --nav-text:     #eef0f7;
+  --scrim:        rgba(0, 0, 0, .55);
+  --modal-shadow: 0 24px 60px rgba(0, 0, 0, .45);
+  --tag-bg:       #2a2f40;
+  --button-border: #3a4050;
+  --tint:         #262b3a;
+}
+
+/* Code highlight (htmlize classes) in dark mode */
+
+:root[data-resolved="dark"] .org-comment,
+:root[data-resolved="dark"] .org-doc {
+  color: #8b93a5;
+}
+
+:root[data-resolved="dark"] .org-keyword {
+  color: #9aa4ef;
+}
+
+:root[data-resolved="dark"] .org-string {
+  color: #7fd2a9;
+}
+
+:root[data-resolved="dark"] .org-builtin,
+:root[data-resolved="dark"] .org-function-name,
+:root[data-resolved="dark"] .org-preprocessor {
+  color: #e8a0c8;
+}
+
+:root[data-resolved="dark"] .org-type,
+:root[data-resolved="dark"] .org-constant,
+:root[data-resolved="dark"] .org-variable-name {
+  color: #6fc7c9;
+}
+
+:root[data-resolved="dark"] .org-escape-char {
+  color: #e0b080;
+}
+
+/* KaTeX follows the text color in both themes */
+
+#content .katex {
+  color: var(--text);
+}
+
+
+/* ==============================
+   Home page
+   ============================== */
+
+.home-links {
+  display: block;
+  background: none;
+  padding: 0;
+  margin: 2.5rem 0 0;
+}
+
+.home-link {
+  display: block;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--hairline);
+  text-decoration: none;
+}
+
+.home-link:last-child {
+  border-bottom: none;
+}
+
+.home-link-title {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  transition: color .15s ease;
+}
+
+.home-link-desc {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: .9rem;
+  color: var(--muted);
+  margin-top: .25rem;
+}
+
+.home-link:hover .home-link-title {
+  color: var(--primary);
+}

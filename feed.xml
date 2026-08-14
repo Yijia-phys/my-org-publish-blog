@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Yijia&apos;s blog</title>
+    <link>https://blog.yijialog.org/</link>
+    <description>Physics, mathematics and philosophy notes.</description>
+    <atom:link href="https://blog.yijialog.org/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Fri, 14 Aug 2026 14:51:10 +0800</lastBuildDate>
+    <generator>org-publish</generator>
+    <item>
+      <title>My Tips for Converting Integrals into Series</title>
+      <link>https://blog.yijialog.org/posts/ma001-integrals-to-series.html</link>
+      <guid isPermaLink="true">https://blog.yijialog.org/posts/ma001-integrals-to-series.html</guid>
+      <author>y.zhao.phys@gmail.com (Yijia Zhao)</author>
+      <dc:creator>Yijia Zhao</dc:creator>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0800</pubDate>
+      <description>My Tips for Converting Integrals into Series</description>
+      <content:encoded><![CDATA[<p>
+We begin with <b>Euler’s product formula for sine</b>:
+</p>
+
+<p>
+\[
+\sin x = x\prod_{n=1}^{\infty}\left(1-\frac{x^2}{n^2\pi^2}\right)
+\]
+</p>
+
+<p>
+Substituting \(x=\pi t\) and taking the natural logarithm of both sides gives:
+</p>
+
+<p>
+\[
+\ln\left(\frac{\sin\pi t}{\pi t}\right) = \sum_{n=1}^{\infty} \ln \left(1-\frac{t^2}{n^2}\right)
+\]
+</p>
+
+<p>
+Since the series converges uniformly on compact subsets of \((-1, 1)\), we may differentiate both sides term by term with respect to \(t\), 
+</p>
+
+<p>
+\[
+ -\frac{\pi\cot(\pi t)}{2t} + \frac{1}{2t^2} = \sum_{n=1}^{\infty} \frac{1}{n^2-t^2}
+\]
+</p>
+
+<p>
+Finally, setting \(t=-iu\) (equivalently, continuing analytically to the imaginary axis) yields:
+</p>
+
+<p>
+\[
+\frac{\pi\coth(\pi u)}{2u} - \frac{1}{2u^2} = \sum_{n=1}^{\infty} \frac{1}{n^2+u^2}
+\]
+</p>
+]]></content:encoded>
+<category>Mathematics</category><category>Integral</category><category>Series</category>    </item>
+  </channel>
+</rss>
