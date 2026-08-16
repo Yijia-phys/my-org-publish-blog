@@ -318,11 +318,12 @@ nav a:hover {
 
 #content p code,
 #content li code {
-  background: var(--code-bg);
+  background: var(--tag-bg);
   border: 1px solid var(--hairline);
   border-radius: 4px;
   padding: .08em .35em;
   font-size: .88em;
+  color: var(--text);
 }
 
 /* Code language label (org shows it on hover; restyle only) */
@@ -695,6 +696,15 @@ html {
   position: sticky;
   top: 2rem;
   align-self: start;
+}
+
+/* Body column: the export filter wraps everything after the aside in
+   <div class="about-body">, so the grid has exactly two items and one
+   row — the sticky aside then spans the full column height. */
+
+#content:has(.about-left) > .about-body {
+  grid-column: 2;
+  min-width: 0;
 }
 
 /* Avatar */
