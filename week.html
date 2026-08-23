@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2026-08-16 Sun 19:50 -->
+<!-- 2026-08-17 Mon 13:41 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>This Week</title>
@@ -57,52 +57,37 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org4e8922e">1. This week</a></li>
-<li><a href="#orge61e688">2. Backlog — all candidate tasks</a>
+<li><a href="#orgb75a842">1. This week</a></li>
+<li><a href="#orgec6c5a1">2. Backlog — all candidate tasks</a>
 <ul>
-<li><a href="#org0c46b0f">2.1. Core features (semi-academic blog)</a></li>
-<li><a href="#org07e3099">2.2. Experience &amp; polish</a></li>
+<li><a href="#org74454f9">2.1. Core features (semi-academic blog)</a></li>
+<li><a href="#orgd88b88e">2.2. Experience &amp; polish</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org4e8922e" class="outline-2">
-<h2 id="org4e8922e"><span class="section-number-2">1.</span> This week</h2>
+<div id="outline-container-orgb75a842" class="outline-2">
+<h2 id="orgb75a842"><span class="section-number-2">1.</span> This week</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
-<li class="on"><code>[X]</code> Fix the H-m keybinding conflict (grip-mode steals the publish key)</li>
-<li class="on"><code>[X]</code> Fix the site-wide author meta ("i" → "Yijia Zhao": set user-full-name in publish.el)</li>
-<li class="on"><code>[X]</code> Switch pages to HTML5 doctype (org-html-doctype "html5")</li>
-<li class="on"><code>[X]</code> Drop the inlined default org CSS on every page (org-html-head-include-default-style nil)</li>
-<li class="on"><code>[X]</code> Unify the 404 page with the site: self-hosted fonts, remove quarto-color-scheme leftover, sync with data-theme</li>
-<li class="on"><code>[X]</code> Finish the About page: fill .about-name, real GitHub / LinkedIn / ORCID links</li>
-<li class="on"><code>[X]</code> Init a git repository + .gitignore (public/, node<sub>modules</sub>/, .DS<sub>Store</sub>)</li>
-<li class="on"><code>[X]</code> Add publish-time cleanup of stale files in public/</li>
-<li class="on"><code>[X]</code> Fix the empty #+DESCRIPTION fallback bug (empty post-card &amp; RSS descriptions)</li>
-<li class="on"><code>[X]</code> Fix the htmlize theme-restore bug after publishing</li>
-<li class="on"><code>[X]</code> Parameterize publish.el paths / site URL (prep for CI auto-deploy)</li>
-<li class="on"><code>[X]</code> Decide the final article naming convention</li>
 <li class="off"><code>[&nbsp;]</code> Write the first real post body (ma-001)</li>
-<li class="on"><code>[X]</code> sitemap.xml + robots.txt</li>
-<li class="on"><code>[X]</code> RSS: add &lt;author&gt; / dc:creator per item</li>
-<li class="on"><code>[X]</code> Tag filter URL sync (?tag=… + history.pushState) — shareable and indexable</li>
-<li class="on"><code>[X]</code> random-post.js: read /pagefind/pagefind-entry.json instead of scraping posts.html</li>
-<li class="on"><code>[X]</code> modal a11y (role=dialog, focus management, aria-current on nav)</li>
-<li class="on"><code>[X]</code> Go live: point blog.yijialog.org to the host and deploy public/</li>
+<li class="off"><code>[&nbsp;]</code> Prev / next post navigation on article pages</li>
+<li class="off"><code>[&nbsp;]</code> Print stylesheet (@media print) — PDF-export friendly</li>
+<li class="off"><code>[&nbsp;]</code> Mobile layout pass (table / KaTeX overflow, sticky columns, search modal)</li>
+<li class="off"><code>[&nbsp;]</code> Post images + card covers (#+COVER property → .post-cover)</li>
+<li class="off"><code>[&nbsp;]</code> Dark mode: hunt remaining contrast issues</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orge61e688" class="outline-2">
-<h2 id="orge61e688"><span class="section-number-2">2.</span> Backlog — all candidate tasks</h2>
+<div id="outline-container-orgec6c5a1" class="outline-2">
+<h2 id="orgec6c5a1"><span class="section-number-2">2.</span> Backlog — all candidate tasks</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org0c46b0f" class="outline-3">
-<h3 id="org0c46b0f"><span class="section-number-3">2.1.</span> Core features (semi-academic blog)</h3>
+<div id="outline-container-org74454f9" class="outline-3">
+<h3 id="org74454f9"><span class="section-number-3">2.1.</span> Core features (semi-academic blog)</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
-<li class="off"><code>[&nbsp;]</code> Prev / next post navigation on article pages</li>
-<li class="off"><code>[&nbsp;]</code> Print stylesheet (@media print) — PDF-export friendly</li>
 <li class="off"><code>[&nbsp;]</code> Open Graph + Twitter Card meta (article:published<sub>time</sub>, article:tag on posts)</li>
 <li class="off"><code>[&nbsp;]</code> Per-page meta description + canonical link</li>
 <li class="off"><code>[&nbsp;]</code> Comments (Cusdis or giscus)</li>
@@ -110,13 +95,10 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org07e3099" class="outline-3">
-<h3 id="org07e3099"><span class="section-number-3">2.2.</span> Experience &amp; polish</h3>
+<div id="outline-container-orgd88b88e" class="outline-3">
+<h3 id="orgd88b88e"><span class="section-number-3">2.2.</span> Experience &amp; polish</h3>
 <div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
-<li class="off"><code>[&nbsp;]</code> Mobile layout pass (table / KaTeX overflow, sticky columns, search modal)</li>
-<li class="off"><code>[&nbsp;]</code> Post images + card covers (#+COVER property → .post-cover)</li>
-<li class="off"><code>[&nbsp;]</code> Dark mode: hunt remaining contrast issues</li>
 <li class="off"><code>[&nbsp;]</code> Milestone page</li>
 <li class="off"><code>[&nbsp;]</code> CV page</li>
 <li class="off"><code>[&nbsp;]</code> Document page</li>
