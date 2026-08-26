@@ -1000,6 +1000,20 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 
+/* Images in dark mode.
+   Default: leave content images untouched, just dim them slightly so
+   bright photos or white backgrounds don't glare on dark screens.
+   Opt-in: add class="dark-invert" (via #+ATTR_HTML: :class dark-invert)
+   to invert white-background formula / diagram images. */
+
+:root[data-resolved="dark"] #content img {
+  filter: brightness(.92);
+}
+
+:root[data-resolved="dark"] #content img.dark-invert {
+  filter: invert(1) hue-rotate(180deg);
+}
+
 
 /* ==============================
    Home page
@@ -1208,5 +1222,12 @@ html {
   .post-tag {
     background: #eeeeee;
     color: #111111;
+  }
+
+  /* Printed PDFs keep images natural, even when the page was
+     rendered in dark mode. */
+  :root[data-resolved="dark"] #content img,
+  :root[data-resolved="dark"] #content img.dark-invert {
+    filter: none;
   }
 }
