@@ -540,6 +540,16 @@ pre.src::before {
   border: 1px solid var(--hairline);
 }
 
+/* Cover image (from #+COVER): fill the fixed placeholder box.
+   ID-qualified so it beats the generic #content img rule. */
+
+#content img.post-cover {
+  height: 78px;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+}
+
 /* Narrow screens: stack the meta above the title so the
    date, description and cover don't squeeze the text */
 
@@ -559,6 +569,10 @@ pre.src::before {
 
   .post-cover {
     flex: 0 0 76px;
+    height: 56px;
+  }
+
+  #content img.post-cover {
     height: 56px;
   }
 }
@@ -754,6 +768,8 @@ html {
   content: "·";
   margin-right: 1em;
 }
+
+/* Cover hero shown at the top of article pages */
 
 /* ==============================
    Coming soon pages
