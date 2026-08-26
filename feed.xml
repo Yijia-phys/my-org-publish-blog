@@ -5,7 +5,7 @@
     <link>https://blog.yijialog.org/</link>
     <description>Physics, mathematics and philosophy notes.</description>
     <atom:link href="https://blog.yijialog.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 26 Aug 2026 12:15:04 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 16:12:39 +0800</lastBuildDate>
     <generator>org-publish</generator>
     <item>
       <title>My Tips for Converting Integrals into Series</title>
@@ -15,8 +15,8 @@
       <dc:creator>Yijia Zhao</dc:creator>
       <pubDate>Thu, 13 Aug 2026 00:00:00 +0800</pubDate>
       <description>My Tips for Converting Integrals into Series</description>
-      <content:encoded><![CDATA[<div id="outline-container-orgfdca6b6" class="outline-2">
-<h2 id="orgfdca6b6"><span class="section-number-2">1.</span> 1/(n<sup>2</sup>+x<sup>2</sup>)</h2>
+      <content:encoded><![CDATA[<div id="outline-container-org59cbaf8" class="outline-2">
+<h2 id="org59cbaf8"><span class="section-number-2">1.</span> 1/(n<sup>2</sup>+x<sup>2</sup>)</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 We begin with <b>Euler’s product formula for sine</b>:
