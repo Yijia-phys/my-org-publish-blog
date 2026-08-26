@@ -869,3 +869,170 @@ html {
 .home-link:hover .home-link-title {
   color: var(--primary);
 }
+
+
+/* ==============================
+   Print / PDF
+   ============================== */
+
+/* Page geometry (margins + paper size) */
+
+@page {
+  size: A4;
+  margin: 18mm 16mm;
+}
+
+/* Everything below applies only when printing / exporting to PDF */
+
+@media print {
+
+  /* Force the light palette even for dark-mode visitors, so we never
+     end up with light text on white paper. */
+  :root,
+  :root[data-resolved],
+  :root[data-resolved="dark"] {
+    --background: #ffffff;
+    --fill:       #ffffff;
+    --text:       #111111;
+    --link:       #111111;
+    --muted:      #444444;
+    --primary:    #111111;
+    --hairline:   #cccccc;
+    --code-bg:    #f6f7f9;
+    --tag-bg:     #eeeeee;
+    --nav-bg:     transparent;
+    --nav-text:   #111111;
+  }
+
+  body {
+    background: #ffffff;
+    color: #111111;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Hide navigation and interactive chrome */
+  #preamble,
+  .search-modal,
+  .theme-toggle,
+  .nav-search,
+  .nav-github,
+  .tag-filter,
+  .rss-link,
+  .random-post,
+  #pagefind-search,
+  .pagefind-ui {
+    display: none !important;
+  }
+
+  /* Reading column: use the full printable width */
+  #content {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    font-size: 11pt;
+    line-height: 1.65;
+  }
+
+  #content h1.title {
+    font-size: 1.6rem;
+    margin: 0 0 1.5rem;
+  }
+
+  /* Don't leave headings orphaned at the bottom of a page */
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  p, li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Links: plain underline; print the URL of external links */
+  #content a {
+    color: inherit;
+    text-decoration: underline;
+    border-bottom: none;
+    overflow-wrap: break-word;
+  }
+
+  #content a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: .85em;
+    color: #444444;
+  }
+
+  /* Code: wrap long lines instead of clipping them */
+  #content pre {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    border-color: #cccccc;
+  }
+
+  #content p code,
+  #content li code {
+    background: #eeeeee;
+    border-color: #cccccc;
+    color: #111111;
+  }
+
+  /* Dark-theme syntax colors → light palette on paper */
+  :root[data-resolved] .org-comment,
+  :root[data-resolved] .org-doc {
+    color: #59627a;
+  }
+  :root[data-resolved] .org-keyword { color: #3548cf; }
+  :root[data-resolved] .org-string  { color: #0a7d5f; }
+  :root[data-resolved] .org-builtin,
+  :root[data-resolved] .org-function-name,
+  :root[data-resolved] .org-preprocessor {
+    color: #721045;
+  }
+  :root[data-resolved] .org-type,
+  :root[data-resolved] .org-constant,
+  :root[data-resolved] .org-variable-name {
+    color: #005a5f;
+  }
+  :root[data-resolved] .org-escape-char {
+    color: #b06f2e;
+  }
+
+  /* Keep tables, figures, quotes and displayed math together */
+  tr,
+  .figure,
+  blockquote,
+  .katex-display {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  #content table {
+    border-color: #999999;
+  }
+
+  #content th,
+  #content td {
+    border-bottom-color: #cccccc;
+  }
+
+  /* Article meta: quiet, single-line */
+  .article-meta {
+    color: #444444;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Posts list on the archive page: plain text */
+  .post-card {
+    border-bottom-color: #cccccc;
+  }
+  .post-title { color: #111111; }
+  .post-desc  { color: #333333; }
+  .post-tag {
+    background: #eeeeee;
+    color: #111111;
+  }
+}
