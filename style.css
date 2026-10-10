@@ -1060,6 +1060,59 @@ html {
 
 
 /* ==============================
+   Course notes
+   ============================== */
+
+.notes-formats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-family: var(--font-sans);
+  font-size: .9rem;
+}
+
+.notes-unavailable,
+.notes-empty {
+  color: var(--muted);
+}
+
+#content .notes-chapters {
+  list-style: none;
+  padding-left: 0;
+}
+
+.notes-chapters > li {
+  margin: 1.5rem 0;
+}
+
+.notes-chapter-title {
+  font-weight: 600;
+}
+
+.notes-navigation {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 48.3em;
+  margin: 0 auto 3rem;
+  padding: 1.25rem;
+  border-top: 1px solid var(--hairline);
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: .95rem;
+}
+
+.notes-navigation a {
+  color: var(--link);
+}
+
+.notes-navigation a:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+/* ==============================
    Print / PDF
    ============================== */
 
@@ -1101,6 +1154,7 @@ html {
 
   /* Hide navigation and interactive chrome */
   #preamble,
+  .notes-navigation,
   .search-modal,
   .theme-toggle,
   .nav-search,
