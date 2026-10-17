@@ -36,6 +36,18 @@
     var proofs = panel.querySelector('[name="proof"]');
     var examples = panel.querySelector('[name="example"]');
     var folding = panel.querySelector('[name="folding"]');
+    var storageKey = 'math-reading-preferences-v1';
+    var controls = {content: showContent, proof: proofs, example: examples, folding: folding};
+    var preferences = {content: true, proof: true, example: true, folding: true};
+    try {
+      var saved = JSON.parse(localStorage.getItem(storageKey));
+      if (saved && typeof saved === 'object' && !Array.isArray(saved)) {
+        Object.keys(preferences).forEach(function (key) {
+          if (typeof saved[key] === 'boolean') preferences[key] = saved[key];
+        });
+      }
+    } catch (_) { /* Storage may be unavailable or contain invalid JSON. */ }
+    Object.keys(controls).forEach(function (key) { controls[key].checked = preferences[key]; });
     var records = new Map();
     content.querySelectorAll('.math-proof, .math-examp').forEach(function (block) {
       var heading = block.querySelector(':scope > .math-heading');
@@ -77,7 +89,14 @@
         }
       });
     }
-    panel.addEventListener('change', function (event) { apply(event.target); });
+    panel.addEventListener('change', function (event) {
+      var key = event.target.name;
+      if (!Object.prototype.hasOwnProperty.call(controls, key) || controls[key] !== event.target) return;
+      // Save only explicit preference changes, not temporary reference reveals.
+      preferences[key] = event.target.checked;
+      try { localStorage.setItem(storageKey, JSON.stringify(preferences)); } catch (_) {}
+      apply(event.target);
+    });
     function reveal(hash) {
       if (!hash || hash === '#') return;
       var target;
