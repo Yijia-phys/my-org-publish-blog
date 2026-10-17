@@ -1,3 +1,73 @@
+/* Mathematical environments: shared by articles and notes. */
+/* Fixed reading tools; no scroll handlers or layout measurements. */
+.math-reading-dock { position: fixed; bottom: max(16px, env(safe-area-inset-bottom)); right: 16px; z-index: 190; font-family: var(--font-sans); color: var(--text); }
+.math-settings-trigger { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid var(--hairline); border-radius: 10px; background: var(--fill); color: var(--primary); cursor: pointer; box-shadow: 0 2px 8px var(--tint); }
+.math-settings-trigger:hover, .math-settings-trigger[aria-expanded="true"] { background: var(--tint); }
+.math-settings { position: absolute; bottom: 49px; right: 0; width: min(310px, calc(100vw - 28px)); max-height: calc(100dvh - 80px); overflow-y: auto; box-sizing: border-box; border: 1px solid var(--hairline); border-radius: 12px; background: var(--fill); color: var(--text); box-shadow: 0 12px 32px var(--scrim); }
+.math-settings[hidden] { display: none; }
+.math-settings-header { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px 8px; }
+.math-settings-header strong { font-weight: 600; }
+.math-settings-close { width: 32px; height: 32px; border: 0; background: transparent; color: var(--muted); font-size: 24px; cursor: pointer; border-radius: 6px; }
+.math-settings-close:hover { background: var(--tint); color: var(--text); }
+.math-settings-group { padding: 10px 16px; }
+.math-settings-group + .math-settings-group { border-top: 1px solid var(--hairline); }
+.math-settings-caption { display: block; font-size: 11px; letter-spacing: .08em; color: var(--muted); margin-bottom: 6px; }
+.math-settings label { display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 42px; padding: 5px 0; cursor: pointer; font-size: 15px; }
+.math-settings label small { display: block; color: var(--muted); font-size: 12px; margin-top: 3px; }
+.math-settings input { accent-color: var(--primary); width: 17px; height: 17px; flex-shrink: 0; }
+.math-settings-note { margin: 0; padding: 12px 16px; background: var(--code-bg); border-top: 1px solid var(--hairline); font-size: 12px; color: var(--muted); }
+.math-fold-toggle { font: inherit; color: inherit; background: transparent; border: 0; padding: .2em 0; text-align: left; cursor: pointer; }
+.math-fold-toggle::before { content: '▾'; display: inline-block; margin-right: .5em; }
+.math-fold-toggle[aria-expanded="false"]::before { content: '▸'; }
+.math-fold-label { display: none; }
+.math-no-folding .math-fold-toggle { display: none; }
+.math-no-folding .math-fold-label { display: inline; }
+.math-fold-body > p { margin: .45em 0 0; }
+@media screen {
+  .math-hidden, .math-collapsed > .math-fold-body { display: none; }
+  .math-hide-content .math-prose { display: none; }
+}
+@media print {
+  .math-reading-dock, .math-fold-toggle { display: none; }
+  .math-fold-label { display: inline; }
+}
+.math-env {
+  margin: 1.5em 0;
+  padding: .8em 1.1em;
+  border-left: 3px solid var(--primary);
+  color: var(--text);
+  font-family: var(--font-serif);
+  break-inside: avoid;
+}
+.math-heading {
+  color: var(--primary);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: .95em;
+  line-height: 1.5;
+}
+.math-name { color: var(--text); font-weight: 400; }
+.math-env > p { margin: .45em 0 0; }
+.math-definition { background: var(--tint); border-radius: 0 5px 5px 0; }
+.math-axiom { border-left-width: 1px; }
+.math-lemma, .math-corollary { border-left: 1px solid var(--hairline); }
+.math-examp { border-left: 1px solid var(--primary); }
+.math-theorem > p, .math-lemma > p, .math-corollary > p { font-style: italic; }
+.math-proof { border: 0; padding: 0 0 0 calc(1.1em + 3px); }
+.math-proof .math-heading {
+  color: var(--text);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1em;
+}
+.math-qed { display: block; text-align: right; }
+a.math-ref { color: var(--primary); text-underline-offset: .18em; }
+@media print {
+  .math-definition { background: transparent; }
+  .math-env { border-radius: 0; }
+}
+
 /* ==============================
    Common
    ============================== */
@@ -1062,6 +1132,35 @@ html {
 /* ==============================
    Course notes
    ============================== */
+
+/* Compact course rows on the overview; chapter headings stay unchanged. */
+#content .outline-4:has(> .outline-text-4 .notes-formats) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: .3rem 1rem;
+  padding: .7rem 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+#content .outline-4:has(> .outline-text-4 .notes-formats) > h4,
+#content .outline-4 > .outline-text-4:has(.notes-formats) > p {
+  margin: 0;
+}
+
+#content .outline-4 .notes-formats > a,
+#content .outline-4 .notes-formats > span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.75rem;
+  padding: 0 .2rem;
+}
+
+@media (max-width: 640px) {
+  #content .outline-4:has(> .outline-text-4 .notes-formats) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 
 .notes-formats {
   display: flex;
