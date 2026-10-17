@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2026-10-17 Sat 08:59 -->
+<!-- 2026-10-17 Sat 22:03 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Boundedness, Supremum, and Infimum</title>
@@ -68,7 +68,312 @@
        <div id='drawer-backdrop' class='drawer-backdrop'></div>
 </div>
 <div id="content" class="content">
-<h1 class="title">Boundedness, Supremum, and Infimum</h1><p class="article-meta"><span class="reading-time">1 min read</span><span class="post-updated">Updated 2026-10-16</span></p>
+<h1 class="title">Boundedness, Supremum, and Infimum</h1><p class="article-meta"><span class="reading-time">6 min read</span><span class="post-updated">Updated 2026-10-17</span></p>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgefe1340">1. Foundations</a></li>
+<li><a href="#org03d4bc4">2. Proof Strategies</a>
+<ul>
+<li><a href="#orge1175aa">2.1. Unboundedness</a></li>
+<li><a href="#orgb7dfd5d">2.2. Proving a Supremum or Infimum</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgefe1340" class="outline-2">
+<h2 id="orgefe1340"><span class="section-number-2">1.</span> Foundations</h2>
+<div class="outline-text-2" id="text-1">
+<div class="math-prose"><p>
+Let us begin with a brief review of the definitions.
+</p>
+
+</div>
+<section class="math-env math-definition" id="org16fad2c" aria-labelledby="org16fad2c-heading">
+<div class="math-heading" id="org16fad2c-heading">Definition 1 <span class="math-name">— Boundedness</span></div>
+<p>
+Let \(A \subseteq \mathbb{R}\). We say that \(A\) is <i>bounded above</i> if there exists \(M \in \mathbb{R}\) such that \(a \leq M\) for every \(a \in A\). Any such \(M\) is called an <i>upper bound</i> of \(A\).
+</p>
+
+<p>
+Similarly, \(A\) is <i>bounded below</i> if there exists \(m \in \mathbb{R}\) such that \(m \leq a\) for every \(a \in A\). Any such \(m\) is called a <i>lower bound</i> of \(A\).
+</p>
+
+<p>
+The set \(A\) is <i>bounded</i> if it is both bounded above and bounded below. Thus,
+</p>
+
+<p>
+\[
+A \text{ is bounded}
+\iff \bigl(A \text{ is bounded above}\bigr) \land \bigl(A \text{ is bounded below}\bigr).
+\]
+</p>
+</section>
+
+<div class="math-prose"><p>
+In particular, the empty set is bounded: every real number is both an upper bound and a lower bound of \(\varnothing\), since there are no elements that could violate either condition.
+</p>
+
+</div>
+<section class="math-env math-definition" id="org3552748" aria-labelledby="org3552748-heading">
+<div class="math-heading" id="org3552748-heading">Definition 2 <span class="math-name">— Supremum and infimum</span></div>
+<p>
+Let \(A \subseteq \mathbb{R}\). A real number \(s\) is the <i>supremum</i> (or <i>least upper bound</i>) of \(A\), written \(s = \sup A\), if:
+</p>
+
+<ol class="org-ol">
+<li>\(a \leq s\) for every \(a \in A\);</li>
+<li>\(s \leq M\) for every upper bound \(M \in \mathbb{R}\) of \(A\).</li>
+</ol>
+
+<p>
+Similarly, a real number \(t\) is the <i>infimum</i> (or <i>greatest lower bound</i>) of \(A\), written \(t = \inf A\), if:
+</p>
+
+<ol class="org-ol">
+<li>\(t \leq a\) for every \(a \in A\);</li>
+<li>\(m \leq t\) for every lower bound \(m \in \mathbb{R}\) of \(A\).</li>
+</ol>
+</section>
+
+<div class="math-prose"><p>
+To include unbounded sets and the empty set, we also allow values in the <i>extended real line</i> \(\overline{\mathbb{R}} = \mathbb{R} \cup \{-\infty,+\infty\}\), ordered by \(-\infty < x < +\infty\) for every \(x \in \mathbb{R}\). We adopt the conventions
+</p>
+
+</div>
+<div class="math-prose"><p>
+\[\begin{aligned}
+\sup A &= +\infty &&\text{if } A \text{ is not bounded above}, \\
+\inf A &= -\infty &&\text{if } A \text{ is not bounded below}, \\
+\sup \varnothing &= -\infty, \qquad &\inf \varnothing &= +\infty.
+\end{aligned}\]
+</p>
+
+</div>
+<div class="math-prose"><p>
+These conventions agree with taking the least upper bound and greatest lower bound in \(\overline{\mathbb{R}}\). The empty set has no supremum or infimum in \(\mathbb{R}\) itself.
+</p>
+
+</div>
+<section class="math-env math-axiom" id="org9a7fc08" aria-labelledby="org9a7fc08-heading">
+<div class="math-heading" id="org9a7fc08-heading">Axiom 3 <span class="math-name">— Completeness of the real numbers</span></div>
+<p>
+Every nonempty subset of \(\mathbb{R}\) that is bounded above has a supremum in \(\mathbb{R}\).
+</p>
+
+<p>
+Every nonempty subset of \(\mathbb{R}\) that is bounded below has an infimum in \(\mathbb{R}\).
+</p>
+</section>
+
+<div class="math-prose"><p>
+The second statement follows from the first by applying it to \(-A = \{-a : a \in A\}\) and using \(\inf A = -\sup(-A)\). We state both together here for ease of reference.
+</p>
+
+</div>
+<section class="math-env math-theorem" id="org58e2666" aria-labelledby="org58e2666-heading">
+<div class="math-heading" id="org58e2666-heading">Theorem 4 <span class="math-name">— Archimedean property</span></div>
+<p>
+For every \(x \in \mathbb{R}\), there exists a positive integer \(n\) such that \(x < n\). In other words, the positive integers are not bounded above in \(\mathbb{R}\).
+</p>
+</section>
+
+<section class="math-env math-lemma" id="org538a368" aria-labelledby="org538a368-heading">
+<div class="math-heading" id="org538a368-heading">Lemma 5 <span class="math-name">— Integer bracketing</span></div>
+<p>
+For every \(x \in \mathbb{R}\), there exists an integer \(n \in \mathbb{Z}\) such that
+</p>
+
+<p>
+\[
+n - 1 \leq x < n.
+\]
+</p>
+</section>
+
+<div class="math-prose"><p>
+We will not go into further proofs or explanations here; for details, see the <a href="#">notes</a>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org03d4bc4" class="outline-2">
+<h2 id="org03d4bc4"><span class="section-number-2">2.</span> Proof Strategies</h2>
+<div class="outline-text-2" id="text-2">
+<div class="math-prose"><p>
+We now examine in detail how to prove the various properties introduced above.
+</p>
+
+</div>
+</div>
+<div id="outline-container-orge1175aa" class="outline-3">
+<h3 id="orge1175aa"><span class="section-number-3">2.1.</span> Unboundedness</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="math-prose"><p>
+First, negating the definitions of boundedness above and below gives the following characterizations.
+</p>
+
+</div>
+<section class="math-env math-remark" id="org2c1c410" aria-labelledby="org2c1c410-heading">
+<div class="math-heading" id="org2c1c410-heading">Remark 6</div>
+<p>
+Let \(A \subseteq \mathbb{R}\). Then
+</p>
+
+<p>
+\[\begin{aligned}
+A \text{ is unbounded above}
+&\iff \neg\bigl(\exists M \in \mathbb{R}\; \forall a \in A,\; a \leq M\bigr) \\
+&\iff \forall M \in \mathbb{R}\; \exists a \in A,\; a > M, \\
+A \text{ is unbounded below}
+&\iff \neg\bigl(\exists m \in \mathbb{R}\; \forall a \in A,\; m \leq a\bigr) \\
+&\iff \forall m \in \mathbb{R}\; \exists a \in A,\; a < m.
+\end{aligned}\]
+</p>
+</section>
+
+<div class="math-prose"><p>
+In other words, to prove that \(A\) is unbounded above, we start with an arbitrary proposed upper bound \(M \in \mathbb{R}\) and find an element \(a \in A\) with \(a > M\). Our choice of \(a\) may depend on \(M\): when giving an explicit construction, we express \(a\) in terms of \(M\) and verify both that \(a \in A\) and that \(a > M\).
+</p>
+
+</div>
+<div class="math-prose"><p>
+Likewise, to prove that \(A\) is unbounded below, we start with an arbitrary \(m \in \mathbb{R}\) and choose \(a \in A\), depending on \(m\), such that \(a < m\). The order of the quantifiers matters: the proposed bound is given first, and we then choose an element that exceeds it or falls below it.
+</p>
+
+</div>
+<div class="math-prose"><p>
+Let us illustrate this with a simple example.
+</p>
+
+</div>
+<section class="math-env math-examp" id="org931078e" aria-labelledby="org931078e-heading">
+<div class="math-heading" id="org931078e-heading">Example 7 <span class="math-name">— The real line is unbounded</span></div>
+<p>
+The set \(A = \{x \mid x \in \mathbb{R}\} = \mathbb{R}\) is unbounded both above and below.
+</p>
+</section>
+
+<section class="math-env math-proof" id="orge685edb" aria-labelledby="orge685edb-heading">
+<div class="math-heading" id="orge685edb-heading">Proof.</div>
+<p>
+Given any \(M \in \mathbb{R}\), choose \(a = M + 1\). Then \(a \in A\) and \(a > M\), so \(A\) is unbounded above.
+</p>
+
+<p>
+Similarly, given any \(m \in \mathbb{R}\), choose \(a = m - 1\). Then \(a \in A\) and \(a < m\), so \(A\) is unbounded below. Hence \(A\) is unbounded.
+</p>
+<span class="math-qed" aria-label="End of proof">□</span>
+</section>
+
+</div>
+</div>
+<div id="outline-container-orgb7dfd5d" class="outline-3">
+<h3 id="orgb7dfd5d"><span class="section-number-3">2.2.</span> Proving a Supremum or Infimum</h3>
+<div class="outline-text-3" id="text-2-2">
+<div class="math-prose"><p>
+To prove that a real number \(s\) is the supremum of \(A\), we must show that it is an upper bound and that it is the least upper bound. For the second part, we show that every number strictly smaller than \(s\), written as \(s - \varepsilon\) with \(\varepsilon > 0\), fails to be an upper bound.
+</p>
+
+</div>
+<section class="math-env math-remark" id="org0a62c41" aria-labelledby="org0a62c41-heading">
+<div class="math-heading" id="org0a62c41-heading">Remark 8</div>
+<p>
+Let \(A \subseteq \mathbb{R}\) and \(s \in \mathbb{R}\). Then \(s = \sup A\) if and only if both of the following hold:
+</p>
+
+<ol class="org-ol">
+<li>\(s\) is an upper bound:
+\[
+   \forall a \in A,\quad a \leq s.
+   \]</li>
+<li>For every \(\varepsilon > 0\), \(s - \varepsilon\) is not an upper bound:
+\[
+   \forall \varepsilon > 0\; \exists a \in A,\quad s - \varepsilon < a.
+   \]</li>
+</ol>
+
+<p>
+Similarly, \(s = \inf A\) if and only if both of the following hold:
+</p>
+
+<ol class="org-ol">
+<li>\(s\) is a lower bound:
+\[
+   \forall a \in A,\quad s \leq a.
+   \]</li>
+<li>For every \(\varepsilon > 0\), \(s + \varepsilon\) is not a lower bound:
+\[
+   \forall \varepsilon > 0\; \exists a \in A,\quad a < s + \varepsilon.
+   \]</li>
+</ol>
+</section>
+
+<div class="math-prose"><p>
+The two parts require different approaches. To establish the bound, take an arbitrary \(a \in A\) and prove the required inequality. To establish that the bound is the least or greatest one, take an arbitrary \(\varepsilon > 0\) and find a suitable \(a \in A\). Here \(s\) is fixed, and our choice of \(a\) may depend on \(\varepsilon\): in an explicit construction, we express \(a\) in terms of \(\varepsilon\) (and the fixed candidate \(s\)).
+</p>
+
+</div>
+<div class="math-prose"><p>
+For a supremum, the chosen element must satisfy \(s - \varepsilon < a \leq s\); for an infimum, it must satisfy \(s \leq a < s + \varepsilon\). In each case, we must verify that the chosen element belongs to \(A\). The element need not equal \(s\); it only needs to lie within the prescribed distance on the appropriate side.
+</p>
+
+</div>
+<section class="math-env math-examp" id="orga3fd29f" aria-labelledby="orga3fd29f-heading">
+<div class="math-heading" id="orga3fd29f-heading">Example 9 <span class="math-name">— A supremum that is not attained</span></div>
+<p>
+Let
+</p>
+
+<p>
+\[
+A = \left\{1 - \frac{1}{x} \;\middle|\; x \in \mathbb{R}_{+}\right\},
+\]
+</p>
+
+<p>
+where \(\mathbb{R}_{+} = (0,\infty)\). Then \(\sup A = 1\).
+</p>
+</section>
+
+<section class="math-env math-proof" id="orgaa174f4" aria-labelledby="orgaa174f4-heading">
+<div class="math-heading" id="orgaa174f4-heading">Proof.</div>
+<p>
+First, for every \(x > 0\), we have \(1/x > 0\), so \(1 - 1/x < 1\). Thus every \(a \in A\) satisfies \(a \leq 1\), and \(1\) is an upper bound of \(A\).
+</p>
+
+<p>
+Next, let \(\varepsilon > 0\) be arbitrary. To show that \(1 - \varepsilon\) is not an upper bound, we need an \(x > 0\) such that
+</p>
+
+<p>
+\[
+1 - \frac{1}{x} > 1 - \varepsilon,
+\]
+</p>
+
+<p>
+which is equivalent to \(x > 1/\varepsilon\). Choose \(x = 2/\varepsilon > 0\). Then \(a = 1 - 1/x\) belongs to \(A\) and
+</p>
+
+<p>
+\[
+a = 1 - \frac{\varepsilon}{2} > 1 - \varepsilon.
+\]
+</p>
+
+<p>
+Hence \(1 - \varepsilon\) is not an upper bound for any \(\varepsilon > 0\). Therefore \(\sup A = 1\).
+</p>
+<span class="math-qed" aria-label="End of proof">□</span>
+</section>
+</div>
+</div>
+</div>
 </div>
 </body>
 </html>
