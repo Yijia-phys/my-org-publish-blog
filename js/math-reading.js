@@ -24,7 +24,9 @@
     function setOpen(open) {
       panel.hidden = !open;
       trigger.setAttribute('aria-expanded', String(open));
+      if (open) document.dispatchEvent(new CustomEvent('reading-panel-open', {detail: 'math'}));
     }
+    document.addEventListener('reading-panel-open', function (event) { if (event.detail !== 'math') setOpen(false); });
     trigger.addEventListener('click', function () { setOpen(panel.hidden); });
     dock.querySelector('.math-settings-close').addEventListener('click', function () { setOpen(false); trigger.focus(); });
     document.addEventListener('click', function (event) {

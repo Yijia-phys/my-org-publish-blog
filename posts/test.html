@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2026-10-17 Sat 08:28 -->
+<!-- 2026-10-17 Sat 08:59 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Rendering Test</title>
@@ -17,6 +17,7 @@
 <script src='/js/search.js' defer></script>
 <script src='/js/katex-loader.js' defer></script>
 <script src='/js/math-reading.js' defer></script>
+<script src='/js/toc.js' defer></script>
 <script src='/js/theme.js' defer></script>
 </head>
 <body>
@@ -73,11 +74,11 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org019112e">Mathematical environments</a></li>
-<li><a href="#org3212fce">Cross-references</a></li>
-<li><a href="#orgdd9cec2">Equations</a></li>
-<li><a href="#org06f666b">Table</a></li>
-<li><a href="#org9cf432d">Basic formatting</a></li>
+<li><a href="#org5716be9">Mathematical environments</a></li>
+<li><a href="#org4cb9043">Cross-references</a></li>
+<li><a href="#org7696301">Equations</a></li>
+<li><a href="#orgc30ff33">Table</a></li>
+<li><a href="#org7d72404">Basic formatting</a></li>
 </ul>
 </div>
 </div>
@@ -86,25 +87,25 @@ This page is kept as a small rendering test for the blog.
 </p>
 
 </div>
-<div id="outline-container-org019112e" class="outline-2">
-<h2 id="org019112e">Mathematical environments</h2>
-<div class="outline-text-2" id="text-org019112e">
-<section class="math-env math-definition" id="org674cd3a" aria-labelledby="org674cd3a-heading">
-<div class="math-heading" id="org674cd3a-heading">Definition 1 <span class="math-name">— Upper bound</span></div>
+<div id="outline-container-org5716be9" class="outline-2">
+<h2 id="org5716be9">Mathematical environments</h2>
+<div class="outline-text-2" id="text-org5716be9">
+<section class="math-env math-definition" id="orga58632e" aria-labelledby="orga58632e-heading">
+<div class="math-heading" id="orga58632e-heading">Definition 1 <span class="math-name">— Upper bound</span></div>
 <p>
 Let \(A \subseteq \mathbb{R}\). A number \(M \in \mathbb{R}\) is an upper bound of \(A\) if \(x \leq M\) for every \(x \in A\).
 </p>
 </section>
 
-<section class="math-env math-axiom" id="org0f6f578" aria-labelledby="org0f6f578-heading">
-<div class="math-heading" id="org0f6f578-heading">Axiom 2 <span class="math-name">— Completeness</span></div>
+<section class="math-env math-axiom" id="org2c3e3a3" aria-labelledby="org2c3e3a3-heading">
+<div class="math-heading" id="org2c3e3a3-heading">Axiom 2 <span class="math-name">— Completeness</span></div>
 <p>
 Every nonempty subset of \(\mathbb{R}\) that is bounded above has a supremum in \(\mathbb{R}\).
 </p>
 </section>
 
-<section class="math-env math-lemma" id="org084ab93" aria-labelledby="org084ab93-heading">
-<div class="math-heading" id="org084ab93-heading">Lemma 3 <span class="math-name">— Approximation from below</span></div>
+<section class="math-env math-lemma" id="orga23a083" aria-labelledby="orga23a083-heading">
+<div class="math-heading" id="orga23a083-heading">Lemma 3 <span class="math-name">— Approximation from below</span></div>
 <p>
 If \(s = \sup A\), then for every \(\varepsilon > 0\) there exists \(a \in A\) such that
 </p>
@@ -116,30 +117,30 @@ s - \varepsilon < a \leq s.
 </p>
 </section>
 
-<section class="math-env math-theorem" id="orgc23313d" aria-labelledby="orgc23313d-heading">
-<div class="math-heading" id="orgc23313d-heading">Theorem 4 <span class="math-name">— Uniqueness of the supremum</span></div>
+<section class="math-env math-theorem" id="org4176536" aria-labelledby="org4176536-heading">
+<div class="math-heading" id="org4176536-heading">Theorem 4 <span class="math-name">— Uniqueness of the supremum</span></div>
 <p>
 A nonempty subset of \(\mathbb{R}\) has at most one supremum.
 </p>
 </section>
 
-<section class="math-env math-proof" id="orgdc7a6d0" aria-labelledby="orgdc7a6d0-heading">
-<div class="math-heading" id="orgdc7a6d0-heading">Proof.</div>
+<section class="math-env math-proof" id="orgcaad90d" aria-labelledby="orgcaad90d-heading">
+<div class="math-heading" id="orgcaad90d-heading">Proof.</div>
 <p>
 Suppose \(s\) and \(t\) are both suprema of \(A\). Since \(t\) is an upper bound and \(s\) is the least upper bound, \(s \leq t\). Similarly, \(t \leq s\). Therefore \(s = t\).
 </p>
 <span class="math-qed" aria-label="End of proof">□</span>
 </section>
 
-<section class="math-env math-corollary" id="org80cf5bb" aria-labelledby="org80cf5bb-heading">
-<div class="math-heading" id="org80cf5bb-heading">Corollary 5</div>
+<section class="math-env math-corollary" id="orgeb3a846" aria-labelledby="orgeb3a846-heading">
+<div class="math-heading" id="orgeb3a846-heading">Corollary 5</div>
 <p>
 If \(A\) has a maximum \(m\), then \(\sup A = m\).
 </p>
 </section>
 
-<section class="math-env math-examp" id="orgf3cc771" aria-labelledby="orgf3cc771-heading">
-<div class="math-heading" id="orgf3cc771-heading">Example 6 <span class="math-name">— A supremum without a maximum</span></div>
+<section class="math-env math-examp" id="org003a78b" aria-labelledby="org003a78b-heading">
+<div class="math-heading" id="org003a78b-heading">Example 6 <span class="math-name">— A supremum without a maximum</span></div>
 <p>
 Let \(A = (0,1)\). Then \(\sup A = 1\), but \(A\) has no maximum because \(1 \notin A\).
 </p>
@@ -151,24 +152,24 @@ For every \(x \in A\), the number \((x+1)/2\) also belongs to \(A\) and is stric
 
 </div>
 </div>
-<div id="outline-container-org3212fce" class="outline-2">
-<h2 id="org3212fce">Cross-references</h2>
-<div class="outline-text-2" id="text-org3212fce">
+<div id="outline-container-org4cb9043" class="outline-2">
+<h2 id="org4cb9043">Cross-references</h2>
+<div class="outline-text-2" id="text-org4cb9043">
 <div class="math-prose"><p>
-Automatic labels: <a class="math-ref" href="#org674cd3a">Definition 1</a>, <a class="math-ref" href="#org0f6f578">Axiom 2</a>, <a class="math-ref" href="#org084ab93">Lemma 3</a>, <a class="math-ref" href="#orgc23313d">Theorem 4</a>, <a class="math-ref" href="#org80cf5bb">Corollary 5</a>, and <a class="math-ref" href="#orgf3cc771">Example 6</a>.
+Automatic labels: <a class="math-ref" href="#orga58632e">Definition 1</a>, <a class="math-ref" href="#org2c3e3a3">Axiom 2</a>, <a class="math-ref" href="#orga23a083">Lemma 3</a>, <a class="math-ref" href="#org4176536">Theorem 4</a>, <a class="math-ref" href="#orgeb3a846">Corollary 5</a>, and <a class="math-ref" href="#org003a78b">Example 6</a>.
 </p>
 
 </div>
 <div class="math-prose"><p>
-Custom link text: <a class="math-ref" href="#org674cd3a">the definition of an upper bound</a>.
+Custom link text: <a class="math-ref" href="#orga58632e">the definition of an upper bound</a>.
 </p>
 
 </div>
 </div>
 </div>
-<div id="outline-container-orgdd9cec2" class="outline-2">
-<h2 id="orgdd9cec2">Equations</h2>
-<div class="outline-text-2" id="text-orgdd9cec2">
+<div id="outline-container-org7696301" class="outline-2">
+<h2 id="org7696301">Equations</h2>
+<div class="outline-text-2" id="text-org7696301">
 <div class="math-prose"><p>
 An inline formula: \(a^2 + b^2 = c^2\). Another example: \(\lim_{n \to \infty} 1/n = 0\).
 </p>
@@ -201,9 +202,9 @@ A multi-line calculation:
 </div>
 </div>
 </div>
-<div id="outline-container-org06f666b" class="outline-2">
-<h2 id="org06f666b">Table</h2>
-<div class="outline-text-2" id="text-org06f666b">
+<div id="outline-container-orgc30ff33" class="outline-2">
+<h2 id="orgc30ff33">Table</h2>
+<div class="outline-text-2" id="text-orgc30ff33">
 <div class="math-prose"><table>
 <caption class="t-above"><span class="table-number">Table 1:</span> Bounds and extrema of some subsets of the real numbers.</caption>
 
@@ -257,9 +258,9 @@ A multi-line calculation:
 </div>
 </div>
 </div>
-<div id="outline-container-org9cf432d" class="outline-2">
-<h2 id="org9cf432d">Basic formatting</h2>
-<div class="outline-text-2" id="text-org9cf432d">
+<div id="outline-container-org7d72404" class="outline-2">
+<h2 id="org7d72404">Basic formatting</h2>
+<div class="outline-text-2" id="text-org7d72404">
 <div class="math-prose"><p>
 This sentence contains <b>bold text</b>, <i>italic text</i>, and <code>inline code</code>.
 </p>

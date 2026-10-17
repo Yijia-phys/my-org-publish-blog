@@ -1384,3 +1384,16 @@ html {
     filter: none;
   }
 }
+
+/* Floating article contents; original directory remains available in print. */
+.toc-dock { position: fixed; bottom: max(16px, env(safe-area-inset-bottom)); right: 16px; z-index: 190; font-family: var(--font-sans); color: var(--text); }
+.has-math-reading .toc-dock { right: 66px; }
+.has-math-reading .toc-panel { right: -50px; }
+.toc-links { padding: 0 10px 12px; }
+.toc-links ul { list-style: none; padding: 0; margin: 0; }
+.toc-links ul ul { padding-left: 14px; border-left: 1px solid var(--hairline); margin-left: 10px; }
+.toc-links a { display: block; padding: 10px 12px; font-size: 14px; line-height: 1.5; color: var(--text); text-decoration: none; border-radius: 6px; overflow-wrap: anywhere; }
+.toc-links a:hover, .toc-links a[aria-current="location"] { background: var(--tint); color: var(--primary); }
+@media screen { #content #table-of-contents.toc-enhanced { display: none; } }
+@media print { .toc-dock { display: none; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
