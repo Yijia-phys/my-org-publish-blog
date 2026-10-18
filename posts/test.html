@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2026-10-18 Sun 21:21 -->
+<!-- 2026-10-18 Sun 22:05 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Rendering Test</title>
@@ -11,6 +11,7 @@
 <script>try{var t=localStorage.getItem('theme');if(['system','light','dark'].indexOf(t)<0)t='system';var r=t==='system'?(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;document.documentElement.setAttribute('data-theme',t);document.documentElement.setAttribute('data-resolved',r);}catch(e){}</script>
 <link rel="stylesheet" href="/style.css">
 <link rel="icon" type="image/svg+xml" href="/image/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 <script src='/js/tags.js' defer></script>
 <script src='/js/nav.js' defer></script>
@@ -19,7 +20,6 @@
 <script src='/js/math-reading.js' defer></script>
 <script src='/js/toc.js' defer></script>
 <script src='/js/theme.js' defer></script>
-<link rel="stylesheet" href="/htmlize.css" type="text/css">
 </head>
 <body>
 <div id="preamble" class="status">
@@ -75,11 +75,11 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org7843984">Mathematical environments</a></li>
-<li><a href="#org32ec762">Cross-references</a></li>
-<li><a href="#orga61357c">Equations</a></li>
-<li><a href="#orgddaa770">Table</a></li>
-<li><a href="#org4765dbc">Basic formatting</a></li>
+<li><a href="#org1f647d5">Mathematical environments</a></li>
+<li><a href="#orgd50dc96">Cross-references</a></li>
+<li><a href="#org5daa750">Equations</a></li>
+<li><a href="#orgfc9edd4">Table</a></li>
+<li><a href="#org1e16e07">Basic formatting</a></li>
 </ul>
 </div>
 </div>
@@ -88,25 +88,25 @@ This page is kept as a small rendering test for the blog.
 </p>
 
 </div>
-<div id="outline-container-org7843984" class="outline-2">
-<h2 id="org7843984">Mathematical environments</h2>
-<div class="outline-text-2" id="text-org7843984">
-<section class="math-env math-definition" id="org3087774" aria-labelledby="org3087774-heading">
-<div class="math-heading" id="org3087774-heading">Definition 1 <span class="math-name">— Upper bound</span></div>
+<div id="outline-container-org1f647d5" class="outline-2">
+<h2 id="org1f647d5">Mathematical environments</h2>
+<div class="outline-text-2" id="text-org1f647d5">
+<section class="math-env math-definition" id="orga17ca2e" aria-labelledby="orga17ca2e-heading">
+<div class="math-heading" id="orga17ca2e-heading">Definition 1 <span class="math-name">— Upper bound</span></div>
 <p>
 Let \(A \subseteq \mathbb{R}\). A number \(M \in \mathbb{R}\) is an upper bound of \(A\) if \(x \leq M\) for every \(x \in A\).
 </p>
 </section>
 
-<section class="math-env math-axiom" id="orgd02e3c7" aria-labelledby="orgd02e3c7-heading">
-<div class="math-heading" id="orgd02e3c7-heading">Axiom 2 <span class="math-name">— Completeness</span></div>
+<section class="math-env math-axiom" id="org416c5ce" aria-labelledby="org416c5ce-heading">
+<div class="math-heading" id="org416c5ce-heading">Axiom 2 <span class="math-name">— Completeness</span></div>
 <p>
 Every nonempty subset of \(\mathbb{R}\) that is bounded above has a supremum in \(\mathbb{R}\).
 </p>
 </section>
 
-<section class="math-env math-lemma" id="org886a123" aria-labelledby="org886a123-heading">
-<div class="math-heading" id="org886a123-heading">Lemma 3 <span class="math-name">— Approximation from below</span></div>
+<section class="math-env math-lemma" id="org44f28dc" aria-labelledby="org44f28dc-heading">
+<div class="math-heading" id="org44f28dc-heading">Lemma 3 <span class="math-name">— Approximation from below</span></div>
 <p>
 If \(s = \sup A\), then for every \(\varepsilon > 0\) there exists \(a \in A\) such that
 </p>
@@ -118,30 +118,30 @@ s - \varepsilon < a \leq s.
 </p>
 </section>
 
-<section class="math-env math-theorem" id="org92ad1e3" aria-labelledby="org92ad1e3-heading">
-<div class="math-heading" id="org92ad1e3-heading">Theorem 4 <span class="math-name">— Uniqueness of the supremum</span></div>
+<section class="math-env math-theorem" id="org5b53403" aria-labelledby="org5b53403-heading">
+<div class="math-heading" id="org5b53403-heading">Theorem 4 <span class="math-name">— Uniqueness of the supremum</span></div>
 <p>
 A nonempty subset of \(\mathbb{R}\) has at most one supremum.
 </p>
 </section>
 
-<section class="math-env math-proof" id="orgbdebcfa" aria-labelledby="orgbdebcfa-heading">
-<div class="math-heading" id="orgbdebcfa-heading">Proof.</div>
+<section class="math-env math-proof" id="org6c1e56e" aria-labelledby="org6c1e56e-heading">
+<div class="math-heading" id="org6c1e56e-heading">Proof.</div>
 <p>
 Suppose \(s\) and \(t\) are both suprema of \(A\). Since \(t\) is an upper bound and \(s\) is the least upper bound, \(s \leq t\). Similarly, \(t \leq s\). Therefore \(s = t\).
 </p>
 <span class="math-qed" aria-label="End of proof">□</span>
 </section>
 
-<section class="math-env math-corollary" id="org46f7c07" aria-labelledby="org46f7c07-heading">
-<div class="math-heading" id="org46f7c07-heading">Corollary 5</div>
+<section class="math-env math-corollary" id="org33fb975" aria-labelledby="org33fb975-heading">
+<div class="math-heading" id="org33fb975-heading">Corollary 5</div>
 <p>
 If \(A\) has a maximum \(m\), then \(\sup A = m\).
 </p>
 </section>
 
-<section class="math-env math-examp" id="orga6dc234" aria-labelledby="orga6dc234-heading">
-<div class="math-heading" id="orga6dc234-heading">Example 6 <span class="math-name">— A supremum without a maximum</span></div>
+<section class="math-env math-examp" id="orgf1e8ce9" aria-labelledby="orgf1e8ce9-heading">
+<div class="math-heading" id="orgf1e8ce9-heading">Example 6 <span class="math-name">— A supremum without a maximum</span></div>
 <p>
 Let \(A = (0,1)\). Then \(\sup A = 1\), but \(A\) has no maximum because \(1 \notin A\).
 </p>
@@ -151,8 +151,8 @@ For every \(x \in A\), the number \((x+1)/2\) also belongs to \(A\) and is stric
 </p>
 </section>
 
-<section class="math-env math-remark" id="org00fec4d" aria-labelledby="org00fec4d-heading">
-<div class="math-heading" id="org00fec4d-heading">Remark 7 <span class="math-name">— Supremum versus maximum</span></div>
+<section class="math-env math-remark" id="orgd523cde" aria-labelledby="orgd523cde-heading">
+<div class="math-heading" id="orgd523cde-heading">Remark 7 <span class="math-name">— Supremum versus maximum</span></div>
 <p>
 The supremum need not belong to the set. For instance, \(\sup(0,1)=1\), although \(1 \notin (0,1)\). This distinction is why an upper bound and a maximum are different notions.
 </p>
@@ -160,24 +160,24 @@ The supremum need not belong to the set. For instance, \(\sup(0,1)=1\), although
 
 </div>
 </div>
-<div id="outline-container-org32ec762" class="outline-2">
-<h2 id="org32ec762">Cross-references</h2>
-<div class="outline-text-2" id="text-org32ec762">
+<div id="outline-container-orgd50dc96" class="outline-2">
+<h2 id="orgd50dc96">Cross-references</h2>
+<div class="outline-text-2" id="text-orgd50dc96">
 <div class="math-prose"><p>
-Automatic labels: <a class="math-ref" href="#org3087774">Definition 1</a>, <a class="math-ref" href="#orgd02e3c7">Axiom 2</a>, <a class="math-ref" href="#org886a123">Lemma 3</a>, <a class="math-ref" href="#org92ad1e3">Theorem 4</a>, <a class="math-ref" href="#org46f7c07">Corollary 5</a>, <a class="math-ref" href="#orga6dc234">Example 6</a>, and <a class="math-ref" href="#org00fec4d">Remark 7</a>.
+Automatic labels: <a class="math-ref" href="#orga17ca2e">Definition 1</a>, <a class="math-ref" href="#org416c5ce">Axiom 2</a>, <a class="math-ref" href="#org44f28dc">Lemma 3</a>, <a class="math-ref" href="#org5b53403">Theorem 4</a>, <a class="math-ref" href="#org33fb975">Corollary 5</a>, <a class="math-ref" href="#orgf1e8ce9">Example 6</a>, and <a class="math-ref" href="#orgd523cde">Remark 7</a>.
 </p>
 
 </div>
 <div class="math-prose"><p>
-Custom link text: <a class="math-ref" href="#org3087774">the definition of an upper bound</a>.
+Custom link text: <a class="math-ref" href="#orga17ca2e">the definition of an upper bound</a>.
 </p>
 
 </div>
 </div>
 </div>
-<div id="outline-container-orga61357c" class="outline-2">
-<h2 id="orga61357c">Equations</h2>
-<div class="outline-text-2" id="text-orga61357c">
+<div id="outline-container-org5daa750" class="outline-2">
+<h2 id="org5daa750">Equations</h2>
+<div class="outline-text-2" id="text-org5daa750">
 <div class="math-prose"><p>
 An inline formula: \(a^2 + b^2 = c^2\). Another example: \(\lim_{n \to \infty} 1/n = 0\).
 </p>
@@ -210,9 +210,9 @@ A multi-line calculation:
 </div>
 </div>
 </div>
-<div id="outline-container-orgddaa770" class="outline-2">
-<h2 id="orgddaa770">Table</h2>
-<div class="outline-text-2" id="text-orgddaa770">
+<div id="outline-container-orgfc9edd4" class="outline-2">
+<h2 id="orgfc9edd4">Table</h2>
+<div class="outline-text-2" id="text-orgfc9edd4">
 <div class="math-prose"><table>
 <caption class="t-above"><span class="table-number">Table 1:</span> Bounds and extrema of some subsets of the real numbers.</caption>
 
@@ -266,9 +266,9 @@ A multi-line calculation:
 </div>
 </div>
 </div>
-<div id="outline-container-org4765dbc" class="outline-2">
-<h2 id="org4765dbc">Basic formatting</h2>
-<div class="outline-text-2" id="text-org4765dbc">
+<div id="outline-container-org1e16e07" class="outline-2">
+<h2 id="org1e16e07">Basic formatting</h2>
+<div class="outline-text-2" id="text-org1e16e07">
 <div class="math-prose"><p>
 This sentence contains <b>bold text</b>, <i>italic text</i>, and <code>inline code</code>.
 </p>

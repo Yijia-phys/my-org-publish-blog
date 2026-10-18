@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2026-10-18 Sun 21:21 -->
+<!-- 2026-10-18 Sun 22:05 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Boundedness, Supremum, and Infimum</title>
@@ -11,6 +11,7 @@
 <script>try{var t=localStorage.getItem('theme');if(['system','light','dark'].indexOf(t)<0)t='system';var r=t==='system'?(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;document.documentElement.setAttribute('data-theme',t);document.documentElement.setAttribute('data-resolved',r);}catch(e){}</script>
 <link rel="stylesheet" href="/style.css">
 <link rel="icon" type="image/svg+xml" href="/image/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 <script src='/js/tags.js' defer></script>
 <script src='/js/nav.js' defer></script>
@@ -19,7 +20,6 @@
 <script src='/js/math-reading.js' defer></script>
 <script src='/js/toc.js' defer></script>
 <script src='/js/theme.js' defer></script>
-<link rel="stylesheet" href="/htmlize.css" type="text/css">
 </head>
 <body>
 <div id="preamble" class="status">
@@ -75,37 +75,37 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org0b661ee">1. Foundations</a></li>
-<li><a href="#orgb5851c4">2. Proof Strategies</a>
+<li><a href="#orgac22545">1. Foundations</a></li>
+<li><a href="#org3430f71">2. Proof Strategies</a>
 <ul>
-<li><a href="#org13c8470">2.1. Boundedness</a></li>
-<li><a href="#org5918a27">2.2. Unboundedness</a></li>
-<li><a href="#orgf63ed1b">2.3. Identifying a Supremum or Infimum</a></li>
-<li><a href="#org949a93e">2.4. Ruling Out a Candidate Supremum or Infimum</a></li>
-<li><a href="#orga3770d8">2.5. Using Known Suprema and Infima</a></li>
-<li><a href="#org5f8117a">2.6. Summary</a></li>
+<li><a href="#org70c0643">2.1. Boundedness</a></li>
+<li><a href="#org897c46a">2.2. Unboundedness</a></li>
+<li><a href="#orgb276441">2.3. Identifying a Supremum or Infimum</a></li>
+<li><a href="#orga5791ee">2.4. Ruling Out a Candidate Supremum or Infimum</a></li>
+<li><a href="#org118a515">2.5. Using Known Suprema and Infima</a></li>
+<li><a href="#org926f839">2.6. Summary</a></li>
 </ul>
 </li>
-<li><a href="#orgd912c90">3. Finding Suitable Choices</a>
+<li><a href="#org4e8050a">3. Finding Suitable Choices</a>
 <ul>
-<li><a href="#orgf00ad96">3.1. Bounding Expressions</a></li>
-<li><a href="#org3d119b1">3.2. Auxiliary Constraints</a></li>
-<li><a href="#org1a3b31f">3.3. Choosing a Solution</a></li>
+<li><a href="#org660c330">3.1. Bounding Expressions</a></li>
+<li><a href="#orge6bb6c4">3.2. Auxiliary Constraints</a></li>
+<li><a href="#org742d7f5">3.3. Choosing a Solution</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org0b661ee" class="outline-2">
-<h2 id="org0b661ee"><span class="section-number-2">1.</span> Foundations</h2>
+<div id="outline-container-orgac22545" class="outline-2">
+<h2 id="orgac22545"><span class="section-number-2">1.</span> Foundations</h2>
 <div class="outline-text-2" id="text-1">
 <div class="math-prose"><p>
 Let us begin with a brief review of the definitions.
 </p>
 
 </div>
-<section class="math-env math-definition" id="orga699ff5" aria-labelledby="orga699ff5-heading">
-<div class="math-heading" id="orga699ff5-heading">Definition 1 <span class="math-name">— Boundedness</span></div>
+<section class="math-env math-definition" id="org48f668c" aria-labelledby="org48f668c-heading">
+<div class="math-heading" id="org48f668c-heading">Definition 1 <span class="math-name">— Boundedness</span></div>
 <p>
 Let \(A \subseteq \mathbb{R}\). We say that \(A\) is <i>bounded above</i> if there exists \(M \in \mathbb{R}\) such that \(a \leq M\) for every \(a \in A\). Any such \(M\) is called an <i>upper bound</i> of \(A\).
 </p>
@@ -131,8 +131,8 @@ In particular, the empty set is bounded: every real number is both an upper boun
 </p>
 
 </div>
-<section class="math-env math-definition" id="org2f50249" aria-labelledby="org2f50249-heading">
-<div class="math-heading" id="org2f50249-heading">Definition 2 <span class="math-name">— Supremum and infimum</span></div>
+<section class="math-env math-definition" id="org81c2539" aria-labelledby="org81c2539-heading">
+<div class="math-heading" id="org81c2539-heading">Definition 2 <span class="math-name">— Supremum and infimum</span></div>
 <p>
 Let \(A \subseteq \mathbb{R}\). A real number \(s\) is the <i>supremum</i> (or <i>least upper bound</i>) of \(A\), written \(s = \sup A\), if:
 </p>
@@ -171,8 +171,8 @@ These conventions agree with taking the least upper bound and greatest lower bou
 </p>
 
 </div>
-<section class="math-env math-axiom" id="orgb902384" aria-labelledby="orgb902384-heading">
-<div class="math-heading" id="orgb902384-heading">Axiom 3 <span class="math-name">— Completeness of the real numbers</span></div>
+<section class="math-env math-axiom" id="orga009873" aria-labelledby="orga009873-heading">
+<div class="math-heading" id="orga009873-heading">Axiom 3 <span class="math-name">— Completeness of the real numbers</span></div>
 <p>
 Every nonempty subset of \(\mathbb{R}\) that is bounded above has a supremum in \(\mathbb{R}\).
 </p>
@@ -187,15 +187,15 @@ The second statement follows from the first by applying it to \(-A = \{-a : a \i
 </p>
 
 </div>
-<section class="math-env math-theorem" id="org6da50b1" aria-labelledby="org6da50b1-heading">
-<div class="math-heading" id="org6da50b1-heading">Theorem 4 <span class="math-name">— Archimedean property</span></div>
+<section class="math-env math-theorem" id="orgf81b9c7" aria-labelledby="orgf81b9c7-heading">
+<div class="math-heading" id="orgf81b9c7-heading">Theorem 4 <span class="math-name">— Archimedean property</span></div>
 <p>
 For every \(x \in \mathbb{R}\), there exists a positive integer \(n\) such that \(x \lt  n\). In other words, the positive integers are not bounded above in \(\mathbb{R}\).
 </p>
 </section>
 
-<section class="math-env math-lemma" id="orgb2a6ccc" aria-labelledby="orgb2a6ccc-heading">
-<div class="math-heading" id="orgb2a6ccc-heading">Lemma 5 <span class="math-name">— Integer bracketing</span></div>
+<section class="math-env math-lemma" id="orgd34ab93" aria-labelledby="orgd34ab93-heading">
+<div class="math-heading" id="orgd34ab93-heading">Lemma 5 <span class="math-name">— Integer bracketing</span></div>
 <p>
 For every \(x \in \mathbb{R}\), there exists an integer \(n \in \mathbb{Z}\) such that
 </p>
@@ -214,8 +214,8 @@ We will not go into further proofs or explanations here; for details, see the <a
 </div>
 </div>
 </div>
-<div id="outline-container-orgb5851c4" class="outline-2">
-<h2 id="orgb5851c4"><span class="section-number-2">2.</span> Proof Strategies</h2>
+<div id="outline-container-org3430f71" class="outline-2">
+<h2 id="org3430f71"><span class="section-number-2">2.</span> Proof Strategies</h2>
 <div class="outline-text-2" id="text-2">
 <div class="math-prose"><p>
 We now examine in detail how to prove the various properties introduced above.
@@ -223,16 +223,16 @@ We now examine in detail how to prove the various properties introduced above.
 
 </div>
 </div>
-<div id="outline-container-org13c8470" class="outline-3">
-<h3 id="org13c8470"><span class="section-number-3">2.1.</span> Boundedness</h3>
+<div id="outline-container-org70c0643" class="outline-3">
+<h3 id="org70c0643"><span class="section-number-3">2.1.</span> Boundedness</h3>
 <div class="outline-text-3" id="text-2-1">
 <div class="math-prose"><p>
 To prove boundedness, we find fixed real bounds that work for every element of the set.
 </p>
 
 </div>
-<section class="math-env math-remark" id="org60035f9" aria-labelledby="org60035f9-heading">
-<div class="math-heading" id="org60035f9-heading">Remark 6</div>
+<section class="math-env math-remark" id="orgd316489" aria-labelledby="orgd316489-heading">
+<div class="math-heading" id="orgd316489-heading">Remark 6</div>
 <p>
 Let \(A\subseteq\mathbb{R}\). Then
 </p>
@@ -253,16 +253,16 @@ The bounds may depend on the set and its fixed parameters, but must not depend o
 </div>
 </div>
 </div>
-<div id="outline-container-org5918a27" class="outline-3">
-<h3 id="org5918a27"><span class="section-number-3">2.2.</span> Unboundedness</h3>
+<div id="outline-container-org897c46a" class="outline-3">
+<h3 id="org897c46a"><span class="section-number-3">2.2.</span> Unboundedness</h3>
 <div class="outline-text-3" id="text-2-2">
 <div class="math-prose"><p>
 First, negating the definitions of boundedness above and below gives the following characterizations.
 </p>
 
 </div>
-<section class="math-env math-remark" id="orgee651d8" aria-labelledby="orgee651d8-heading">
-<div class="math-heading" id="orgee651d8-heading">Remark 7</div>
+<section class="math-env math-remark" id="orga83fc8e" aria-labelledby="orga83fc8e-heading">
+<div class="math-heading" id="orga83fc8e-heading">Remark 7</div>
 <p>
 Let \(A \subseteq \mathbb{R}\). Then
 </p>
@@ -294,15 +294,15 @@ Let us illustrate this with a simple example.
 </p>
 
 </div>
-<section class="math-env math-examp" id="org034155e" aria-labelledby="org034155e-heading">
-<div class="math-heading" id="org034155e-heading">Example 8 <span class="math-name">— The real line is unbounded</span></div>
+<section class="math-env math-examp" id="org4b103b8" aria-labelledby="org4b103b8-heading">
+<div class="math-heading" id="org4b103b8-heading">Example 8 <span class="math-name">— The real line is unbounded</span></div>
 <p>
 The set \(A = \{x \mid x \in \mathbb{R}\} = \mathbb{R}\) is unbounded both above and below.
 </p>
 </section>
 
-<section class="math-env math-proof" id="orgf228ef2" aria-labelledby="orgf228ef2-heading">
-<div class="math-heading" id="orgf228ef2-heading">Proof.</div>
+<section class="math-env math-proof" id="orge26d6fe" aria-labelledby="orge26d6fe-heading">
+<div class="math-heading" id="orge26d6fe-heading">Proof.</div>
 <p>
 Given any \(M \in \mathbb{R}\), choose \(a = M + 1\). Then \(a \in A\) and \(a > M\), so \(A\) is unbounded above.
 </p>
@@ -315,16 +315,16 @@ Similarly, given any \(m \in \mathbb{R}\), choose \(a = m - 1\). Then \(a \in A\
 
 </div>
 </div>
-<div id="outline-container-orgf63ed1b" class="outline-3">
-<h3 id="orgf63ed1b"><span class="section-number-3">2.3.</span> Identifying a Supremum or Infimum</h3>
+<div id="outline-container-orgb276441" class="outline-3">
+<h3 id="orgb276441"><span class="section-number-3">2.3.</span> Identifying a Supremum or Infimum</h3>
 <div class="outline-text-3" id="text-2-3">
 <div class="math-prose"><p>
 To prove that a real number \(s\) is the supremum of \(A\), we must show that it is an upper bound and that it is the least upper bound. For the second part, we show that every number strictly smaller than \(s\), written as \(s - \varepsilon\) with \(\varepsilon > 0\), fails to be an upper bound.
 </p>
 
 </div>
-<section class="math-env math-remark" id="org5809cd8" aria-labelledby="org5809cd8-heading">
-<div class="math-heading" id="org5809cd8-heading">Remark 9</div>
+<section class="math-env math-remark" id="orgbda1551" aria-labelledby="orgbda1551-heading">
+<div class="math-heading" id="orgbda1551-heading">Remark 9</div>
 <p>
 Let \(A \subseteq \mathbb{R}\) and \(s,t \in \mathbb{R}\). Then \(s = \sup A\) if and only if both of the following hold:
 </p>
@@ -366,8 +366,8 @@ For a supremum, the chosen element must satisfy \(s - \varepsilon \lt  a \leq s\
 </p>
 
 </div>
-<section class="math-env math-examp" id="org4a22114" aria-labelledby="org4a22114-heading">
-<div class="math-heading" id="org4a22114-heading">Example 10 <span class="math-name">— A supremum that is not attained</span></div>
+<section class="math-env math-examp" id="org0afb07b" aria-labelledby="org0afb07b-heading">
+<div class="math-heading" id="org0afb07b-heading">Example 10 <span class="math-name">— A supremum that is not attained</span></div>
 <p>
 Let
 </p>
@@ -383,8 +383,8 @@ where \(\mathbb{R}_{+} = (0,\infty)\). Then \(\sup A = 1\).
 </p>
 </section>
 
-<section class="math-env math-proof" id="org1645bf5" aria-labelledby="org1645bf5-heading">
-<div class="math-heading" id="org1645bf5-heading">Proof.</div>
+<section class="math-env math-proof" id="org84e7008" aria-labelledby="org84e7008-heading">
+<div class="math-heading" id="org84e7008-heading">Proof.</div>
 <p>
 First, for every \(x > 0\), we have \(1/x > 0\), so \(1 - 1/x \lt  1\). Thus every \(a \in A\) satisfies \(a \leq 1\), and \(1\) is an upper bound of \(A\).
 </p>
@@ -425,8 +425,8 @@ There is also a simpler way to identify a supremum when the proposed upper bound
 </p>
 
 </div>
-<section class="math-env math-theorem" id="orgacc9bc4" aria-labelledby="orgacc9bc4-heading">
-<div class="math-heading" id="orgacc9bc4-heading">Theorem 11 <span class="math-name">— Attained bounds are suprema and infima</span></div>
+<section class="math-env math-theorem" id="org3d6492e" aria-labelledby="org3d6492e-heading">
+<div class="math-heading" id="org3d6492e-heading">Theorem 11 <span class="math-name">— Attained bounds are suprema and infima</span></div>
 <p>
 Let \(A \subseteq \mathbb{R}\) and \(s,t \in \mathbb{R}\). If \(s\) is an upper bound of \(A\) and \(s \in A\), then \(\sup A = s\).
 </p>
@@ -443,16 +443,16 @@ The converse does not hold: \(s = \sup A\) does not imply that \(s \in A\). In t
 </div>
 </div>
 </div>
-<div id="outline-container-org949a93e" class="outline-3">
-<h3 id="org949a93e"><span class="section-number-3">2.4.</span> Ruling Out a Candidate Supremum or Infimum</h3>
+<div id="outline-container-orga5791ee" class="outline-3">
+<h3 id="orga5791ee"><span class="section-number-3">2.4.</span> Ruling Out a Candidate Supremum or Infimum</h3>
 <div class="outline-text-3" id="text-2-4">
 <div class="math-prose"><p>
 Taking the contrapositives of the necessary conditions in Section 2.3 gives two ways to rule out a proposed supremum or infimum. It is enough for either condition to fail.
 </p>
 
 </div>
-<section class="math-env math-remark" id="org3a4b1f5" aria-labelledby="org3a4b1f5-heading">
-<div class="math-heading" id="org3a4b1f5-heading">Remark 12</div>
+<section class="math-env math-remark" id="orgc4f492b" aria-labelledby="orgc4f492b-heading">
+<div class="math-heading" id="orgc4f492b-heading">Remark 12</div>
 <p>
 Let \(A \subseteq \mathbb{R}\) and let \(s,t \in \mathbb{R}\) be arbitrary. Then \(s\) is not the supremum of \(A\) if either of the following holds:
 </p>
@@ -503,8 +503,8 @@ The dependence has now changed. In Section 2.3, we were given an arbitrary \(\va
 </p>
 
 </div>
-<section class="math-env math-examp" id="org6ee398e" aria-labelledby="org6ee398e-heading">
-<div class="math-heading" id="org6ee398e-heading">Example 13 <span class="math-name">— Constructing a cube root using completeness</span></div>
+<section class="math-env math-examp" id="orgb90d89f" aria-labelledby="orgb90d89f-heading">
+<div class="math-heading" id="orgb90d89f-heading">Example 13 <span class="math-name">— Constructing a cube root using completeness</span></div>
 <p>
 Let
 </p>
@@ -520,8 +520,8 @@ Then \(s = \sup A\) exists and satisfies \(s^3 = 2\).
 </p>
 </section>
 
-<section class="math-env math-proof" id="orgd3f8bb6" aria-labelledby="orgd3f8bb6-heading">
-<div class="math-heading" id="orgd3f8bb6-heading">Proof.</div>
+<section class="math-env math-proof" id="org793a1fe" aria-labelledby="org793a1fe-heading">
+<div class="math-heading" id="org793a1fe-heading">Proof.</div>
 <p>
 Since \(1 \in A\) and \(2\) is an upper bound of \(A\), completeness gives \(s = \sup A \in \mathbb{R}\). Moreover, \(1 \leq s \leq 2\), so \(s > 0\).
 </p>
@@ -595,11 +595,11 @@ For now, we have simply stated suitable choices of \(\varepsilon_1\) and \(\vare
 </div>
 </div>
 </div>
-<div id="outline-container-orga3770d8" class="outline-3">
-<h3 id="orga3770d8"><span class="section-number-3">2.5.</span> Using Known Suprema and Infima</h3>
+<div id="outline-container-org118a515" class="outline-3">
+<h3 id="org118a515"><span class="section-number-3">2.5.</span> Using Known Suprema and Infima</h3>
 <div class="outline-text-3" id="text-2-5">
-<section class="math-env math-corollary" id="org14faf37" aria-labelledby="org14faf37-heading">
-<div class="math-heading" id="org14faf37-heading">Corollary 14 <span class="math-name">— Approximating suprema and infima by elements of the set</span></div>
+<section class="math-env math-corollary" id="org0ff5984" aria-labelledby="org0ff5984-heading">
+<div class="math-heading" id="org0ff5984-heading">Corollary 14 <span class="math-name">— Approximating suprema and infima by elements of the set</span></div>
 <p>
 Let \(A \subseteq \mathbb{R}\) and \(s,t \in \mathbb{R}\).
 </p>
@@ -641,8 +641,8 @@ Once we know that \(s = \sup A\) or \(t = \inf A\), we can use the corresponding
 </p>
 
 </div>
-<section class="math-env math-examp" id="org6978544" aria-labelledby="org6978544-heading">
-<div class="math-heading" id="org6978544-heading">Example 15 <span class="math-name">— The supremum of a reciprocal set</span></div>
+<section class="math-env math-examp" id="orgded3637" aria-labelledby="orgded3637-heading">
+<div class="math-heading" id="orgded3637-heading">Example 15 <span class="math-name">— The supremum of a reciprocal set</span></div>
 <p>
 Let \(\varnothing \neq A \subseteq \mathbb{R}_{+}\) and define
 </p>
@@ -658,8 +658,8 @@ If \(t = \inf A\) and \(t \neq 0\), then \(\sup B = 1/t\).
 </p>
 </section>
 
-<section class="math-env math-proof" id="org30a6b0a" aria-labelledby="org30a6b0a-heading">
-<div class="math-heading" id="org30a6b0a-heading">Proof.</div>
+<section class="math-env math-proof" id="org4c381d4" aria-labelledby="org4c381d4-heading">
+<div class="math-heading" id="org4c381d4-heading">Proof.</div>
 <p>
 Since \(A \subseteq (0,\infty)\), we have \(t \geq 0\). Together with \(t \neq 0\), this gives \(t > 0\).
 </p>
@@ -700,8 +700,8 @@ Therefore \(1/t - \varepsilon \lt  1/a \leq 1/t\), with \(1/a \in B\). Hence \(1
 
 </div>
 </div>
-<div id="outline-container-org5f8117a" class="outline-3">
-<h3 id="org5f8117a"><span class="section-number-3">2.6.</span> Summary</h3>
+<div id="outline-container-org926f839" class="outline-3">
+<h3 id="org926f839"><span class="section-number-3">2.6.</span> Summary</h3>
 <div class="outline-text-3" id="text-2-6">
 <div class="math-prose"><p>
 The following table summarizes the logical goals and the order in which we choose the quantities involved. In the last two rows, the supremum or infimum is already known, so the displayed statement is available for use in a proof.
@@ -727,67 +727,67 @@ The following table summarizes the logical goals and the order in which we choos
 </thead>
 <tbody>
 <tr>
-<td class="org-left"><a class="math-ref" href="#org60035f9">Bounded above</a></td>
+<td class="org-left"><a class="math-ref" href="#orgd316489">Bounded above</a></td>
 <td class="org-left">\(\exists M\in\mathbb{R}\;\forall a\in A,\;a\leq M\)</td>
 <td class="org-left">Choose a fixed \(M\) independent of \(a\), then verify the inequality for every \(a\in A\).</td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org60035f9">Bounded below</a></td>
+<td class="org-left"><a class="math-ref" href="#orgd316489">Bounded below</a></td>
 <td class="org-left">\(\exists m\in\mathbb{R}\;\forall a\in A,\;m\leq a\)</td>
 <td class="org-left">Choose a fixed \(m\) independent of \(a\), then verify the inequality for every \(a\in A\).</td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org60035f9">Bounded</a></td>
+<td class="org-left"><a class="math-ref" href="#orgd316489">Bounded</a></td>
 <td class="org-left">\(\exists m,M\in\mathbb{R}\;\forall a\in A,\;m\leq a\leq M\)</td>
 <td class="org-left">Choose fixed bounds \(m,M\) independent of \(a\), then verify both inequalities for every \(a\in A\).</td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#orgee651d8">Unbounded above</a></td>
+<td class="org-left"><a class="math-ref" href="#orga83fc8e">Unbounded above</a></td>
 <td class="org-left">\(\forall M \in \mathbb{R}\; \exists a \in A,\; a > M\)</td>
 <td class="org-left">Given \(M\), choose \(a\) in terms of \(M\).</td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#orgee651d8">Unbounded below</a></td>
+<td class="org-left"><a class="math-ref" href="#orga83fc8e">Unbounded below</a></td>
 <td class="org-left">\(\forall m \in \mathbb{R}\; \exists a \in A,\; a \lt  m\)</td>
 <td class="org-left">Given \(m\), choose \(a\) in terms of \(m\).</td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org5809cd8">Proving a supremum</a></td>
+<td class="org-left"><a class="math-ref" href="#orgbda1551">Proving a supremum</a></td>
 <td class="org-left">\((\forall a \in A,\; a \leq s) \land (\forall \varepsilon > 0\; \exists a \in A,\; s-\varepsilon \lt  a)\)</td>
 <td class="org-left">Fix \(s\). Check the bound for arbitrary \(a\); then, given \(\varepsilon\), choose \(a\) in terms of \(\varepsilon\) and \(s\).</td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org5809cd8">Proving an infimum</a></td>
+<td class="org-left"><a class="math-ref" href="#orgbda1551">Proving an infimum</a></td>
 <td class="org-left">\((\forall a \in A,\; t \leq a) \land (\forall \varepsilon > 0\; \exists a \in A,\; a \lt  t+\varepsilon)\)</td>
 <td class="org-left">Fix \(t\). Check the bound for arbitrary \(a\); then, given \(\varepsilon\), choose \(a\) in terms of \(\varepsilon\) and \(t\).</td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org3a4b1f5">Disproving a supremum</a></td>
+<td class="org-left"><a class="math-ref" href="#orgc4f492b">Disproving a supremum</a></td>
 <td class="org-left">\((\exists \varepsilon > 0,\; s+\varepsilon \in A) \lor (\exists \varepsilon > 0\; \forall a \in A,\; a \leq s-\varepsilon)\)</td>
 <td class="org-left">Fix \(s\) and choose a suitable \(\varepsilon\) in terms of \(s\). In the second alternative, the same \(\varepsilon\) must work for every \(a\).</td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org3a4b1f5">Disproving an infimum</a></td>
+<td class="org-left"><a class="math-ref" href="#orgc4f492b">Disproving an infimum</a></td>
 <td class="org-left">\((\exists \varepsilon > 0,\; t-\varepsilon \in A) \lor (\exists \varepsilon > 0\; \forall a \in A,\; t+\varepsilon \leq a)\)</td>
 <td class="org-left">Fix \(t\) and choose a suitable \(\varepsilon\) in terms of \(t\). In the second alternative, the same \(\varepsilon\) must work for every \(a\).</td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org14faf37">Using a known supremum</a></td>
+<td class="org-left"><a class="math-ref" href="#org0ff5984">Using a known supremum</a></td>
 <td class="org-left">\(s=\sup A \implies \forall \varepsilon > 0\; \exists x \in A,\; s-\varepsilon \lt  x \leq s\)</td>
 <td class="org-left">Choose a positive tolerance \(\varepsilon\); the corollary supplies \(x\) depending on it.</td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org14faf37">Using a known infimum</a></td>
+<td class="org-left"><a class="math-ref" href="#org0ff5984">Using a known infimum</a></td>
 <td class="org-left">\(t=\inf A \implies \forall \varepsilon > 0\; \exists x \in A,\; t \leq x \lt  t+\varepsilon\)</td>
 <td class="org-left">Choose a positive tolerance \(\varepsilon\); the corollary supplies \(x\) depending on it.</td>
 </tr>
@@ -798,8 +798,8 @@ The following table summarizes the logical goals and the order in which we choos
 </div>
 </div>
 </div>
-<div id="outline-container-orgd912c90" class="outline-2">
-<h2 id="orgd912c90"><span class="section-number-2">3.</span> Finding Suitable Choices</h2>
+<div id="outline-container-org4e8050a" class="outline-2">
+<h2 id="org4e8050a"><span class="section-number-2">3.</span> Finding Suitable Choices</h2>
 <div class="outline-text-2" id="text-3">
 <div class="math-prose"><p>
 We now systematically collect some useful techniques for solving the inequalities that arise in these proofs.
@@ -807,8 +807,8 @@ We now systematically collect some useful techniques for solving the inequalitie
 
 </div>
 </div>
-<div id="outline-container-orgf00ad96" class="outline-3">
-<h3 id="orgf00ad96"><span class="section-number-3">3.1.</span> Bounding Expressions</h3>
+<div id="outline-container-org660c330" class="outline-3">
+<h3 id="org660c330"><span class="section-number-3">3.1.</span> Bounding Expressions</h3>
 <div class="outline-text-3" id="text-3-1">
 <div class="math-prose"><p>
 Our goal is to find a choice that satisfies the required inequality, rather than to determine every possible solution. We can therefore replace the original inequality with a stronger, simpler condition: any solution of that condition will also solve the original problem. This is why estimates are useful even when they are not sharp.
@@ -855,7 +855,7 @@ A useful way to remember the direction is: <i>to prove it is large, make it smal
 
 </div>
 <div class="math-prose"><p>
-Let us return to <a class="math-ref" href="#org6ee398e">the cube-root example</a> and work backwards from the desired inequality. Suppose that \(s^3 > 2\). We want to choose \(\varepsilon > 0\) so that
+Let us return to <a class="math-ref" href="#orgb90d89f">the cube-root example</a> and work backwards from the desired inequality. Suppose that \(s^3 > 2\). We want to choose \(\varepsilon > 0\) so that
 </p>
 
 </div>
@@ -900,8 +900,8 @@ If even this larger expression lies below the gap, the original expression does 
 </div>
 </div>
 </div>
-<div id="outline-container-org3d119b1" class="outline-3">
-<h3 id="org3d119b1"><span class="section-number-3">3.2.</span> Auxiliary Constraints</h3>
+<div id="outline-container-orge6bb6c4" class="outline-3">
+<h3 id="orge6bb6c4"><span class="section-number-3">3.2.</span> Auxiliary Constraints</h3>
 <div class="outline-text-3" id="text-3-2">
 <div class="math-prose"><p>
 Returning to the inequality
@@ -1099,8 +1099,8 @@ The following table collects some common auxiliary constraints. Throughout, we a
 </div>
 </div>
 </div>
-<div id="outline-container-org1a3b31f" class="outline-3">
-<h3 id="org1a3b31f"><span class="section-number-3">3.3.</span> Choosing a Solution</h3>
+<div id="outline-container-org742d7f5" class="outline-3">
+<h3 id="org742d7f5"><span class="section-number-3">3.3.</span> Choosing a Solution</h3>
 <div class="outline-text-3" id="text-3-3">
 <div class="math-prose"><p>
 Once we have listed all the constraints, how do we choose a value satisfying them simultaneously? For finitely many real bounds \(a_1,\ldots,a_n\) and \(b_1,\ldots,b_n\), where \(n\) is a positive integer, maxima and minima provide explicit choices.
@@ -1157,7 +1157,7 @@ Some constraints specify the set to which a chosen value must belong. Let \(x\in
 
 </div>
 <div class="math-prose"><p>
-For integer constraints, <a class="math-ref" href="#orgb2a6ccc">the integer-bracketing lemma</a> gives an integer \(k\) with \(k-1\leq x\lt k\). Thus \(k\) lies strictly above \(x\), while \(k-2\) lies strictly below it. For positive integers above \(x\), we can instead apply <a class="math-ref" href="#org6da50b1">the Archimedean property</a> directly.
+For integer constraints, <a class="math-ref" href="#orgd34ab93">the integer-bracketing lemma</a> gives an integer \(k\) with \(k-1\leq x\lt k\). Thus \(k\) lies strictly above \(x\), while \(k-2\) lies strictly below it. For positive integers above \(x\), we can instead apply <a class="math-ref" href="#orgf81b9c7">the Archimedean property</a> directly.
 </p>
 
 </div>
