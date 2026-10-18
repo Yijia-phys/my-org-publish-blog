@@ -163,6 +163,8 @@ a.math-ref { color: var(--primary); text-underline-offset: .18em; }
     --tag-bg:         #eef1fb;
     --button-border:  #ddd;
     --tint:           #eceef9;
+    --table-body-bg:  #f8f9fd;
+    --table-even-bg:  #eef0f8;
 }
 
 /* ---- Base ---- */
@@ -516,20 +518,57 @@ pre.src::before {
     display: block;
     max-width: 100%;
     overflow-x: auto;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 0;
     margin: 1.5rem 0;
 }
 
 #content th,
 #content td {
-    padding: .5rem .8rem;
+    padding: .65rem .9rem;
+    border: 0;
     border-bottom: 1px solid var(--hairline);
+    background: var(--table-body-bg);
     text-align: left;
+    vertical-align: top;
 }
 
 #content th {
+    background: var(--nav-bg);
+    color: var(--nav-text);
     font-weight: 600;
 }
+
+#content td:nth-child(even) {
+    background: var(--table-even-bg);
+}
+
+#content th:nth-child(even) {
+    background: color-mix(in srgb, var(--nav-bg), black 7%);
+}
+
+#content thead th {
+    border-bottom: 0;
+}
+
+#content thead tr:first-child > :first-child { border-top-left-radius: 6px; }
+#content thead tr:first-child > :last-child { border-top-right-radius: 6px; }
+#content table:not(:has(thead)) tbody:first-of-type tr:first-child > :first-child { border-top-left-radius: 6px; }
+#content table:not(:has(thead)) tbody:first-of-type tr:first-child > :last-child { border-top-right-radius: 6px; }
+#content tbody:last-child tr:last-child > :first-child { border-bottom-left-radius: 6px; }
+#content tbody:last-child tr:last-child > :last-child { border-bottom-right-radius: 6px; }
+
+#content table caption {
+    padding: 0 0 .65rem;
+    color: var(--muted);
+    font-size: .9em;
+    text-align: left;
+    line-height: 1.5;
+}
+
+#content table .org-right { text-align: right; }
+#content table .org-center { text-align: center; }
 
 
 /* ==============================
@@ -1022,6 +1061,8 @@ html {
   --tag-bg:       #2a2f40;
   --button-border: #3a4050;
   --tint:         #262b3a;
+  --table-body-bg: #20232d;
+  --table-even-bg: #1b1e27;
 }
 
 /* Code highlight (htmlize classes) in dark mode */
@@ -1358,7 +1399,11 @@ html {
   }
 
   #content th,
-  #content td {
+  #content td,
+  #content th:nth-child(even),
+  #content td:nth-child(even) {
+    background: #ffffff;
+    color: #111111;
     border-bottom-color: #cccccc;
   }
 
