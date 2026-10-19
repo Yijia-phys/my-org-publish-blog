@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2026-10-19 Mon 09:29 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>JavaScript on this site</title>
+<meta name="author" content="Yijia Zhao" />
+<meta name="description" content="The JavaScript used on this site, its size, and what changes when it is disabled." />
+<meta name="generator" content="Org Mode" />
+<script>try{var t=localStorage.getItem('theme');if(['system','light','dark'].indexOf(t)<0)t='system';var r=t==='system'?(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;document.documentElement.setAttribute('data-theme',t);document.documentElement.setAttribute('data-resolved',r);}catch(e){}</script>
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" type="image/svg+xml" href="/image/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+<script src='/js/tags.js' defer></script>
+<script src='/js/nav.js' defer></script>
+<script src='/js/search.js' defer></script>
+<script src='/js/math-reading.js' defer></script>
+<script src='/js/toc.js' defer></script>
+<script src='/js/theme.js' defer></script>
+</head>
+<body>
+<div id="preamble" class="status">
+<nav>
+          <a href='#' class='nav-menu-btn' role='button' aria-label='Menu' aria-expanded='false' aria-controls='site-drawer'>
+            <svg width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' aria-hidden='true'>
+              <line x1='3.5' y1='6' x2='20.5' y2='6'/>
+              <line x1='3.5' y1='12' x2='20.5' y2='12'/>
+              <line x1='3.5' y1='18' x2='20.5' y2='18'/>
+            </svg>
+          </a>
+          <a href='/index.html' title='Home' class='nav-brand'>
+            <svg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor'>
+              <path d='M3 10.5 12 3l9 7.5'/>
+              <path d='M5 9.5V21h14V9.5'/>
+            </svg>
+          </a>
+          <a href='/posts.html' class='nav-desktop'>Posts</a>
+          <a href='/notes.html' class='nav-desktop'>Notes</a>
+          <!-- <a href='/cv.html' class='nav-desktop'>CV</a> -->
+          <a href='/about-site.html' class='nav-desktop'>About</a>
+          <a href='#' class='theme-toggle' title='Theme: system / light / dark' aria-label='Toggle color theme'>
+            <svg width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'>
+              <circle cx='12' cy='12' r='6'/>
+              <path d='M12 2.5v2M12 19.5v2M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M2.5 12h2M19.5 12h2M6.1 17.9l-1.5 1.5M19.4 4.6l-1.5 1.5'/>
+            </svg>
+          </a>
+          <a href='#' class='nav-search' aria-label='Search' title='Search'>
+            <svg width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
+              <circle cx='11' cy='11' r='7'/>
+              <line x1='16.5' y1='16.5' x2='21' y2='21'/>
+            </svg>
+          </a>
+          <a href='https://github.com/Yijia-phys/my-org-publish-blog' target='_blank' rel='noopener' class='nav-github'>
+            <svg width='20' height='20' viewBox='0 0 24 24' fill='currentColor' aria-hidden='true'>
+              <path d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/>
+           </svg>
+          </a>
+       </nav>
+       <nav id='site-drawer' class='site-drawer' aria-label='Site menu'>
+         <a href='/index.html'>Home</a>
+         <a href='/posts.html'>Posts</a>
+         <a href='/notes.html'>Notes</a>
+         <!-- <a href='/cv.html'>CV</a> -->
+         <a href='/about-site.html'>About</a>
+         <a href='https://github.com/Yijia-phys/my-org-publish-blog' target='_blank' rel='noopener'>GitHub</a>
+       </nav>
+       <div id='drawer-backdrop' class='drawer-backdrop'></div>
+</div>
+<div id="content" class="content">
+<h1 class="title">JavaScript on this site</h1>
+<div id="outline-container-orgcae1abd" class="outline-2">
+<h2 id="orgcae1abd">Third-party JavaScript</h2>
+<div class="outline-text-2" id="text-orgcae1abd">
+<p>
+The libraries below are hosted on this site. Sizes refer to the JavaScript files before transfer compression (1 KiB = 1,024 bytes); stylesheets, fonts, and search index data are not included.
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Script</th>
+<th scope="col" class="org-left">Size</th>
+<th scope="col" class="org-left">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="file:///vendor/katex/katex.min.js">KaTeX (katex.min.js)</a></td>
+<td class="org-left">265.8 KiB</td>
+<td class="org-left">Renders mathematical notation at build time; not loaded by your browser.</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="file:///pagefind/pagefind-ui.js">Pagefind UI (pagefind-ui.js)</a></td>
+<td class="org-left">117.2 KiB</td>
+<td class="org-left">Provides the search box and results in the site search panel.</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="file:///pagefind/pagefind.js">Pagefind (pagefind.js)</a></td>
+<td class="org-left">44.5 KiB</td>
+<td class="org-left">Loads the search engine and index data to search the published pages.</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+KaTeX runs when the site is published, so mathematical expressions are already rendered in the pages you receive. Disabling JavaScript does not prevent you from reading formulas. Pages with mathematics still load KaTeX's stylesheet and fonts. The RSS feed uses native MathML; its display depends on your feed reader's support for MathML.
+</p>
+
+<p>
+Pagefind is loaded when you open the search panel, with further search resources loaded as needed. If JavaScript is disabled, you can use the Kagi search form below instead. Keep <code>site:yijialog.org</code> in the field and add your search terms after it.
+</p>
+
+<form class="external-search" action="https://kagi.com/search" method="get" role="search">
+  <label for="kagi-query">Search this site with Kagi</label>
+  <div class="external-search-controls">
+    <input id="kagi-query" name="q" type="search" value="site:yijialog.org " placeholder="Enter text to search" aria-describedby="kagi-hint" required>
+    <button type="submit">Search</button>
+  </div>
+  <small id="kagi-hint">Enter text after site:yijialog.org to search.</small>
+</form>
+</div>
+</div>
+<div id="outline-container-org0f7df4f" class="outline-2">
+<h2 id="org0f7df4f">Built-in JavaScript</h2>
+<div class="outline-text-2" id="text-org0f7df4f">
+<p>
+These small scripts provide the site's navigation and reading tools. Without JavaScript, article text, notes, tables, and ordinary links remain available, but these interactive features will not work. Mathematical notation also remains readable.
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Script</th>
+<th scope="col" class="org-left">Size</th>
+<th scope="col" class="org-left">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="file:///js/math-reading.js">math-reading.js</a></td>
+<td class="org-left">7.5 KiB</td>
+<td class="org-left">Controls content visibility, proof and example folding, and saved reading preferences.</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="file:///js/nav.js">nav.js</a></td>
+<td class="org-left">2.4 KiB</td>
+<td class="org-left">Controls the mobile navigation menu and marks the current navigation link.</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="file:///js/random-post.js">random-post.js</a></td>
+<td class="org-left">0.7 KiB</td>
+<td class="org-left">Opens a randomly selected blog post from the homepage.</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="file:///js/search.js">search.js</a></td>
+<td class="org-left">2.9 KiB</td>
+<td class="org-left">Opens the search panel and loads Pagefind when needed.</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="file:///js/tags.js">tags.js</a></td>
+<td class="org-left">1.9 KiB</td>
+<td class="org-left">Filters the post list by tag and keeps the selected tag in the URL.</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="file:///js/theme.js">theme.js</a></td>
+<td class="org-left">1.8 KiB</td>
+<td class="org-left">Switches between light, dark, and system themes and remembers the selection.</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="file:///js/toc.js">toc.js</a></td>
+<td class="org-left">3.6 KiB</td>
+<td class="org-left">Provides a floating table of contents and highlights the current section.</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+A small inline script also applies the saved theme before the page is displayed, helping to avoid a flash of the wrong theme.
+</p>
+
+<p>
+<a href="about-site.html">About this site →</a>
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
