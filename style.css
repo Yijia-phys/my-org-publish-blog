@@ -1096,10 +1096,10 @@ html {
   color: #e0b080;
 }
 
-/* KaTeX follows the text color in both themes */
+/* Inherit contextual colors, including table headers and both themes. */
 
 #content .katex {
-  color: var(--text);
+  color: inherit;
 }
 
 /* Wide display equations scroll horizontally instead of overflowing
