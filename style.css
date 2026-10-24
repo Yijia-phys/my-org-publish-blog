@@ -1177,7 +1177,7 @@ html {
    ============================== */
 
 /* Compact course rows on the overview; chapter headings stay unchanged. */
-#content .outline-4:has(> .outline-text-4 .notes-formats) {
+#content .outline-2:has(> .outline-text-2 .notes-formats) {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
@@ -1186,13 +1186,13 @@ html {
   border-bottom: 1px solid var(--hairline);
 }
 
-#content .outline-4:has(> .outline-text-4 .notes-formats) > h4,
-#content .outline-4 > .outline-text-4:has(.notes-formats) > p {
+#content .outline-2:has(> .outline-text-2 .notes-formats) > h2,
+#content .outline-2 > .outline-text-2:has(.notes-formats) > p {
   margin: 0;
 }
 
-#content .outline-4 .notes-formats > a,
-#content .outline-4 .notes-formats > span {
+#content .outline-2 .notes-formats > a,
+#content .outline-2 .notes-formats > span {
   display: inline-flex;
   align-items: center;
   min-height: 1.75rem;
@@ -1200,7 +1200,7 @@ html {
 }
 
 @media (max-width: 640px) {
-  #content .outline-4:has(> .outline-text-4 .notes-formats) {
+  #content .outline-2:has(> .outline-text-2 .notes-formats) {
     grid-template-columns: minmax(0, 1fr);
   }
 }

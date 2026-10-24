@@ -5,7 +5,7 @@
     <link>https://blog.yijialog.org/</link>
     <description>Physics, mathematics and philosophy notes.</description>
     <atom:link href="https://blog.yijialog.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 22 Oct 2026 17:59:44 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 21:01:49 +0100</lastBuildDate>
     <generator>org-publish</generator>
     <item>
       <title>Calculus with Laplace Transforms</title>
@@ -15,16 +15,16 @@
       <dc:creator>Yijia Zhao</dc:creator>
       <pubDate>Tue, 20 Oct 2026 00:00:00 +0100</pubDate>
       <description>A practical guide to using Laplace transforms to evaluate improper integrals and solve initial-value problems. Transform formulas and worked examples explain how to choose a method and justify its use.</description>
-      <content:encoded><![CDATA[<div id="outline-container-org5307e8d" class="outline-2">
-<h2 id="org5307e8d"><span class="section-number-2">1.</span> Foundations</h2>
+      <content:encoded><![CDATA[<div id="outline-container-orgd146273" class="outline-2">
+<h2 id="orgd146273"><span class="section-number-2">1.</span> Foundations</h2>
 <div class="outline-text-2" id="text-1">
 <div class="math-prose"><p>
 Let us begin with the definition of the one-sided Laplace transform.
 </p>
 
 </div>
-<section class="math-env math-definition" id="org669a5ef" aria-labelledby="org669a5ef-heading">
-<div class="math-heading" id="org669a5ef-heading">Definition 1 <span class="math-name">— One-sided Laplace transform</span></div>
+<section class="math-env math-definition" id="org7a845e1" aria-labelledby="org7a845e1-heading">
+<div class="math-heading" id="org7a845e1-heading">Definition 1 <span class="math-name">— One-sided Laplace transform</span></div>
 <p>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo><mo>→</mo><mi mathvariant="double-struck">C</mi></mrow><annotation encoding="application/x-tex">f:[0,\infty)\to\mathbb{C}</annotation></semantics></math>. The <i>one-sided Laplace transform</i> of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math> is
 </p>
@@ -50,8 +50,8 @@ Before listing the transform pairs, let us record the scaling and shifting rules
 </p>
 
 </div>
-<section class="math-env math-theorem" id="org06b9464" aria-labelledby="org06b9464-heading">
-<div class="math-heading" id="org06b9464-heading">Theorem 2 <span class="math-name">— Scaling</span></div>
+<section class="math-env math-theorem" id="orge44acc9" aria-labelledby="orge44acc9-heading">
+<div class="math-heading" id="orge44acc9-heading">Theorem 2 <span class="math-name">— Scaling</span></div>
 <p>
 For <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">c&gt;0</annotation></semantics></math>,
 </p>
@@ -63,8 +63,8 @@ For <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi>
 </p>
 </section>
 
-<section class="math-env math-proof" id="orgd0947ea" aria-labelledby="orgd0947ea-heading">
-<div class="math-heading" id="orgd0947ea-heading">Proof.</div>
+<section class="math-env math-proof" id="org0b58482" aria-labelledby="org0b58482-heading">
+<div class="math-heading" id="org0b58482-heading">Proof.</div>
 <p>
 Substitute <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><mi>c</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">u=cx</annotation></semantics></math>:
 </p>
@@ -79,8 +79,8 @@ Substitute <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi
 <span class="math-qed" aria-label="End of proof">□</span>
 </section>
 
-<section class="math-env math-theorem" id="org93de087" aria-labelledby="org93de087-heading">
-<div class="math-heading" id="org93de087-heading">Theorem 3 <span class="math-name">— Shifting the transform variable</span></div>
+<section class="math-env math-theorem" id="org93ffcf9" aria-labelledby="org93ffcf9-heading">
+<div class="math-heading" id="org93ffcf9-heading">Theorem 3 <span class="math-name">— Shifting the transform variable</span></div>
 <p>
 For <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">a\in\mathbb{R}</annotation></semantics></math>,
 </p>
@@ -92,8 +92,8 @@ For <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi>
 </p>
 </section>
 
-<section class="math-env math-proof" id="org285af52" aria-labelledby="org285af52-heading">
-<div class="math-heading" id="org285af52-heading">Proof.</div>
+<section class="math-env math-proof" id="orgdc140c4" aria-labelledby="orgdc140c4-heading">
+<div class="math-heading" id="orgdc140c4-heading">Proof.</div>
 <p>
 Combine the exponential factors:
 </p>
@@ -113,8 +113,8 @@ Shifting the original variable instead requires a delay. Write <math xmlns="http
 </p>
 
 </div>
-<section class="math-env math-theorem" id="org3896c96" aria-labelledby="org3896c96-heading">
-<div class="math-heading" id="org3896c96-heading">Theorem 4 <span class="math-name">— Shifting the original variable</span></div>
+<section class="math-env math-theorem" id="org9462ace" aria-labelledby="org9462ace-heading">
+<div class="math-heading" id="org9462ace-heading">Theorem 4 <span class="math-name">— Shifting the original variable</span></div>
 <p>
 For <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">c\geq0</annotation></semantics></math>,
 </p>
@@ -126,8 +126,8 @@ For <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi>
 </p>
 </section>
 
-<section class="math-env math-proof" id="orgde7276f" aria-labelledby="orgde7276f-heading">
-<div class="math-heading" id="orgde7276f-heading">Proof.</div>
+<section class="math-env math-proof" id="org90296a6" aria-labelledby="org90296a6-heading">
+<div class="math-heading" id="org90296a6-heading">Proof.</div>
 <p>
 Substitute <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><mi>x</mi><mo>−</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">u=x-c</annotation></semantics></math>:
 </p>
@@ -300,20 +300,20 @@ The last row is understood in the sense of distributions: <math xmlns="http://ww
 </div>
 </div>
 </div>
-<div id="outline-container-org14fb7da" class="outline-2">
-<h2 id="org14fb7da"><span class="section-number-2">2.</span> Applications</h2>
+<div id="outline-container-org4a84a4a" class="outline-2">
+<h2 id="org4a84a4a"><span class="section-number-2">2.</span> Applications</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orge9078b1" class="outline-3">
-<h3 id="orge9078b1"><span class="section-number-3">2.1.</span> Transforming a Parameter and Inverting</h3>
+<div id="outline-container-org55ce01a" class="outline-3">
+<h3 id="org55ce01a"><span class="section-number-3">2.1.</span> Transforming a Parameter and Inverting</h3>
 <div class="outline-text-3" id="text-2-1">
 <div class="math-prose"><p>
 The first method is to regard an integral as a function of a parameter, take its Laplace transform, and then recover the original function by identifying the inverse transform.
 </p>
 
 </div>
-<section class="math-env math-theorem" id="orgad93daf" aria-labelledby="orgad93daf-heading">
-<div class="math-heading" id="orgad93daf-heading">Theorem 5 <span class="math-name">— Uniqueness and inverse transformation</span></div>
+<section class="math-env math-theorem" id="org6ebd7b9" aria-labelledby="org6ebd7b9-heading">
+<div class="math-heading" id="org6ebd7b9-heading">Theorem 5 <span class="math-name">— Uniqueness and inverse transformation</span></div>
 <p>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo separator="true">,</mo><mi>g</mi><mo>:</mo><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo><mo>→</mo><mi mathvariant="double-struck">C</mi></mrow><annotation encoding="application/x-tex">f,g:[0,\infty)\to\mathbb{C}</annotation></semantics></math> be continuous functions of exponential order. If their Laplace transforms agree for all sufficiently large real <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math>, then <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x)=g(x)</annotation></semantics></math> for every <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x\geq0</annotation></semantics></math>.
 </p>
@@ -336,8 +336,8 @@ In practice, we often recover the function by matching its transform with an ent
 </p>
 
 </div>
-<section class="math-env math-examp" id="org6f96923" aria-labelledby="org6f96923-heading">
-<div class="math-heading" id="org6f96923-heading">Example 6 <span class="math-name">— A cosine integral with a quadratic denominator</span></div>
+<section class="math-env math-examp" id="orgc9ac28c" aria-labelledby="orgc9ac28c-heading">
+<div class="math-heading" id="orgc9ac28c-heading">Example 6 <span class="math-name">— A cosine integral with a quadratic denominator</span></div>
 <p>
 For <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a&gt;0</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">b\in\mathbb{R}</annotation></semantics></math>,
 </p>
@@ -367,8 +367,8 @@ More generally, a subscript on <math xmlns="http://www.w3.org/1998/Math/MathML">
 </p>
 
 </div>
-<section class="math-env math-proof" id="orga6e0482" aria-labelledby="orga6e0482-heading">
-<div class="math-heading" id="orga6e0482-heading">Proof.</div>
+<section class="math-env math-proof" id="org72fe089" aria-labelledby="org72fe089-heading">
+<div class="math-heading" id="org72fe089-heading">Proof.</div>
 <p>
 Fix <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a&gt;0</annotation></semantics></math> and, for <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b\geq0</annotation></semantics></math>, write
 </p>
@@ -442,16 +442,16 @@ Motivation: the parameter <math xmlns="http://www.w3.org/1998/Math/MathML"><sema
 </div>
 </div>
 </div>
-<div id="outline-container-orgff74681" class="outline-3">
-<h3 id="orgff74681"><span class="section-number-3">2.2.</span> Transferring a Transform Between Factors</h3>
+<div id="outline-container-org680e720" class="outline-3">
+<h3 id="org680e720"><span class="section-number-3">2.2.</span> Transferring a Transform Between Factors</h3>
 <div class="outline-text-3" id="text-2-2">
 <div class="math-prose"><p>
 The following identity lets us move a Laplace transform from one factor of an integral to the other.
 </p>
 
 </div>
-<section class="math-env math-theorem" id="org1678d0a" aria-labelledby="org1678d0a-heading">
-<div class="math-heading" id="org1678d0a-heading">Theorem 7 <span class="math-name">— An integral identity for Laplace transforms</span></div>
+<section class="math-env math-theorem" id="org22e56e2" aria-labelledby="org22e56e2-heading">
+<div class="math-heading" id="org22e56e2-heading">Theorem 7 <span class="math-name">— An integral identity for Laplace transforms</span></div>
 <p>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi mathvariant="script">L</mi><mo stretchy="false">{</mo><mi>f</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">F=\mathcal{L}\{f\}</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo>=</mo><mi mathvariant="script">L</mi><mo stretchy="false">{</mo><mi>g</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">G=\mathcal{L}\{g\}</annotation></semantics></math>, where <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math> are measurable and their transforms converge absolutely for every positive real argument. Suppose also that
 </p>
@@ -474,8 +474,8 @@ Then
 </p>
 </section>
 
-<section class="math-env math-proof" id="orgaf75b05" aria-labelledby="orgaf75b05-heading">
-<div class="math-heading" id="orgaf75b05-heading">Proof.</div>
+<section class="math-env math-proof" id="orgd35f254" aria-labelledby="orgd35f254-heading">
+<div class="math-heading" id="orgd35f254-heading">Proof.</div>
 <p>
 The absolute integrability assumption allows us to interchange the order of integration:
 </p>
@@ -504,8 +504,8 @@ The integration variables are dummy variables, so we can equally write this as
 </p>
 
 </div>
-<section class="math-env math-examp" id="org566e9be" aria-labelledby="org566e9be-heading">
-<div class="math-heading" id="org566e9be-heading">Example 8 <span class="math-name">— An integral involving one minus a cosine</span></div>
+<section class="math-env math-examp" id="org2827a1b" aria-labelledby="org2827a1b-heading">
+<div class="math-heading" id="org2827a1b-heading">Example 8 <span class="math-name">— An integral involving one minus a cosine</span></div>
 <p>
 For <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">a\in\mathbb{R}</annotation></semantics></math>,
 </p>
@@ -517,8 +517,8 @@ For <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi>
 </p>
 </section>
 
-<section class="math-env math-proof" id="org78b6f3e" aria-labelledby="org78b6f3e-heading">
-<div class="math-heading" id="org78b6f3e-heading">Proof.</div>
+<section class="math-env math-proof" id="org90c637b" aria-labelledby="org90c637b-heading">
+<div class="math-heading" id="org90c637b-heading">Proof.</div>
 <p>
 The case <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a=0</annotation></semantics></math> is immediate. For <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo mathvariant="normal">≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a\neq0</annotation></semantics></math>, choose
 </p>
@@ -541,7 +541,7 @@ F(s)=\frac1s-\frac{s}{s^2+a^2}
 </p>
 
 <p>
-The integral on the left converges: <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><mn>1</mn><mo>−</mo><mi>cos</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo stretchy="false">)</mo><mo>≤</mo><msup><mi>a</mi><mn>2</mn></msup><msup><mi>x</mi><mn>2</mn></msup><mi mathvariant="normal">/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">0\leq1-\cos(ax)\leq a^2x^2/2</annotation></semantics></math> near zero, while <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mi>cos</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo stretchy="false">)</mo><mo>≤</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">1-\cos(ax)\leq2</annotation></semantics></math> controls the tail. Since <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math> are nonnegative, Tonelli's theorem identifies the absolute double integral in <a class="math-ref" href="#org1678d0a">the integral identity</a> with this finite integral. We may therefore apply the identity to obtain
+The integral on the left converges: <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><mn>1</mn><mo>−</mo><mi>cos</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo stretchy="false">)</mo><mo>≤</mo><msup><mi>a</mi><mn>2</mn></msup><msup><mi>x</mi><mn>2</mn></msup><mi mathvariant="normal">/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">0\leq1-\cos(ax)\leq a^2x^2/2</annotation></semantics></math> near zero, while <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mi>cos</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo stretchy="false">)</mo><mo>≤</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">1-\cos(ax)\leq2</annotation></semantics></math> controls the tail. Since <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math> are nonnegative, Tonelli's theorem identifies the absolute double integral in <a class="math-ref" href="#org22e56e2">the integral identity</a> with this finite integral. We may therefore apply the identity to obtain
 </p>
 
 <p>
@@ -562,8 +562,8 @@ Motivation: start with the visible factor <math xmlns="http://www.w3.org/1998/Ma
 </p>
 
 </div>
-<section class="math-env math-examp" id="orgb8e9b27" aria-labelledby="orgb8e9b27-heading">
-<div class="math-heading" id="orgb8e9b27-heading">Example 9 <span class="math-name">— A sine integral with a fractional power</span></div>
+<section class="math-env math-examp" id="orgdbc484a" aria-labelledby="orgdbc484a-heading">
+<div class="math-heading" id="orgdbc484a-heading">Example 9 <span class="math-name">— A sine integral with a fractional power</span></div>
 <p>
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mo>∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mfrac><mrow><mi>sin</mi><mo>⁡</mo><mi>x</mi></mrow><msup><mi>x</mi><mrow><mn>3</mn><mi mathvariant="normal">/</mi><mn>2</mn></mrow></msup></mfrac><mtext> </mtext><mi mathvariant="normal">d</mi><mi>x</mi><mo>=</mo><msqrt><mrow><mn>2</mn><mi>π</mi></mrow></msqrt><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">
 \int_0^\infty\frac{\sin x}{x^{3/2}}\,\mathrm{d}x=\sqrt{2\pi}.
@@ -571,8 +571,8 @@ Motivation: start with the visible factor <math xmlns="http://www.w3.org/1998/Ma
 </p>
 </section>
 
-<section class="math-env math-proof" id="org15c012f" aria-labelledby="org15c012f-heading">
-<div class="math-heading" id="org15c012f-heading">Proof.</div>
+<section class="math-env math-proof" id="orgac6bd90" aria-labelledby="orgac6bd90-heading">
+<div class="math-heading" id="orgac6bd90-heading">Proof.</div>
 <p>
 Choose
 </p>
@@ -607,7 +607,7 @@ The original integral is absolutely convergent: near zero, <math xmlns="http://w
 </p>
 
 <p>
-Thus <a class="math-ref" href="#org1678d0a">the integral identity</a> applies, and
+Thus <a class="math-ref" href="#org22e56e2">the integral identity</a> applies, and
 </p>
 
 <p>
@@ -670,16 +670,16 @@ Motivation: recognize <math xmlns="http://www.w3.org/1998/Math/MathML"><semantic
 </div>
 </div>
 </div>
-<div id="outline-container-org84c884d" class="outline-3">
-<h3 id="org84c884d"><span class="section-number-3">2.3.</span> Dividing by the Original Variable</h3>
+<div id="outline-container-org77d7e28" class="outline-3">
+<h3 id="org77d7e28"><span class="section-number-3">2.3.</span> Dividing by the Original Variable</h3>
 <div class="outline-text-3" id="text-2-3">
 <div class="math-prose"><p>
 Dividing a function by <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math> corresponds to integrating its Laplace transform with respect to the transform variable.
 </p>
 
 </div>
-<section class="math-env math-theorem" id="org058521a" aria-labelledby="org058521a-heading">
-<div class="math-heading" id="org058521a-heading">Theorem 10 <span class="math-name">— Division by the original variable</span></div>
+<section class="math-env math-theorem" id="org2cfa1f5" aria-labelledby="org2cfa1f5-heading">
+<div class="math-heading" id="org2cfa1f5-heading">Theorem 10 <span class="math-name">— Division by the original variable</span></div>
 <p>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi mathvariant="script">L</mi><mo stretchy="false">{</mo><mi>f</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">F=\mathcal{L}\{f\}</annotation></semantics></math>, and let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">s\in\mathbb{R}</annotation></semantics></math> be such that <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">F(u)</annotation></semantics></math> exists for every <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>≥</mo><mi>s</mi></mrow><annotation encoding="application/x-tex">u\geq s</annotation></semantics></math> and
 </p>
@@ -702,8 +702,8 @@ Then
 </p>
 </section>
 
-<section class="math-env math-proof" id="org0df26ee" aria-labelledby="org0df26ee-heading">
-<div class="math-heading" id="org0df26ee-heading">Proof.</div>
+<section class="math-env math-proof" id="org5e3a6b1" aria-labelledby="org5e3a6b1-heading">
+<div class="math-heading" id="org5e3a6b1-heading">Proof.</div>
 <p>
 Since <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∫</mo><mi>s</mi><mi mathvariant="normal">∞</mi></msubsup><msup><mi>e</mi><mrow><mo>−</mo><mi>u</mi><mi>x</mi></mrow></msup><mtext> </mtext><mi mathvariant="normal">d</mi><mi>u</mi><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>s</mi><mi>x</mi></mrow></msup><mi mathvariant="normal">/</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\int_s^\infty e^{-ux}\,\mathrm{d}u=e^{-sx}/x</annotation></semantics></math> for <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x&gt;0</annotation></semantics></math>, the absolute integrability assumption allows us to interchange the integrals:
 </p>
@@ -719,8 +719,8 @@ Since <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup
 <span class="math-qed" aria-label="End of proof">□</span>
 </section>
 
-<section class="math-env math-examp" id="org699a6c4" aria-labelledby="org699a6c4-heading">
-<div class="math-heading" id="org699a6c4-heading">Example 11 <span class="math-name">— The Dirichlet integral</span></div>
+<section class="math-env math-examp" id="org0758348" aria-labelledby="org0758348-heading">
+<div class="math-heading" id="org0758348-heading">Example 11 <span class="math-name">— The Dirichlet integral</span></div>
 <p>
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mo>∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mfrac><mrow><mi>sin</mi><mo>⁡</mo><mi>x</mi></mrow><mi>x</mi></mfrac><mtext> </mtext><mi mathvariant="normal">d</mi><mi>x</mi><mo>=</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">
 \int_0^\infty\frac{\sin x}{x}\,\mathrm{d}x=\frac{\pi}{2}.
@@ -735,8 +735,8 @@ This integral is <i>conditionally convergent</i>, not absolutely convergent:
 </p>
 </section>
 
-<section class="math-env math-proof" id="orgd0ccd43" aria-labelledby="orgd0ccd43-heading">
-<div class="math-heading" id="orgd0ccd43-heading">Proof.</div>
+<section class="math-env math-proof" id="org7662a93" aria-labelledby="org7662a93-heading">
+<div class="math-heading" id="org7662a93-heading">Proof.</div>
 <p>
 Since <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">L</mi><mo stretchy="false">{</mo><mi>sin</mi><mo>⁡</mo><mi>x</mi><mo stretchy="false">}</mo><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mi mathvariant="normal">/</mi><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><msup><mi>u</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{L}\{\sin x\}(u)=1/(1+u^2)</annotation></semantics></math>, the theorem gives, for every <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">s&gt;0</annotation></semantics></math>,
 </p>
@@ -817,16 +817,16 @@ Motivation: the factor <math xmlns="http://www.w3.org/1998/Math/MathML"><semanti
 </div>
 </div>
 </div>
-<div id="outline-container-org1ad6201" class="outline-3">
-<h3 id="org1ad6201"><span class="section-number-3">2.4.</span> Periodic Functions</h3>
+<div id="outline-container-org92c24e6" class="outline-3">
+<h3 id="org92c24e6"><span class="section-number-3">2.4.</span> Periodic Functions</h3>
 <div class="outline-text-3" id="text-2-4">
 <div class="math-prose"><p>
 For a periodic function, we only need to integrate over one period.
 </p>
 
 </div>
-<section class="math-env math-theorem" id="orgeab91c9" aria-labelledby="orgeab91c9-heading">
-<div class="math-heading" id="orgeab91c9-heading">Theorem 12 <span class="math-name">— The transform of a periodic function</span></div>
+<section class="math-env math-theorem" id="orgd5fd86b" aria-labelledby="orgd5fd86b-heading">
+<div class="math-heading" id="orgd5fd86b-heading">Theorem 12 <span class="math-name">— The transform of a periodic function</span></div>
 <p>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo><mo>→</mo><mi mathvariant="double-struck">C</mi></mrow><annotation encoding="application/x-tex">f:[0,\infty)\to\mathbb{C}</annotation></semantics></math> have period <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">T&gt;0</annotation></semantics></math> and satisfy <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∫</mo><mn>0</mn><mi>T</mi></msubsup><mi mathvariant="normal">∣</mi><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi mathvariant="normal">∣</mi><mtext> </mtext><mi mathvariant="normal">d</mi><mi>x</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">\int_0^T|f(x)|\,\mathrm{d}x\lt\infty</annotation></semantics></math>. Then, for <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Re</mi><mo>⁡</mo><mi>s</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\operatorname{Re}s&gt;0</annotation></semantics></math>,
 </p>
@@ -839,8 +839,8 @@ Let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi>
 </p>
 </section>
 
-<section class="math-env math-proof" id="org59762b5" aria-labelledby="org59762b5-heading">
-<div class="math-heading" id="org59762b5-heading">Proof.</div>
+<section class="math-env math-proof" id="org2bcf574" aria-labelledby="org2bcf574-heading">
+<div class="math-heading" id="org2bcf574-heading">Proof.</div>
 <p>
 Write <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mi mathvariant="normal">Re</mi><mo>⁡</mo><mi>s</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sigma=\operatorname{Re}s&gt;0</annotation></semantics></math>. Periodicity gives
 </p>
@@ -872,8 +872,8 @@ The final step is the geometric-series formula, since <math xmlns="http://www.w3
 <span class="math-qed" aria-label="End of proof">□</span>
 </section>
 
-<section class="math-env math-examp" id="org2a3fbb3" aria-labelledby="org2a3fbb3-heading">
-<div class="math-heading" id="org2a3fbb3-heading">Example 13 <span class="math-name">— An exponentially weighted absolute sine</span></div>
+<section class="math-env math-examp" id="org89fa3e9" aria-labelledby="org89fa3e9-heading">
+<div class="math-heading" id="org89fa3e9-heading">Example 13 <span class="math-name">— An exponentially weighted absolute sine</span></div>
 <p>
 For <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a&gt;0</annotation></semantics></math>,
 </p>
@@ -887,8 +887,8 @@ For <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi>
 </p>
 </section>
 
-<section class="math-env math-proof" id="org003d38c" aria-labelledby="org003d38c-heading">
-<div class="math-heading" id="org003d38c-heading">Proof.</div>
+<section class="math-env math-proof" id="orga33c15a" aria-labelledby="orga33c15a-heading">
+<div class="math-heading" id="orga33c15a-heading">Proof.</div>
 <p>
 The function <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>sin</mi><mo>⁡</mo><mi>x</mi><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">|\sin x|</annotation></semantics></math> has period <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math> and equals <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>sin</mi><mo>⁡</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">\sin x</annotation></semantics></math> on <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mi>π</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[0,\pi]</annotation></semantics></math>. Applying the periodic-function formula at <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">s=a</annotation></semantics></math> gives
 </p>
@@ -925,16 +925,16 @@ Motivation: the exponential factor already has the form of a Laplace kernel. Sin
 </div>
 </div>
 </div>
-<div id="outline-container-orga64b24a" class="outline-3">
-<h3 id="orga64b24a"><span class="section-number-3">2.5.</span> Multiplying by the Original Variable</h3>
+<div id="outline-container-org1065077" class="outline-3">
+<h3 id="org1065077"><span class="section-number-3">2.5.</span> Multiplying by the Original Variable</h3>
 <div class="outline-text-3" id="text-2-5">
 <div class="math-prose"><p>
 Multiplying by <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math> corresponds to differentiating the transform with respect to <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math>.
 </p>
 
 </div>
-<section class="math-env math-theorem" id="orgfcf0649" aria-labelledby="orgfcf0649-heading">
-<div class="math-heading" id="orgfcf0649-heading">Theorem 14 <span class="math-name">— Multiplication by the original variable</span></div>
+<section class="math-env math-theorem" id="org0802edc" aria-labelledby="org0802edc-heading">
+<div class="math-heading" id="org0802edc-heading">Theorem 14 <span class="math-name">— Multiplication by the original variable</span></div>
 <p>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math> be locally integrable and of exponential order <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>, and write <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi mathvariant="script">L</mi><mo stretchy="false">{</mo><mi>f</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">F=\mathcal{L}\{f\}</annotation></semantics></math>. For <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Re</mi><mo>⁡</mo><mi>s</mi><mo>&gt;</mo><mi>α</mi></mrow><annotation encoding="application/x-tex">\operatorname{Re}s&gt;\alpha</annotation></semantics></math>,
 </p>
@@ -946,8 +946,8 @@ Let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi>
 </p>
 </section>
 
-<section class="math-env math-proof" id="org7aac62d" aria-labelledby="org7aac62d-heading">
-<div class="math-heading" id="org7aac62d-heading">Proof.</div>
+<section class="math-env math-proof" id="orga3a7788" aria-labelledby="orga3a7788-heading">
+<div class="math-heading" id="orga3a7788-heading">Proof.</div>
 <p>
 Inside the half-plane of convergence, exponential decay justifies differentiation under the integral sign:
 </p>
@@ -961,8 +961,8 @@ F&#x27;(s)=\frac{\mathrm{d}}{\mathrm{d}s}\int_0^\infty e^{-sx}f(x)\,\mathrm{d}x
 <span class="math-qed" aria-label="End of proof">□</span>
 </section>
 
-<section class="math-env math-examp" id="org1e83389" aria-labelledby="org1e83389-heading">
-<div class="math-heading" id="org1e83389-heading">Example 15 <span class="math-name">— An extra factor of the integration variable</span></div>
+<section class="math-env math-examp" id="orgbdbd7a9" aria-labelledby="orgbdbd7a9-heading">
+<div class="math-heading" id="orgbdbd7a9-heading">Example 15 <span class="math-name">— An extra factor of the integration variable</span></div>
 <p>
 For <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a&gt;0</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">b\in\mathbb{R}</annotation></semantics></math>,
 </p>
@@ -975,8 +975,8 @@ For <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi>
 </p>
 </section>
 
-<section class="math-env math-proof" id="org1f35caa" aria-labelledby="org1f35caa-heading">
-<div class="math-heading" id="org1f35caa-heading">Proof.</div>
+<section class="math-env math-proof" id="orgcf538e1" aria-labelledby="orgcf538e1-heading">
+<div class="math-heading" id="orgcf538e1-heading">Proof.</div>
 <p>
 With <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math> fixed, the transform of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>sin</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>b</mi><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\sin(bx)</annotation></semantics></math> is <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><mi>b</mi><mi mathvariant="normal">/</mi><mo stretchy="false">(</mo><msup><mi>s</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">F(s)=b/(s^2+b^2)</annotation></semantics></math>. Differentiate with respect to <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math> and then evaluate at <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">s=a</annotation></semantics></math>:
 </p>
@@ -1002,8 +1002,8 @@ Repeating the same differentiation gives the higher-order formula.
 </p>
 
 </div>
-<section class="math-env math-corollary" id="orgccdbb48" aria-labelledby="orgccdbb48-heading">
-<div class="math-heading" id="orgccdbb48-heading">Corollary 16 <span class="math-name">— Multiplication by powers of the original variable</span></div>
+<section class="math-env math-corollary" id="orgd07ce8a" aria-labelledby="orgd07ce8a-heading">
+<div class="math-heading" id="orgd07ce8a-heading">Corollary 16 <span class="math-name">— Multiplication by powers of the original variable</span></div>
 <p>
 Under the assumptions above, for every integer <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">n\geq0</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Re</mi><mo>⁡</mo><mi>s</mi><mo>&gt;</mo><mi>α</mi></mrow><annotation encoding="application/x-tex">\operatorname{Re}s&gt;\alpha</annotation></semantics></math>,
 </p>
@@ -1022,8 +1022,8 @@ Indeed, each derivative of <math xmlns="http://www.w3.org/1998/Math/MathML"><sem
 </div>
 </div>
 </div>
-<div id="outline-container-orgac3c789" class="outline-3">
-<h3 id="orgac3c789"><span class="section-number-3">2.6.</span> Differential Equations</h3>
+<div id="outline-container-org4075621" class="outline-3">
+<h3 id="org4075621"><span class="section-number-3">2.6.</span> Differential Equations</h3>
 <div class="outline-text-3" id="text-2-6">
 <div class="math-prose"><p>
 For constant-coefficient initial-value problems, Laplace transforms replace derivatives by algebraic expressions. Write <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi mathvariant="script">L</mi><mo stretchy="false">{</mo><mi>f</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">F=\mathcal{L}\{f\}</annotation></semantics></math> and assume the regularity and growth conditions stated below, with <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Re</mi><mo>⁡</mo><mi>s</mi></mrow><annotation encoding="application/x-tex">\operatorname{Re}s</annotation></semantics></math> sufficiently large.
@@ -1051,8 +1051,8 @@ Applying this identity repeatedly gives the second- and higher-order formulas.
 </p>
 
 </div>
-<section class="math-env math-theorem" id="org3403af7" aria-labelledby="org3403af7-heading">
-<div class="math-heading" id="org3403af7-heading">Theorem 17 <span class="math-name">— Transforms of derivatives</span></div>
+<section class="math-env math-theorem" id="orgff5bba7" aria-labelledby="orgff5bba7-heading">
+<div class="math-heading" id="orgff5bba7-heading">Theorem 17 <span class="math-name">— Transforms of derivatives</span></div>
 <p>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n\geq1</annotation></semantics></math>, let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>∈</mo><msup><mi>C</mi><mi>n</mi></msup><mo stretchy="false">(</mo><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f\in C^n([0,\infty))</annotation></semantics></math>, and suppose that <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo separator="true">,</mo><msup><mi>f</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msup><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">f,f&#x27;,\ldots,f^{(n)}</annotation></semantics></math> are of exponential order. If <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi mathvariant="script">L</mi><mo stretchy="false">{</mo><mi>f</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">F=\mathcal{L}\{f\}</annotation></semantics></math>, then for <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Re</mi><mo>⁡</mo><mi>s</mi></mrow><annotation encoding="application/x-tex">\operatorname{Re}s</annotation></semantics></math> sufficiently large,
 </p>
@@ -1081,8 +1081,8 @@ To solve an initial-value problem, transform the equation, insert the initial va
 </p>
 
 </div>
-<section class="math-env math-examp" id="orgc8f10fd" aria-labelledby="orgc8f10fd-heading">
-<div class="math-heading" id="orgc8f10fd-heading">Example 18 <span class="math-name">— A second-order initial-value problem</span></div>
+<section class="math-env math-examp" id="orgd52a19b" aria-labelledby="orgd52a19b-heading">
+<div class="math-heading" id="orgd52a19b-heading">Example 18 <span class="math-name">— A second-order initial-value problem</span></div>
 <p>
 Solve
 </p>
@@ -1094,8 +1094,8 @@ y&#x27;&#x27;+3y&#x27;+2y=0,\qquad y(0)=1,\qquad y&#x27;(0)=0.
 </p>
 </section>
 
-<section class="math-env math-proof" id="org2cd8dd7" aria-labelledby="org2cd8dd7-heading">
-<div class="math-heading" id="org2cd8dd7-heading">Proof.</div>
+<section class="math-env math-proof" id="org3cf059a" aria-labelledby="org3cf059a-heading">
+<div class="math-heading" id="org3cf059a-heading">Proof.</div>
 <p>
 Write <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><mi mathvariant="script">L</mi><mo stretchy="false">{</mo><mi>y</mi><mo stretchy="false">}</mo><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">Y(s)=\mathcal{L}\{y\}(s)</annotation></semantics></math>. Transforming the equation and inserting the initial values gives
 </p>
@@ -1151,8 +1151,8 @@ Motivation: constant coefficients make every derivative contribute a polynomial 
 </div>
 </div>
 </div>
-<div id="outline-container-org497ab59" class="outline-2">
-<h2 id="org497ab59"><span class="section-number-2">3.</span> Summary</h2>
+<div id="outline-container-orgbae6f22" class="outline-2">
+<h2 id="orgbae6f22"><span class="section-number-2">3.</span> Summary</h2>
 <div class="outline-text-2" id="text-3">
 <div class="math-prose"><p>
 Write <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi mathvariant="script">L</mi><mo stretchy="false">{</mo><mi>f</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">F=\mathcal{L}\{f\}</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo>=</mo><mi mathvariant="script">L</mi><mo stretchy="false">{</mo><mi>g</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">G=\mathcal{L}\{g\}</annotation></semantics></math>. Each formula below is used under the assumptions stated in its corresponding theorem.
@@ -1175,62 +1175,62 @@ Write <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</m
 </thead>
 <tbody>
 <tr>
-<td class="org-left"><a class="math-ref" href="#org06b9464">Scaling</a></td>
+<td class="org-left"><a class="math-ref" href="#orge44acc9">Scaling</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi mathvariant="script">L</mi><mo stretchy="false">{</mo><mi>f</mi><mo stretchy="false">(</mo><mi>c</mi><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">}</mo><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mi>c</mi></mfrac><mi>F</mi><mo stretchy="false">(</mo><mi>s</mi><mi mathvariant="normal">/</mi><mi>c</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mspace width="1em"/><mi>c</mi><mo>&gt;</mo><mn>0</mn></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \mathcal{L}\{f(cx)\}(s)=\frac1cF(s/c),\quad c&gt;0</annotation></semantics></math></td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org93de087">Transform-variable shift</a></td>
+<td class="org-left"><a class="math-ref" href="#org93ffcf9">Transform-variable shift</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">L</mi><mo stretchy="false">{</mo><msup><mi>e</mi><mrow><mi>a</mi><mi>x</mi></mrow></msup><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">}</mo><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><mi>F</mi><mo stretchy="false">(</mo><mi>s</mi><mo>−</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{L}\{e^{ax}f(x)\}(s)=F(s-a)</annotation></semantics></math></td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org3896c96">Time delay</a></td>
+<td class="org-left"><a class="math-ref" href="#org9462ace">Time delay</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">L</mi><mo stretchy="false">{</mo><mi>H</mi><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>c</mi><mo stretchy="false">)</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>c</mi><mo stretchy="false">)</mo><mo stretchy="false">}</mo><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>c</mi><mi>s</mi></mrow></msup><mi>F</mi><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mspace width="1em"/><mi>c</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathcal{L}\{H(x-c)f(x-c)\}(s)=e^{-cs}F(s),\quad c\geq0</annotation></semantics></math></td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#orgad93daf">Uniqueness and inversion</a></td>
+<td class="org-left"><a class="math-ref" href="#org6ebd7b9">Uniqueness and inversion</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="script">L</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo stretchy="false">{</mo><mi mathvariant="script">L</mi><mo stretchy="false">{</mo><mi>f</mi><mo stretchy="false">}</mo><mo stretchy="false">}</mo><mo>=</mo><mi>f</mi></mrow><annotation encoding="application/x-tex">\mathcal{L}^{-1}\{\mathcal{L}\{f\}\}=f</annotation></semantics></math></td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org1678d0a">Integral identity</a></td>
+<td class="org-left"><a class="math-ref" href="#org22e56e2">Integral identity</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msubsup><mo>∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi>G</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mtext> </mtext><mi mathvariant="normal">d</mi><mi>x</mi><mo>=</mo><msubsup><mo>∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mi>F</mi><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mi>g</mi><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mtext> </mtext><mi mathvariant="normal">d</mi><mi>s</mi></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \int_0^\infty f(x)G(x)\,\mathrm{d}x=\int_0^\infty F(s)g(s)\,\mathrm{d}s</annotation></semantics></math></td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org058521a">Division by the original variable</a></td>
+<td class="org-left"><a class="math-ref" href="#org2cfa1f5">Division by the original variable</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi mathvariant="script">L</mi><mo stretchy="false">{</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi mathvariant="normal">/</mi><mi>x</mi><mo stretchy="false">}</mo><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><msubsup><mo>∫</mo><mi>s</mi><mi mathvariant="normal">∞</mi></msubsup><mi>F</mi><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo><mtext> </mtext><mi mathvariant="normal">d</mi><mi>u</mi></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \mathcal{L}\{f(x)/x\}(s)=\int_s^\infty F(u)\,\mathrm{d}u</annotation></semantics></math></td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#orgeab91c9">Periodic functions</a></td>
+<td class="org-left"><a class="math-ref" href="#orgd5fd86b">Periodic functions</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>F</mi><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><msubsup><mo>∫</mo><mn>0</mn><mi>T</mi></msubsup><msup><mi>e</mi><mrow><mo>−</mo><mi>s</mi><mi>x</mi></mrow></msup><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mtext> </mtext><mi mathvariant="normal">d</mi><mi>x</mi></mrow><mrow><mn>1</mn><mo>−</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>s</mi><mi>T</mi></mrow></msup></mrow></mfrac><mo separator="true">,</mo><mspace width="1em"/><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mi>T</mi><mo stretchy="false">)</mo><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle F(s)=\frac{\int_0^T e^{-sx}f(x)\,\mathrm{d}x}{1-e^{-sT}},\quad f(x+T)=f(x)</annotation></semantics></math></td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#orgfcf0649">Multiplication by the original variable</a></td>
+<td class="org-left"><a class="math-ref" href="#org0802edc">Multiplication by the original variable</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">L</mi><mi>x</mi></msub><mo stretchy="false">{</mo><mi>x</mi><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">}</mo><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><mo>−</mo><msup><mi>F</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{L}_x\{xf(x)\}(s)=-F&#x27;(s)</annotation></semantics></math></td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#orgccdbb48">Multiplication by powers</a></td>
+<td class="org-left"><a class="math-ref" href="#orgd07ce8a">Multiplication by powers</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">L</mi><mi>x</mi></msub><mo stretchy="false">{</mo><msup><mi>x</mi><mi>n</mi></msup><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">}</mo><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mo>−</mo><mn>1</mn><msup><mo stretchy="false">)</mo><mi>n</mi></msup><msup><mi>F</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></msup><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{L}_x\{x^n f(x)\}(s)=(-1)^nF^{(n)}(s)</annotation></semantics></math></td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org3403af7">First derivative</a></td>
+<td class="org-left"><a class="math-ref" href="#orgff5bba7">First derivative</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">L</mi><mo stretchy="false">{</mo><msup><mi>f</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo stretchy="false">}</mo><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><mi>s</mi><mi>F</mi><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>−</mo><mi>f</mi><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{L}\{f&#x27;\}(s)=sF(s)-f(0)</annotation></semantics></math></td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org3403af7">Second derivative</a></td>
+<td class="org-left"><a class="math-ref" href="#orgff5bba7">Second derivative</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">L</mi><mo stretchy="false">{</mo><msup><mi>f</mi><mrow><mo mathvariant="normal">′</mo><mo mathvariant="normal">′</mo></mrow></msup><mo stretchy="false">}</mo><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>s</mi><mn>2</mn></msup><mi>F</mi><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>−</mo><mi>s</mi><mi>f</mi><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo><mo>−</mo><msup><mi>f</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{L}\{f&#x27;&#x27;\}(s)=s^2F(s)-sf(0)-f&#x27;(0)</annotation></semantics></math></td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org3403af7">nth derivative</a></td>
+<td class="org-left"><a class="math-ref" href="#orgff5bba7">nth derivative</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi mathvariant="script">L</mi><mo stretchy="false">{</mo><msup><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></msup><mo stretchy="false">}</mo><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>s</mi><mi>n</mi></msup><mi>F</mi><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>−</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></munderover><msup><mi>s</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn><mo>−</mo><mi>k</mi></mrow></msup><msup><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></msup><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \mathcal{L}\{f^{(n)}\}(s)=s^nF(s)-\sum_{k=0}^{n-1}s^{n-1-k}f^{(k)}(0)</annotation></semantics></math></td>
 </tr>
 </tbody>
@@ -1248,16 +1248,16 @@ Write <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</m
       <dc:creator>Yijia Zhao</dc:creator>
       <pubDate>Fri, 16 Oct 2026 00:00:00 +0100</pubDate>
       <description>A practical guide to proving boundedness and working with suprema and infima, with an emphasis on quantifiers and choosing suitable elements.</description>
-      <content:encoded><![CDATA[<div id="outline-container-org4dd517f" class="outline-2">
-<h2 id="org4dd517f"><span class="section-number-2">1.</span> Foundations</h2>
+      <content:encoded><![CDATA[<div id="outline-container-org15c0931" class="outline-2">
+<h2 id="org15c0931"><span class="section-number-2">1.</span> Foundations</h2>
 <div class="outline-text-2" id="text-1">
 <div class="math-prose"><p>
 Let us begin with a brief review of the definitions.
 </p>
 
 </div>
-<section class="math-env math-definition" id="org3694cf4" aria-labelledby="org3694cf4-heading">
-<div class="math-heading" id="org3694cf4-heading">Definition 1 <span class="math-name">— Boundedness</span></div>
+<section class="math-env math-definition" id="orgdbe52f6" aria-labelledby="orgdbe52f6-heading">
+<div class="math-heading" id="orgdbe52f6-heading">Definition 1 <span class="math-name">— Boundedness</span></div>
 <p>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">A \subseteq \mathbb{R}</annotation></semantics></math>. We say that <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math> is <i>bounded above</i> if there exists <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">M \in \mathbb{R}</annotation></semantics></math> such that <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≤</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">a \leq M</annotation></semantics></math> for every <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">a \in A</annotation></semantics></math>. Any such <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math> is called an <i>upper bound</i> of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math>.
 </p>
@@ -1283,8 +1283,8 @@ In particular, the empty set is bounded: every real number is both an upper boun
 </p>
 
 </div>
-<section class="math-env math-definition" id="org73babe1" aria-labelledby="org73babe1-heading">
-<div class="math-heading" id="org73babe1-heading">Definition 2 <span class="math-name">— Supremum and infimum</span></div>
+<section class="math-env math-definition" id="org6e3d107" aria-labelledby="org6e3d107-heading">
+<div class="math-heading" id="org6e3d107-heading">Definition 2 <span class="math-name">— Supremum and infimum</span></div>
 <p>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">A \subseteq \mathbb{R}</annotation></semantics></math>. A real number <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math> is the <i>supremum</i> (or <i>least upper bound</i>) of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math>, written <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>sup</mi><mo>⁡</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">s = \sup A</annotation></semantics></math>, if:
 </p>
@@ -1323,8 +1323,8 @@ These conventions agree with taking the least upper bound and greatest lower bou
 </p>
 
 </div>
-<section class="math-env math-axiom" id="org528777f" aria-labelledby="org528777f-heading">
-<div class="math-heading" id="org528777f-heading">Axiom 3 <span class="math-name">— Completeness of the real numbers</span></div>
+<section class="math-env math-axiom" id="orga813533" aria-labelledby="orga813533-heading">
+<div class="math-heading" id="orga813533-heading">Axiom 3 <span class="math-name">— Completeness of the real numbers</span></div>
 <p>
 Every nonempty subset of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math> that is bounded above has a supremum in <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math>.
 </p>
@@ -1339,15 +1339,15 @@ The second statement follows from the first by applying it to <math xmlns="http:
 </p>
 
 </div>
-<section class="math-env math-theorem" id="org1f7e607" aria-labelledby="org1f7e607-heading">
-<div class="math-heading" id="org1f7e607-heading">Theorem 4 <span class="math-name">— Archimedean property</span></div>
+<section class="math-env math-theorem" id="org3514a34" aria-labelledby="org3514a34-heading">
+<div class="math-heading" id="org3514a34-heading">Theorem 4 <span class="math-name">— Archimedean property</span></div>
 <p>
 For every <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">x \in \mathbb{R}</annotation></semantics></math>, there exists a positive integer <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math> such that <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>&lt;</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">x \lt  n</annotation></semantics></math>. In other words, the positive integers are not bounded above in <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math>.
 </p>
 </section>
 
-<section class="math-env math-lemma" id="org3d05bf3" aria-labelledby="org3d05bf3-heading">
-<div class="math-heading" id="org3d05bf3-heading">Lemma 5 <span class="math-name">— Integer bracketing</span></div>
+<section class="math-env math-lemma" id="org05947a0" aria-labelledby="org05947a0-heading">
+<div class="math-heading" id="org05947a0-heading">Lemma 5 <span class="math-name">— Integer bracketing</span></div>
 <p>
 For every <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">x \in \mathbb{R}</annotation></semantics></math>, there exists an integer <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">Z</mi></mrow><annotation encoding="application/x-tex">n \in \mathbb{Z}</annotation></semantics></math> such that
 </p>
@@ -1366,8 +1366,8 @@ We will not go into further proofs or explanations here; for details, see the <a
 </div>
 </div>
 </div>
-<div id="outline-container-orge1cdcb6" class="outline-2">
-<h2 id="orge1cdcb6"><span class="section-number-2">2.</span> Proof Strategies</h2>
+<div id="outline-container-org1098718" class="outline-2">
+<h2 id="org1098718"><span class="section-number-2">2.</span> Proof Strategies</h2>
 <div class="outline-text-2" id="text-2">
 <div class="math-prose"><p>
 We now examine in detail how to prove the various properties introduced above.
@@ -1375,16 +1375,16 @@ We now examine in detail how to prove the various properties introduced above.
 
 </div>
 </div>
-<div id="outline-container-orgeff56df" class="outline-3">
-<h3 id="orgeff56df"><span class="section-number-3">2.1.</span> Boundedness</h3>
+<div id="outline-container-orgefc6ad7" class="outline-3">
+<h3 id="orgefc6ad7"><span class="section-number-3">2.1.</span> Boundedness</h3>
 <div class="outline-text-3" id="text-2-1">
 <div class="math-prose"><p>
 To prove boundedness, we find fixed real bounds that work for every element of the set.
 </p>
 
 </div>
-<section class="math-env math-remark" id="org5b575a8" aria-labelledby="org5b575a8-heading">
-<div class="math-heading" id="org5b575a8-heading">Remark 6</div>
+<section class="math-env math-remark" id="orgf465b60" aria-labelledby="orgf465b60-heading">
+<div class="math-heading" id="orgf465b60-heading">Remark 6</div>
 <p>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">A\subseteq\mathbb{R}</annotation></semantics></math>. Then
 </p>
@@ -1405,16 +1405,16 @@ The bounds may depend on the set and its fixed parameters, but must not depend o
 </div>
 </div>
 </div>
-<div id="outline-container-org0944059" class="outline-3">
-<h3 id="org0944059"><span class="section-number-3">2.2.</span> Unboundedness</h3>
+<div id="outline-container-org60f3c91" class="outline-3">
+<h3 id="org60f3c91"><span class="section-number-3">2.2.</span> Unboundedness</h3>
 <div class="outline-text-3" id="text-2-2">
 <div class="math-prose"><p>
 First, negating the definitions of boundedness above and below gives the following characterizations.
 </p>
 
 </div>
-<section class="math-env math-remark" id="org0e2bb17" aria-labelledby="org0e2bb17-heading">
-<div class="math-heading" id="org0e2bb17-heading">Remark 7</div>
+<section class="math-env math-remark" id="org09b2ff9" aria-labelledby="org09b2ff9-heading">
+<div class="math-heading" id="org09b2ff9-heading">Remark 7</div>
 <p>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">A \subseteq \mathbb{R}</annotation></semantics></math>. Then
 </p>
@@ -1446,15 +1446,15 @@ Let us illustrate this with a simple example.
 </p>
 
 </div>
-<section class="math-env math-examp" id="org839b430" aria-labelledby="org839b430-heading">
-<div class="math-heading" id="org839b430-heading">Example 8 <span class="math-name">— The real line is unbounded</span></div>
+<section class="math-env math-examp" id="orge97244d" aria-labelledby="orge97244d-heading">
+<div class="math-heading" id="orge97244d-heading">Example 8 <span class="math-name">— The real line is unbounded</span></div>
 <p>
 The set <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mo stretchy="false">{</mo><mi>x</mi><mo>∣</mo><mi>x</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi><mo stretchy="false">}</mo><mo>=</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">A = \{x \mid x \in \mathbb{R}\} = \mathbb{R}</annotation></semantics></math> is unbounded both above and below.
 </p>
 </section>
 
-<section class="math-env math-proof" id="org88b31b4" aria-labelledby="org88b31b4-heading">
-<div class="math-heading" id="org88b31b4-heading">Proof.</div>
+<section class="math-env math-proof" id="org3adbbd1" aria-labelledby="org3adbbd1-heading">
+<div class="math-heading" id="org3adbbd1-heading">Proof.</div>
 <p>
 Given any <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">M \in \mathbb{R}</annotation></semantics></math>, choose <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mi>M</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">a = M + 1</annotation></semantics></math>. Then <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">a \in A</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>&gt;</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">a &gt; M</annotation></semantics></math>, so <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math> is unbounded above.
 </p>
@@ -1467,16 +1467,16 @@ Similarly, given any <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics
 
 </div>
 </div>
-<div id="outline-container-orgdf69fa2" class="outline-3">
-<h3 id="orgdf69fa2"><span class="section-number-3">2.3.</span> Identifying a Supremum or Infimum</h3>
+<div id="outline-container-org430c681" class="outline-3">
+<h3 id="org430c681"><span class="section-number-3">2.3.</span> Identifying a Supremum or Infimum</h3>
 <div class="outline-text-3" id="text-2-3">
 <div class="math-prose"><p>
 To prove that a real number <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math> is the supremum of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math>, we must show that it is an upper bound and that it is the least upper bound. For the second part, we show that every number strictly smaller than <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math>, written as <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>−</mo><mi>ε</mi></mrow><annotation encoding="application/x-tex">s - \varepsilon</annotation></semantics></math> with <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\varepsilon &gt; 0</annotation></semantics></math>, fails to be an upper bound.
 </p>
 
 </div>
-<section class="math-env math-remark" id="org7e0be2c" aria-labelledby="org7e0be2c-heading">
-<div class="math-heading" id="org7e0be2c-heading">Remark 9</div>
+<section class="math-env math-remark" id="orga09cfc6" aria-labelledby="orga09cfc6-heading">
+<div class="math-heading" id="orga09cfc6-heading">Remark 9</div>
 <p>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">A \subseteq \mathbb{R}</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo separator="true">,</mo><mi>t</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">s,t \in \mathbb{R}</annotation></semantics></math>. Then <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>sup</mi><mo>⁡</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">s = \sup A</annotation></semantics></math> if and only if both of the following hold:
 </p>
@@ -1518,8 +1518,8 @@ For a supremum, the chosen element must satisfy <math xmlns="http://www.w3.org/1
 </p>
 
 </div>
-<section class="math-env math-examp" id="orgf9ecf6c" aria-labelledby="orgf9ecf6c-heading">
-<div class="math-heading" id="orgf9ecf6c-heading">Example 10 <span class="math-name">— A supremum that is not attained</span></div>
+<section class="math-env math-examp" id="orgd5e5089" aria-labelledby="orgd5e5089-heading">
+<div class="math-heading" id="orgd5e5089-heading">Example 10 <span class="math-name">— A supremum that is not attained</span></div>
 <p>
 Let
 </p>
@@ -1535,8 +1535,8 @@ where <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><m
 </p>
 </section>
 
-<section class="math-env math-proof" id="orgb8368f5" aria-labelledby="orgb8368f5-heading">
-<div class="math-heading" id="orgb8368f5-heading">Proof.</div>
+<section class="math-env math-proof" id="orgea50c06" aria-labelledby="orgea50c06-heading">
+<div class="math-heading" id="orgea50c06-heading">Proof.</div>
 <p>
 First, for every <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x &gt; 0</annotation></semantics></math>, we have <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">1/x &gt; 0</annotation></semantics></math>, so <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mn>1</mn><mi mathvariant="normal">/</mi><mi>x</mi><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">1 - 1/x \lt  1</annotation></semantics></math>. Thus every <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">a \in A</annotation></semantics></math> satisfies <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≤</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">a \leq 1</annotation></semantics></math>, and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math> is an upper bound of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math>.
 </p>
@@ -1577,8 +1577,8 @@ There is also a simpler way to identify a supremum when the proposed upper bound
 </p>
 
 </div>
-<section class="math-env math-theorem" id="org8eb14ef" aria-labelledby="org8eb14ef-heading">
-<div class="math-heading" id="org8eb14ef-heading">Theorem 11 <span class="math-name">— Attained bounds are suprema and infima</span></div>
+<section class="math-env math-theorem" id="orgddddb3b" aria-labelledby="orgddddb3b-heading">
+<div class="math-heading" id="orgddddb3b-heading">Theorem 11 <span class="math-name">— Attained bounds are suprema and infima</span></div>
 <p>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">A \subseteq \mathbb{R}</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo separator="true">,</mo><mi>t</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">s,t \in \mathbb{R}</annotation></semantics></math>. If <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math> is an upper bound of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>∈</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">s \in A</annotation></semantics></math>, then <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>sup</mi><mo>⁡</mo><mi>A</mi><mo>=</mo><mi>s</mi></mrow><annotation encoding="application/x-tex">\sup A = s</annotation></semantics></math>.
 </p>
@@ -1595,16 +1595,16 @@ The converse does not hold: <math xmlns="http://www.w3.org/1998/Math/MathML"><se
 </div>
 </div>
 </div>
-<div id="outline-container-org9df5017" class="outline-3">
-<h3 id="org9df5017"><span class="section-number-3">2.4.</span> Ruling Out a Candidate Supremum or Infimum</h3>
+<div id="outline-container-org6ce1b0d" class="outline-3">
+<h3 id="org6ce1b0d"><span class="section-number-3">2.4.</span> Ruling Out a Candidate Supremum or Infimum</h3>
 <div class="outline-text-3" id="text-2-4">
 <div class="math-prose"><p>
 Taking the contrapositives of the necessary conditions in Section 2.3 gives two ways to rule out a proposed supremum or infimum. It is enough for either condition to fail.
 </p>
 
 </div>
-<section class="math-env math-remark" id="org5c939f4" aria-labelledby="org5c939f4-heading">
-<div class="math-heading" id="org5c939f4-heading">Remark 12</div>
+<section class="math-env math-remark" id="orga0f4a17" aria-labelledby="orga0f4a17-heading">
+<div class="math-heading" id="orga0f4a17-heading">Remark 12</div>
 <p>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">A \subseteq \mathbb{R}</annotation></semantics></math> and let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo separator="true">,</mo><mi>t</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">s,t \in \mathbb{R}</annotation></semantics></math> be arbitrary. Then <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math> is not the supremum of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math> if either of the following holds:
 </p>
@@ -1655,8 +1655,8 @@ The dependence has now changed. In Section 2.3, we were given an arbitrary <math
 </p>
 
 </div>
-<section class="math-env math-examp" id="org4056cc9" aria-labelledby="org4056cc9-heading">
-<div class="math-heading" id="org4056cc9-heading">Example 13 <span class="math-name">— Constructing a cube root using completeness</span></div>
+<section class="math-env math-examp" id="org1cd99c4" aria-labelledby="org1cd99c4-heading">
+<div class="math-heading" id="org1cd99c4-heading">Example 13 <span class="math-name">— Constructing a cube root using completeness</span></div>
 <p>
 Let
 </p>
@@ -1672,8 +1672,8 @@ Then <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi
 </p>
 </section>
 
-<section class="math-env math-proof" id="orgef3c6a2" aria-labelledby="orgef3c6a2-heading">
-<div class="math-heading" id="orgef3c6a2-heading">Proof.</div>
+<section class="math-env math-proof" id="org4beb692" aria-labelledby="org4beb692-heading">
+<div class="math-heading" id="org4beb692-heading">Proof.</div>
 <p>
 Since <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>∈</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">1 \in A</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math> is an upper bound of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math>, completeness gives <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>sup</mi><mo>⁡</mo><mi>A</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">s = \sup A \in \mathbb{R}</annotation></semantics></math>. Moreover, <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>s</mi><mo>≤</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">1 \leq s \leq 2</annotation></semantics></math>, so <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">s &gt; 0</annotation></semantics></math>.
 </p>
@@ -1747,11 +1747,11 @@ For now, we have simply stated suitable choices of <math xmlns="http://www.w3.or
 </div>
 </div>
 </div>
-<div id="outline-container-org5ef9999" class="outline-3">
-<h3 id="org5ef9999"><span class="section-number-3">2.5.</span> Using Known Suprema and Infima</h3>
+<div id="outline-container-orgfdf8227" class="outline-3">
+<h3 id="orgfdf8227"><span class="section-number-3">2.5.</span> Using Known Suprema and Infima</h3>
 <div class="outline-text-3" id="text-2-5">
-<section class="math-env math-corollary" id="org88358c2" aria-labelledby="org88358c2-heading">
-<div class="math-heading" id="org88358c2-heading">Corollary 14 <span class="math-name">— Approximating suprema and infima by elements of the set</span></div>
+<section class="math-env math-corollary" id="org57d517e" aria-labelledby="org57d517e-heading">
+<div class="math-heading" id="org57d517e-heading">Corollary 14 <span class="math-name">— Approximating suprema and infima by elements of the set</span></div>
 <p>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">A \subseteq \mathbb{R}</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo separator="true">,</mo><mi>t</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">s,t \in \mathbb{R}</annotation></semantics></math>.
 </p>
@@ -1793,8 +1793,8 @@ Once we know that <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><m
 </p>
 
 </div>
-<section class="math-env math-examp" id="orge09fe28" aria-labelledby="orge09fe28-heading">
-<div class="math-heading" id="orge09fe28-heading">Example 15 <span class="math-name">— The supremum of a reciprocal set</span></div>
+<section class="math-env math-examp" id="orgf4d850d" aria-labelledby="orgf4d850d-heading">
+<div class="math-heading" id="orgf4d850d-heading">Example 15 <span class="math-name">— The supremum of a reciprocal set</span></div>
 <p>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∅</mi><mo mathvariant="normal">≠</mo><mi>A</mi><mo>⊆</mo><msub><mi mathvariant="double-struck">R</mi><mo lspace="0em" rspace="0em">+</mo></msub></mrow><annotation encoding="application/x-tex">\varnothing \neq A \subseteq \mathbb{R}_{+}</annotation></semantics></math> and define
 </p>
@@ -1810,8 +1810,8 @@ If <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><
 </p>
 </section>
 
-<section class="math-env math-proof" id="org695e11c" aria-labelledby="org695e11c-heading">
-<div class="math-heading" id="org695e11c-heading">Proof.</div>
+<section class="math-env math-proof" id="orgff164ac" aria-labelledby="orgff164ac-heading">
+<div class="math-heading" id="orgff164ac-heading">Proof.</div>
 <p>
 Since <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">A \subseteq (0,\infty)</annotation></semantics></math>, we have <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t \geq 0</annotation></semantics></math>. Together with <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo mathvariant="normal">≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t \neq 0</annotation></semantics></math>, this gives <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t &gt; 0</annotation></semantics></math>.
 </p>
@@ -1852,8 +1852,8 @@ Therefore <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>
 
 </div>
 </div>
-<div id="outline-container-org2fb7ca9" class="outline-3">
-<h3 id="org2fb7ca9"><span class="section-number-3">2.6.</span> Summary</h3>
+<div id="outline-container-orgafa7030" class="outline-3">
+<h3 id="orgafa7030"><span class="section-number-3">2.6.</span> Summary</h3>
 <div class="outline-text-3" id="text-2-6">
 <div class="math-prose"><p>
 The following table summarizes the logical goals and the order in which we choose the quantities involved. In the last two rows, the supremum or infimum is already known, so the displayed statement is available for use in a proof.
@@ -1879,67 +1879,67 @@ The following table summarizes the logical goals and the order in which we choos
 </thead>
 <tbody>
 <tr>
-<td class="org-left"><a class="math-ref" href="#org5b575a8">Bounded above</a></td>
+<td class="org-left"><a class="math-ref" href="#orgf465b60">Bounded above</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∃</mi><mi>M</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi><mtext>  </mtext><mi mathvariant="normal">∀</mi><mi>a</mi><mo>∈</mo><mi>A</mi><mo separator="true">,</mo><mtext>  </mtext><mi>a</mi><mo>≤</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">\exists M\in\mathbb{R}\;\forall a\in A,\;a\leq M</annotation></semantics></math></td>
 <td class="org-left">Choose a fixed <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math> independent of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math>, then verify the inequality for every <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">a\in A</annotation></semantics></math>.</td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org5b575a8">Bounded below</a></td>
+<td class="org-left"><a class="math-ref" href="#orgf465b60">Bounded below</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∃</mi><mi>m</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi><mtext>  </mtext><mi mathvariant="normal">∀</mi><mi>a</mi><mo>∈</mo><mi>A</mi><mo separator="true">,</mo><mtext>  </mtext><mi>m</mi><mo>≤</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">\exists m\in\mathbb{R}\;\forall a\in A,\;m\leq a</annotation></semantics></math></td>
 <td class="org-left">Choose a fixed <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math> independent of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math>, then verify the inequality for every <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">a\in A</annotation></semantics></math>.</td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org5b575a8">Bounded</a></td>
+<td class="org-left"><a class="math-ref" href="#orgf465b60">Bounded</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∃</mi><mi>m</mi><mo separator="true">,</mo><mi>M</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi><mtext>  </mtext><mi mathvariant="normal">∀</mi><mi>a</mi><mo>∈</mo><mi>A</mi><mo separator="true">,</mo><mtext>  </mtext><mi>m</mi><mo>≤</mo><mi>a</mi><mo>≤</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">\exists m,M\in\mathbb{R}\;\forall a\in A,\;m\leq a\leq M</annotation></semantics></math></td>
 <td class="org-left">Choose fixed bounds <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo separator="true">,</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">m,M</annotation></semantics></math> independent of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math>, then verify both inequalities for every <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">a\in A</annotation></semantics></math>.</td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org0e2bb17">Unbounded above</a></td>
+<td class="org-left"><a class="math-ref" href="#org09b2ff9">Unbounded above</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∀</mi><mi>M</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi><mtext>  </mtext><mi mathvariant="normal">∃</mi><mi>a</mi><mo>∈</mo><mi>A</mi><mo separator="true">,</mo><mtext>  </mtext><mi>a</mi><mo>&gt;</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">\forall M \in \mathbb{R}\; \exists a \in A,\; a &gt; M</annotation></semantics></math></td>
 <td class="org-left">Given <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math>, choose <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math> in terms of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math>.</td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org0e2bb17">Unbounded below</a></td>
+<td class="org-left"><a class="math-ref" href="#org09b2ff9">Unbounded below</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∀</mi><mi>m</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi><mtext>  </mtext><mi mathvariant="normal">∃</mi><mi>a</mi><mo>∈</mo><mi>A</mi><mo separator="true">,</mo><mtext>  </mtext><mi>a</mi><mo>&lt;</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">\forall m \in \mathbb{R}\; \exists a \in A,\; a \lt  m</annotation></semantics></math></td>
 <td class="org-left">Given <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math>, choose <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math> in terms of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math>.</td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org7e0be2c">Proving a supremum</a></td>
+<td class="org-left"><a class="math-ref" href="#orga09cfc6">Proving a supremum</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>a</mi><mo>∈</mo><mi>A</mi><mo separator="true">,</mo><mtext>  </mtext><mi>a</mi><mo>≤</mo><mi>s</mi><mo stretchy="false">)</mo><mo>∧</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>ε</mi><mo>&gt;</mo><mn>0</mn><mtext>  </mtext><mi mathvariant="normal">∃</mi><mi>a</mi><mo>∈</mo><mi>A</mi><mo separator="true">,</mo><mtext>  </mtext><mi>s</mi><mo>−</mo><mi>ε</mi><mo>&lt;</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\forall a \in A,\; a \leq s) \land (\forall \varepsilon &gt; 0\; \exists a \in A,\; s-\varepsilon \lt  a)</annotation></semantics></math></td>
 <td class="org-left">Fix <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math>. Check the bound for arbitrary <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math>; then, given <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi></mrow><annotation encoding="application/x-tex">\varepsilon</annotation></semantics></math>, choose <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math> in terms of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi></mrow><annotation encoding="application/x-tex">\varepsilon</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math>.</td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org7e0be2c">Proving an infimum</a></td>
+<td class="org-left"><a class="math-ref" href="#orga09cfc6">Proving an infimum</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>a</mi><mo>∈</mo><mi>A</mi><mo separator="true">,</mo><mtext>  </mtext><mi>t</mi><mo>≤</mo><mi>a</mi><mo stretchy="false">)</mo><mo>∧</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∀</mi><mi>ε</mi><mo>&gt;</mo><mn>0</mn><mtext>  </mtext><mi mathvariant="normal">∃</mi><mi>a</mi><mo>∈</mo><mi>A</mi><mo separator="true">,</mo><mtext>  </mtext><mi>a</mi><mo>&lt;</mo><mi>t</mi><mo>+</mo><mi>ε</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\forall a \in A,\; t \leq a) \land (\forall \varepsilon &gt; 0\; \exists a \in A,\; a \lt  t+\varepsilon)</annotation></semantics></math></td>
 <td class="org-left">Fix <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math>. Check the bound for arbitrary <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math>; then, given <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi></mrow><annotation encoding="application/x-tex">\varepsilon</annotation></semantics></math>, choose <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math> in terms of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi></mrow><annotation encoding="application/x-tex">\varepsilon</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math>.</td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org5c939f4">Disproving a supremum</a></td>
+<td class="org-left"><a class="math-ref" href="#orga0f4a17">Disproving a supremum</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>ε</mi><mo>&gt;</mo><mn>0</mn><mo separator="true">,</mo><mtext>  </mtext><mi>s</mi><mo>+</mo><mi>ε</mi><mo>∈</mo><mi>A</mi><mo stretchy="false">)</mo><mo>∨</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>ε</mi><mo>&gt;</mo><mn>0</mn><mtext>  </mtext><mi mathvariant="normal">∀</mi><mi>a</mi><mo>∈</mo><mi>A</mi><mo separator="true">,</mo><mtext>  </mtext><mi>a</mi><mo>≤</mo><mi>s</mi><mo>−</mo><mi>ε</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\exists \varepsilon &gt; 0,\; s+\varepsilon \in A) \lor (\exists \varepsilon &gt; 0\; \forall a \in A,\; a \leq s-\varepsilon)</annotation></semantics></math></td>
 <td class="org-left">Fix <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math> and choose a suitable <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi></mrow><annotation encoding="application/x-tex">\varepsilon</annotation></semantics></math> in terms of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math>. In the second alternative, the same <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi></mrow><annotation encoding="application/x-tex">\varepsilon</annotation></semantics></math> must work for every <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math>.</td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org5c939f4">Disproving an infimum</a></td>
+<td class="org-left"><a class="math-ref" href="#orga0f4a17">Disproving an infimum</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>ε</mi><mo>&gt;</mo><mn>0</mn><mo separator="true">,</mo><mtext>  </mtext><mi>t</mi><mo>−</mo><mi>ε</mi><mo>∈</mo><mi>A</mi><mo stretchy="false">)</mo><mo>∨</mo><mo stretchy="false">(</mo><mi mathvariant="normal">∃</mi><mi>ε</mi><mo>&gt;</mo><mn>0</mn><mtext>  </mtext><mi mathvariant="normal">∀</mi><mi>a</mi><mo>∈</mo><mi>A</mi><mo separator="true">,</mo><mtext>  </mtext><mi>t</mi><mo>+</mo><mi>ε</mi><mo>≤</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\exists \varepsilon &gt; 0,\; t-\varepsilon \in A) \lor (\exists \varepsilon &gt; 0\; \forall a \in A,\; t+\varepsilon \leq a)</annotation></semantics></math></td>
 <td class="org-left">Fix <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math> and choose a suitable <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi></mrow><annotation encoding="application/x-tex">\varepsilon</annotation></semantics></math> in terms of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math>. In the second alternative, the same <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi></mrow><annotation encoding="application/x-tex">\varepsilon</annotation></semantics></math> must work for every <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math>.</td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org88358c2">Using a known supremum</a></td>
+<td class="org-left"><a class="math-ref" href="#org57d517e">Using a known supremum</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>sup</mi><mo>⁡</mo><mi>A</mi><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext><mi mathvariant="normal">∀</mi><mi>ε</mi><mo>&gt;</mo><mn>0</mn><mtext>  </mtext><mi mathvariant="normal">∃</mi><mi>x</mi><mo>∈</mo><mi>A</mi><mo separator="true">,</mo><mtext>  </mtext><mi>s</mi><mo>−</mo><mi>ε</mi><mo>&lt;</mo><mi>x</mi><mo>≤</mo><mi>s</mi></mrow><annotation encoding="application/x-tex">s=\sup A \implies \forall \varepsilon &gt; 0\; \exists x \in A,\; s-\varepsilon \lt  x \leq s</annotation></semantics></math></td>
 <td class="org-left">Choose a positive tolerance <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi></mrow><annotation encoding="application/x-tex">\varepsilon</annotation></semantics></math>; the corollary supplies <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math> depending on it.</td>
 </tr>
 
 <tr>
-<td class="org-left"><a class="math-ref" href="#org88358c2">Using a known infimum</a></td>
+<td class="org-left"><a class="math-ref" href="#org57d517e">Using a known infimum</a></td>
 <td class="org-left"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mi>inf</mi><mo>⁡</mo><mi>A</mi><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext><mi mathvariant="normal">∀</mi><mi>ε</mi><mo>&gt;</mo><mn>0</mn><mtext>  </mtext><mi mathvariant="normal">∃</mi><mi>x</mi><mo>∈</mo><mi>A</mi><mo separator="true">,</mo><mtext>  </mtext><mi>t</mi><mo>≤</mo><mi>x</mi><mo>&lt;</mo><mi>t</mi><mo>+</mo><mi>ε</mi></mrow><annotation encoding="application/x-tex">t=\inf A \implies \forall \varepsilon &gt; 0\; \exists x \in A,\; t \leq x \lt  t+\varepsilon</annotation></semantics></math></td>
 <td class="org-left">Choose a positive tolerance <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi></mrow><annotation encoding="application/x-tex">\varepsilon</annotation></semantics></math>; the corollary supplies <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math> depending on it.</td>
 </tr>
@@ -1950,8 +1950,8 @@ The following table summarizes the logical goals and the order in which we choos
 </div>
 </div>
 </div>
-<div id="outline-container-orgfc004bf" class="outline-2">
-<h2 id="orgfc004bf"><span class="section-number-2">3.</span> Finding Suitable Choices</h2>
+<div id="outline-container-org0f0a396" class="outline-2">
+<h2 id="org0f0a396"><span class="section-number-2">3.</span> Finding Suitable Choices</h2>
 <div class="outline-text-2" id="text-3">
 <div class="math-prose"><p>
 We now systematically collect some useful techniques for solving the inequalities that arise in these proofs.
@@ -1959,8 +1959,8 @@ We now systematically collect some useful techniques for solving the inequalitie
 
 </div>
 </div>
-<div id="outline-container-org069f23e" class="outline-3">
-<h3 id="org069f23e"><span class="section-number-3">3.1.</span> Bounding Expressions</h3>
+<div id="outline-container-orgc42781a" class="outline-3">
+<h3 id="orgc42781a"><span class="section-number-3">3.1.</span> Bounding Expressions</h3>
 <div class="outline-text-3" id="text-3-1">
 <div class="math-prose"><p>
 Our goal is to find a choice that satisfies the required inequality, rather than to determine every possible solution. We can therefore replace the original inequality with a stronger, simpler condition: any solution of that condition will also solve the original problem. This is why estimates are useful even when they are not sharp.
@@ -2007,7 +2007,7 @@ A useful way to remember the direction is: <i>to prove it is large, make it smal
 
 </div>
 <div class="math-prose"><p>
-Let us return to <a class="math-ref" href="#org4056cc9">the cube-root example</a> and work backwards from the desired inequality. Suppose that <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>s</mi><mn>3</mn></msup><mo>&gt;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">s^3 &gt; 2</annotation></semantics></math>. We want to choose <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\varepsilon &gt; 0</annotation></semantics></math> so that
+Let us return to <a class="math-ref" href="#org1cd99c4">the cube-root example</a> and work backwards from the desired inequality. Suppose that <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>s</mi><mn>3</mn></msup><mo>&gt;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">s^3 &gt; 2</annotation></semantics></math>. We want to choose <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\varepsilon &gt; 0</annotation></semantics></math> so that
 </p>
 
 </div>
@@ -2052,8 +2052,8 @@ If even this larger expression lies below the gap, the original expression does 
 </div>
 </div>
 </div>
-<div id="outline-container-org63ce4c4" class="outline-3">
-<h3 id="org63ce4c4"><span class="section-number-3">3.2.</span> Auxiliary Constraints</h3>
+<div id="outline-container-org11f3faf" class="outline-3">
+<h3 id="org11f3faf"><span class="section-number-3">3.2.</span> Auxiliary Constraints</h3>
 <div class="outline-text-3" id="text-3-2">
 <div class="math-prose"><p>
 Returning to the inequality
@@ -2251,8 +2251,8 @@ The following table collects some common auxiliary constraints. Throughout, we a
 </div>
 </div>
 </div>
-<div id="outline-container-org7c0a22f" class="outline-3">
-<h3 id="org7c0a22f"><span class="section-number-3">3.3.</span> Choosing a Solution</h3>
+<div id="outline-container-org4d78813" class="outline-3">
+<h3 id="org4d78813"><span class="section-number-3">3.3.</span> Choosing a Solution</h3>
 <div class="outline-text-3" id="text-3-3">
 <div class="math-prose"><p>
 Once we have listed all the constraints, how do we choose a value satisfying them simultaneously? For finitely many real bounds <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">a_1,\ldots,a_n</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mn>1</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>b</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">b_1,\ldots,b_n</annotation></semantics></math>, where <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math> is a positive integer, maxima and minima provide explicit choices.
@@ -2309,7 +2309,7 @@ Some constraints specify the set to which a chosen value must belong. Let <math 
 
 </div>
 <div class="math-prose"><p>
-For integer constraints, <a class="math-ref" href="#org3d05bf3">the integer-bracketing lemma</a> gives an integer <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math> with <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>−</mo><mn>1</mn><mo>≤</mo><mi>x</mi><mo>&lt;</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">k-1\leq x\lt k</annotation></semantics></math>. Thus <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math> lies strictly above <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math>, while <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>−</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">k-2</annotation></semantics></math> lies strictly below it. For positive integers above <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math>, we can instead apply <a class="math-ref" href="#org1f7e607">the Archimedean property</a> directly.
+For integer constraints, <a class="math-ref" href="#org05947a0">the integer-bracketing lemma</a> gives an integer <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math> with <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>−</mo><mn>1</mn><mo>≤</mo><mi>x</mi><mo>&lt;</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">k-1\leq x\lt k</annotation></semantics></math>. Thus <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math> lies strictly above <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math>, while <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>−</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">k-2</annotation></semantics></math> lies strictly below it. For positive integers above <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math>, we can instead apply <a class="math-ref" href="#org3514a34">the Archimedean property</a> directly.
 </p>
 
 </div>
@@ -2395,11 +2395,11 @@ Integer constraints behave differently: a prescribed short interval may contain 
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org5264df1">Mathematical environments</a></li>
-<li><a href="#org76d4cff">Cross-references</a></li>
-<li><a href="#org58d1532">Equations</a></li>
-<li><a href="#org73cdbc4">Table</a></li>
-<li><a href="#org0408701">Basic formatting</a></li>
+<li><a href="#org6d1f343">Mathematical environments</a></li>
+<li><a href="#orgf24d246">Cross-references</a></li>
+<li><a href="#org62bc875">Equations</a></li>
+<li><a href="#orgd01cdd8">Table</a></li>
+<li><a href="#orga8503df">Basic formatting</a></li>
 </ul>
 </div>
 </div>
@@ -2408,25 +2408,25 @@ This page is kept as a small rendering test for the blog.
 </p>
 
 </div>
-<div id="outline-container-org5264df1" class="outline-2">
-<h2 id="org5264df1">Mathematical environments</h2>
-<div class="outline-text-2" id="text-org5264df1">
-<section class="math-env math-definition" id="org9a2675c" aria-labelledby="org9a2675c-heading">
-<div class="math-heading" id="org9a2675c-heading">Definition 1 <span class="math-name">— Upper bound</span></div>
+<div id="outline-container-org6d1f343" class="outline-2">
+<h2 id="org6d1f343">Mathematical environments</h2>
+<div class="outline-text-2" id="text-org6d1f343">
+<section class="math-env math-definition" id="orgc177ddd" aria-labelledby="orgc177ddd-heading">
+<div class="math-heading" id="orgc177ddd-heading">Definition 1 <span class="math-name">— Upper bound</span></div>
 <p>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">A \subseteq \mathbb{R}</annotation></semantics></math>. A number <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">M \in \mathbb{R}</annotation></semantics></math> is an upper bound of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math> if <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>≤</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">x \leq M</annotation></semantics></math> for every <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">x \in A</annotation></semantics></math>.
 </p>
 </section>
 
-<section class="math-env math-axiom" id="orgb45edbf" aria-labelledby="orgb45edbf-heading">
-<div class="math-heading" id="orgb45edbf-heading">Axiom 2 <span class="math-name">— Completeness</span></div>
+<section class="math-env math-axiom" id="org2713ef5" aria-labelledby="org2713ef5-heading">
+<div class="math-heading" id="org2713ef5-heading">Axiom 2 <span class="math-name">— Completeness</span></div>
 <p>
 Every nonempty subset of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math> that is bounded above has a supremum in <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math>.
 </p>
 </section>
 
-<section class="math-env math-lemma" id="org1f8f5f7" aria-labelledby="org1f8f5f7-heading">
-<div class="math-heading" id="org1f8f5f7-heading">Lemma 3 <span class="math-name">— Approximation from below</span></div>
+<section class="math-env math-lemma" id="org1a133c1" aria-labelledby="org1a133c1-heading">
+<div class="math-heading" id="org1a133c1-heading">Lemma 3 <span class="math-name">— Approximation from below</span></div>
 <p>
 If <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>sup</mi><mo>⁡</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">s = \sup A</annotation></semantics></math>, then for every <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ε</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\varepsilon &gt; 0</annotation></semantics></math> there exists <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">a \in A</annotation></semantics></math> such that
 </p>
@@ -2438,30 +2438,30 @@ s - \varepsilon &lt; a \leq s.
 </p>
 </section>
 
-<section class="math-env math-theorem" id="orgdcf7202" aria-labelledby="orgdcf7202-heading">
-<div class="math-heading" id="orgdcf7202-heading">Theorem 4 <span class="math-name">— Uniqueness of the supremum</span></div>
+<section class="math-env math-theorem" id="org8e44319" aria-labelledby="org8e44319-heading">
+<div class="math-heading" id="org8e44319-heading">Theorem 4 <span class="math-name">— Uniqueness of the supremum</span></div>
 <p>
 A nonempty subset of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math> has at most one supremum.
 </p>
 </section>
 
-<section class="math-env math-proof" id="orgfcaba7f" aria-labelledby="orgfcaba7f-heading">
-<div class="math-heading" id="orgfcaba7f-heading">Proof.</div>
+<section class="math-env math-proof" id="org86eefef" aria-labelledby="org86eefef-heading">
+<div class="math-heading" id="org86eefef-heading">Proof.</div>
 <p>
 Suppose <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math> are both suprema of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math>. Since <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math> is an upper bound and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math> is the least upper bound, <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>≤</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">s \leq t</annotation></semantics></math>. Similarly, <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>≤</mo><mi>s</mi></mrow><annotation encoding="application/x-tex">t \leq s</annotation></semantics></math>. Therefore <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">s = t</annotation></semantics></math>.
 </p>
 <span class="math-qed" aria-label="End of proof">□</span>
 </section>
 
-<section class="math-env math-corollary" id="orga4298e8" aria-labelledby="orga4298e8-heading">
-<div class="math-heading" id="orga4298e8-heading">Corollary 5</div>
+<section class="math-env math-corollary" id="orge08b64f" aria-labelledby="orge08b64f-heading">
+<div class="math-heading" id="orge08b64f-heading">Corollary 5</div>
 <p>
 If <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math> has a maximum <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math>, then <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>sup</mi><mo>⁡</mo><mi>A</mi><mo>=</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">\sup A = m</annotation></semantics></math>.
 </p>
 </section>
 
-<section class="math-env math-examp" id="org03647be" aria-labelledby="org03647be-heading">
-<div class="math-heading" id="org03647be-heading">Example 6 <span class="math-name">— A supremum without a maximum</span></div>
+<section class="math-env math-examp" id="org39d05ae" aria-labelledby="org39d05ae-heading">
+<div class="math-heading" id="org39d05ae-heading">Example 6 <span class="math-name">— A supremum without a maximum</span></div>
 <p>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">A = (0,1)</annotation></semantics></math>. Then <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>sup</mi><mo>⁡</mo><mi>A</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\sup A = 1</annotation></semantics></math>, but <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math> has no maximum because <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo mathvariant="normal">∉</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">1 \notin A</annotation></semantics></math>.
 </p>
@@ -2471,8 +2471,8 @@ For every <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>
 </p>
 </section>
 
-<section class="math-env math-remark" id="org12fb722" aria-labelledby="org12fb722-heading">
-<div class="math-heading" id="org12fb722-heading">Remark 7 <span class="math-name">— Supremum versus maximum</span></div>
+<section class="math-env math-remark" id="orgc4491f6" aria-labelledby="orgc4491f6-heading">
+<div class="math-heading" id="orgc4491f6-heading">Remark 7 <span class="math-name">— Supremum versus maximum</span></div>
 <p>
 The supremum need not belong to the set. For instance, <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>sup</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\sup(0,1)=1</annotation></semantics></math>, although <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo mathvariant="normal">∉</mo><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">1 \notin (0,1)</annotation></semantics></math>. This distinction is why an upper bound and a maximum are different notions.
 </p>
@@ -2480,24 +2480,24 @@ The supremum need not belong to the set. For instance, <math xmlns="http://www.w
 
 </div>
 </div>
-<div id="outline-container-org76d4cff" class="outline-2">
-<h2 id="org76d4cff">Cross-references</h2>
-<div class="outline-text-2" id="text-org76d4cff">
+<div id="outline-container-orgf24d246" class="outline-2">
+<h2 id="orgf24d246">Cross-references</h2>
+<div class="outline-text-2" id="text-orgf24d246">
 <div class="math-prose"><p>
-Automatic labels: <a class="math-ref" href="#org9a2675c">Definition 1</a>, <a class="math-ref" href="#orgb45edbf">Axiom 2</a>, <a class="math-ref" href="#org1f8f5f7">Lemma 3</a>, <a class="math-ref" href="#orgdcf7202">Theorem 4</a>, <a class="math-ref" href="#orga4298e8">Corollary 5</a>, <a class="math-ref" href="#org03647be">Example 6</a>, and <a class="math-ref" href="#org12fb722">Remark 7</a>.
+Automatic labels: <a class="math-ref" href="#orgc177ddd">Definition 1</a>, <a class="math-ref" href="#org2713ef5">Axiom 2</a>, <a class="math-ref" href="#org1a133c1">Lemma 3</a>, <a class="math-ref" href="#org8e44319">Theorem 4</a>, <a class="math-ref" href="#orge08b64f">Corollary 5</a>, <a class="math-ref" href="#org39d05ae">Example 6</a>, and <a class="math-ref" href="#orgc4491f6">Remark 7</a>.
 </p>
 
 </div>
 <div class="math-prose"><p>
-Custom link text: <a class="math-ref" href="#org9a2675c">the definition of an upper bound</a>.
+Custom link text: <a class="math-ref" href="#orgc177ddd">the definition of an upper bound</a>.
 </p>
 
 </div>
 </div>
 </div>
-<div id="outline-container-org58d1532" class="outline-2">
-<h2 id="org58d1532">Equations</h2>
-<div class="outline-text-2" id="text-org58d1532">
+<div id="outline-container-org62bc875" class="outline-2">
+<h2 id="org62bc875">Equations</h2>
+<div class="outline-text-2" id="text-org62bc875">
 <div class="math-prose"><p>
 An inline formula: <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">a^2 + b^2 = c^2</annotation></semantics></math>. Another example: <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi>lim</mi><mo>⁡</mo></mrow><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mn>1</mn><mi mathvariant="normal">/</mi><mi>n</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lim_{n \to \infty} 1/n = 0</annotation></semantics></math>.
 </p>
@@ -2530,9 +2530,9 @@ A multi-line calculation:
 </div>
 </div>
 </div>
-<div id="outline-container-org73cdbc4" class="outline-2">
-<h2 id="org73cdbc4">Table</h2>
-<div class="outline-text-2" id="text-org73cdbc4">
+<div id="outline-container-orgd01cdd8" class="outline-2">
+<h2 id="orgd01cdd8">Table</h2>
+<div class="outline-text-2" id="text-orgd01cdd8">
 <div class="math-prose"><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 1:</span> Bounds and extrema of some subsets of the real numbers.</caption>
 
@@ -2586,9 +2586,9 @@ A multi-line calculation:
 </div>
 </div>
 </div>
-<div id="outline-container-org0408701" class="outline-2">
-<h2 id="org0408701">Basic formatting</h2>
-<div class="outline-text-2" id="text-org0408701">
+<div id="outline-container-orga8503df" class="outline-2">
+<h2 id="orga8503df">Basic formatting</h2>
+<div class="outline-text-2" id="text-orga8503df">
 <div class="math-prose"><p>
 This sentence contains <b>bold text</b>, <i>italic text</i>, and <code>inline code</code>.
 </p>
