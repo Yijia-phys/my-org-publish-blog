@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2026-10-25 Sun 12:10 -->
+<!-- 2026-10-25 Sun 12:19 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Real Numbers</title>
@@ -17,8 +17,8 @@
 <script src='/js/search.js' defer></script>
 <script src='/js/math-reading.js' defer></script>
 <script src='/js/toc.js' defer></script>
+<script src='/js/reading-return.js' defer></script>
 <script src='/js/theme.js' defer></script>
-<link rel="stylesheet" href="/htmlize.css" type="text/css">
 <link rel="stylesheet" href="/vendor/katex/katex.min.css">
 </head>
 <body>
@@ -98,8 +98,8 @@ M834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">�
 </p>
 
 </div>
-<section class="math-env math-definition" id="org7018053" aria-labelledby="org7018053-heading">
-<div class="math-heading" id="org7018053-heading">Definition 1 <span class="math-name">— Dedekind left set</span></div>
+<section class="math-env math-definition" id="org474d691" aria-labelledby="org474d691-heading">
+<div class="math-heading" id="org474d691-heading">Definition 1 <span class="math-name">— Dedekind left set</span></div>
 <p>
 A <i>Dedekind left set</i> is a subset <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>⊆</mo><mi mathvariant="double-struck">Q</mi></mrow><annotation encoding="application/x-tex">L \subseteq \mathbb{Q}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊆</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.8556em;vertical-align:-0.1667em;"></span><span class="mord mathbb">Q</span></span></span></span> satisfying the following three properties:
 </p>
@@ -128,8 +128,8 @@ For a rational cut point <span class="katex"><span class="katex-mathml"><math xm
 </p>
 
 </div>
-<section class="math-env math-definition" id="org3674763" aria-labelledby="org3674763-heading">
-<div class="math-heading" id="org3674763-heading">Definition 2 <span class="math-name">— Real number</span></div>
+<section class="math-env math-definition" id="org6854f79" aria-labelledby="org6854f79-heading">
+<div class="math-heading" id="org6854f79-heading">Definition 2 <span class="math-name">— Real number</span></div>
 <p>
 A <i>real number</i> is a Dedekind left set. The set of real numbers is
 <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="double-struck">R</mi><mo>=</mo><mo stretchy="false">{</mo><mi>L</mi><mo>∈</mo><mi mathvariant="script">P</mi><mo stretchy="false">(</mo><mi mathvariant="double-struck">Q</mi><mo stretchy="false">)</mo><mo>:</mo><mi>L</mi><mtext> is a Dedekind left set</mtext><mo stretchy="false">}</mo><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">
@@ -143,8 +143,8 @@ L_a=\{q \in \mathbb{Q}:q&lt;a\}.
 </p>
 </section>
 
-<section class="math-env math-examp" id="org37b7aec" aria-labelledby="org37b7aec-heading">
-<div class="math-heading" id="org37b7aec-heading">Example 3 <span class="math-name">— The cut representing the square root of two</span></div>
+<section class="math-env math-examp" id="orgfd278c7" aria-labelledby="orgfd278c7-heading">
+<div class="math-heading" id="orgfd278c7-heading">Example 3 <span class="math-name">— The cut representing the square root of two</span></div>
 <p>
 The real number that we will denote by <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mn>2</mn></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:1.04em;vertical-align:-0.1328em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9072em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord">2</span></span></span><span style="top:-2.8672em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702
 c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
@@ -165,10 +165,10 @@ Including every negative rational is essential: the condition <span class="katex
 </p>
 </section>
 
-<section class="math-env math-proof" id="orgaaa9665" aria-labelledby="orgaaa9665-heading">
-<div class="math-heading" id="orgaaa9665-heading">Proof.</div>
+<section class="math-env math-proof" id="org3631f8e" aria-labelledby="org3631f8e-heading">
+<div class="math-heading" id="org3631f8e-heading">Proof.</div>
 <p>
-We check the three properties in <a class="math-ref" href="#org7018053">Definition 1</a>.
+We check the three properties in <a class="math-ref" href="#org474d691">Definition 1</a>.
 </p>
 
 <ol class="org-ol">
@@ -209,8 +209,8 @@ M834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">�
 </p>
 
 </div>
-<section class="math-env math-definition" id="org3bcf21e" aria-labelledby="org3bcf21e-heading">
-<div class="math-heading" id="org3bcf21e-heading">Definition 4 <span class="math-name">— Equality and order</span></div>
+<section class="math-env math-definition" id="org683e050" aria-labelledby="org683e050-heading">
+<div class="math-heading" id="org683e050-heading">Definition 4 <span class="math-name">— Equality and order</span></div>
 <p>
 Let <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">x,y \in \mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> be Dedekind left sets. We define
 <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.25em" columnalign="right left right left" columnspacing="0em 1em 0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mi>x</mi><msub><mo>=</mo><mi mathvariant="double-struck">R</mi></msub><mi>y</mi></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext><mi>x</mi><mo>=</mo><mi>y</mi></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mtext>as sets</mtext><mo separator="true">,</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mi>x</mi><msub><mo>≤</mo><mi mathvariant="double-struck">R</mi></msub><mi>y</mi></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext><mi>x</mi><mo>⊆</mo><mi>y</mi><mo separator="true">,</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mi>x</mi><msub><mo>&lt;</mo><mi mathvariant="double-struck">R</mi></msub><mi>y</mi></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext><mi>x</mi><mo>⊊</mo><mi>y</mi><mi mathvariant="normal">.</mi></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
@@ -226,8 +226,8 @@ Thus two real numbers are equal when they contain exactly the same rational numb
 </p>
 </section>
 
-<section class="math-env math-theorem" id="orgce3aef3" aria-labelledby="orgce3aef3-heading">
-<div class="math-heading" id="orgce3aef3-heading">Theorem 5 <span class="math-name">— The real numbers are linearly ordered</span></div>
+<section class="math-env math-theorem" id="org27f208e" aria-labelledby="org27f208e-heading">
+<div class="math-heading" id="org27f208e-heading">Theorem 5 <span class="math-name">— The real numbers are linearly ordered</span></div>
 <p>
 For all <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo separator="true">,</mo><mi>z</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">x,y,z \in \mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7335em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">y</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.044em;">z</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span>, the following properties hold:
 </p>
@@ -240,8 +240,8 @@ For all <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w
 </ol>
 </section>
 
-<section class="math-env math-proof" id="org5d7e41d" aria-labelledby="org5d7e41d-heading">
-<div class="math-heading" id="org5d7e41d-heading">Proof.</div>
+<section class="math-env math-proof" id="orge2515d0" aria-labelledby="orge2515d0-heading">
+<div class="math-heading" id="orge2515d0-heading">Proof.</div>
 <p>
 The first three properties follow directly from reflexivity, antisymmetry, and transitivity of set inclusion.
 </p>
@@ -253,12 +253,12 @@ For linearity, suppose <span class="katex"><span class="katex-mathml"><math xmln
 </section>
 
 <div class="math-prose"><p>
-The <a href="../../introduction-to-pure-mathematics/html/4-real.html#orgb64a11d">definition</a> of boundness state the same.
+The <a href="../../introduction-to-pure-mathematics/html/4-real.html#org48ebdfa">definition</a> of boundness state the same.
 </p>
 
 </div>
-<section class="math-env math-theorem" id="org7b732b5" aria-labelledby="org7b732b5-heading">
-<div class="math-heading" id="org7b732b5-heading">Theorem 6 <span class="math-name">— Completeness</span></div>
+<section class="math-env math-theorem" id="orgd863f31" aria-labelledby="orgd863f31-heading">
+<div class="math-heading" id="orgd863f31-heading">Theorem 6 <span class="math-name">— Completeness</span></div>
 <p>
 Every nonempty subset <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">A\subseteq\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊆</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> that is bounded above has a supremum in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span>. More precisely, if there exists <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">b\in\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7335em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> such that <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><msub><mo>≤</mo><mi mathvariant="double-struck">R</mi></msub><mi>b</mi></mrow><annotation encoding="application/x-tex">x\leq_{\mathbb{R}}b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.786em;vertical-align:-0.15em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel">≤</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3322em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="katex-sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathbb mtight">R</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span> for every <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">x\in A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>, then
 <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>sup</mi><mo>⁡</mo><mi>A</mi><msub><mo>=</mo><mi mathvariant="double-struck">R</mi></msub><mo>⋃</mo><mi>A</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">
@@ -272,8 +272,8 @@ collects all rational numbers belonging to at least one of these left sets.
 </p>
 </section>
 
-<section class="math-env math-proof" id="org9da593c" aria-labelledby="org9da593c-heading">
-<div class="math-heading" id="org9da593c-heading">Proof.</div>
+<section class="math-env math-proof" id="orgf2e5d93" aria-labelledby="orgf2e5d93-heading">
+<div class="math-heading" id="orgf2e5d93-heading">Proof.</div>
 <p>
 Set <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mo>⋃</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">s=\bigcup A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop op-symbol small-op" style="position:relative;top:0em;">⋃</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">A</span></span></span></span>. For every <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">x\in A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>, we have <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⊆</mo><mi>s</mi></mrow><annotation encoding="application/x-tex">x\subseteq s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊆</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">s</span></span></span></span>. If <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">u\in\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">u</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span> is any upper bound of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>, then <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⊆</mo><mi>u</mi></mrow><annotation encoding="application/x-tex">x\subseteq u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊆</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">u</span></span></span></span> for every <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">x\in A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>, so <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mo>⋃</mo><mi>A</mi><mo>⊆</mo><mi>u</mi></mrow><annotation encoding="application/x-tex">s=\bigcup A\subseteq u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop op-symbol small-op" style="position:relative;top:0em;">⋃</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⊆</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">u</span></span></span></span>. Thus <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.4306em;"></span><span class="mord mathnormal">s</span></span></span></span> has the required inclusions to be the supremum; it remains to check that <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>∈</mo><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">s\in\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span>.
 </p>

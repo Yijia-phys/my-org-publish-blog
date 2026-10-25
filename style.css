@@ -1453,3 +1453,10 @@ html {
 .external-search button { padding: .65rem 1rem; border: 0; border-radius: 6px; background: var(--nav-bg); color: var(--nav-text); font: inherit; cursor: pointer; }
 .external-search small { display: block; margin-top: .4rem; color: var(--muted); }
 .external-search input:focus-visible, .external-search button:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+/* Return from an in-page or cross-page reference. */
+.reading-return { position: fixed; bottom: max(16px, env(safe-area-inset-bottom)); left: max(16px, env(safe-area-inset-left)); z-index: 190; max-width: calc(100vw - 140px); padding: .65rem .85rem; border: 1px solid var(--hairline); border-radius: 10px; background: var(--fill); color: var(--primary); font: 14px var(--font-sans); box-shadow: 0 2px 8px var(--tint); cursor: pointer; }
+.reading-return[hidden] { display: none; }
+.reading-return:hover { background: var(--tint); }
+.reading-return:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+@media print { .reading-return { display: none; } }

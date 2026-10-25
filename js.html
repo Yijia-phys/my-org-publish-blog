@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2026-10-25 Sun 12:09 -->
+<!-- 2026-10-25 Sun 12:19 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>JavaScript on this site</title>
@@ -18,8 +18,8 @@
 <script src='/js/search.js' defer></script>
 <script src='/js/math-reading.js' defer></script>
 <script src='/js/toc.js' defer></script>
+<script src='/js/reading-return.js' defer></script>
 <script src='/js/theme.js' defer></script>
-<link rel="stylesheet" href="/htmlize.css" type="text/css">
 </head>
 <body>
 <div id="preamble" class="status">
@@ -71,9 +71,9 @@
 </div>
 <div id="content" class="content">
 <h1 class="title">JavaScript on this site</h1>
-<div id="outline-container-org00436c6" class="outline-2">
-<h2 id="org00436c6">Third-party JavaScript</h2>
-<div class="outline-text-2" id="text-org00436c6">
+<div id="outline-container-orga859fc6" class="outline-2">
+<h2 id="orga859fc6">Third-party JavaScript</h2>
+<div class="outline-text-2" id="text-orga859fc6">
 <p>
 The libraries below are hosted on this site. Sizes refer to the JavaScript files before transfer compression (1 KiB = 1,024 bytes); stylesheets, fonts, and search index data are not included.
 </p>
@@ -97,19 +97,19 @@ The libraries below are hosted on this site. Sizes refer to the JavaScript files
 </thead>
 <tbody>
 <tr>
-<td class="org-left"><a href="file:///vendor/katex/katex.min.js">KaTeX (katex.min.js)</a></td>
+<td class="org-left"><a href="https://blog.yijialog.org/vendor/katex/katex.min.js">KaTeX (katex.min.js)</a></td>
 <td class="org-left">265.8 KiB</td>
 <td class="org-left">Renders mathematical notation at build time; not loaded by your browser.</td>
 </tr>
 
 <tr>
-<td class="org-left"><a href="file:///pagefind/pagefind-ui.js">Pagefind UI (pagefind-ui.js)</a></td>
+<td class="org-left"><a href="https://blog.yijialog.org/pagefind/pagefind-ui.js">Pagefind UI (pagefind-ui.js)</a></td>
 <td class="org-left">117.2 KiB</td>
 <td class="org-left">Provides the search box and results in the site search panel.</td>
 </tr>
 
 <tr>
-<td class="org-left"><a href="file:///pagefind/pagefind.js">Pagefind (pagefind.js)</a></td>
+<td class="org-left"><a href="https://blog.yijialog.org/pagefind/pagefind.js">Pagefind (pagefind.js)</a></td>
 <td class="org-left">44.5 KiB</td>
 <td class="org-left">Loads the search engine and index data to search the published pages.</td>
 </tr>
@@ -134,9 +134,9 @@ Pagefind is loaded when you open the search panel, with further search resources
 </form>
 </div>
 </div>
-<div id="outline-container-org61214f3" class="outline-2">
-<h2 id="org61214f3">Built-in JavaScript</h2>
-<div class="outline-text-2" id="text-org61214f3">
+<div id="outline-container-org86db618" class="outline-2">
+<h2 id="org86db618">Built-in JavaScript</h2>
+<div class="outline-text-2" id="text-org86db618">
 <p>
 These small scripts provide the site's navigation and reading tools. Without JavaScript, article text, notes, tables, and ordinary links remain available, but these interactive features will not work. Mathematical notation also remains readable.
 </p>
@@ -160,48 +160,58 @@ These small scripts provide the site's navigation and reading tools. Without Jav
 </thead>
 <tbody>
 <tr>
-<td class="org-left"><a href="file:///js/math-reading.js">math-reading.js</a></td>
-<td class="org-left">7.5 KiB</td>
+<td class="org-left"><a href="https://blog.yijialog.org/js/math-reading.js">math-reading.js</a></td>
+<td class="org-left">8.1 KiB</td>
 <td class="org-left">Controls content visibility, proof and example folding, and saved reading preferences.</td>
 </tr>
 
 <tr>
-<td class="org-left"><a href="file:///js/nav.js">nav.js</a></td>
+<td class="org-left"><a href="https://blog.yijialog.org/js/nav.js">nav.js</a></td>
 <td class="org-left">2.4 KiB</td>
 <td class="org-left">Controls the mobile navigation menu and marks the current navigation link.</td>
 </tr>
 
 <tr>
-<td class="org-left"><a href="file:///js/random-post.js">random-post.js</a></td>
+<td class="org-left"><a href="https://blog.yijialog.org/js/random-post.js">random-post.js</a></td>
 <td class="org-left">0.7 KiB</td>
 <td class="org-left">Opens a randomly selected blog post from the homepage.</td>
 </tr>
 
 <tr>
-<td class="org-left"><a href="file:///js/search.js">search.js</a></td>
+<td class="org-left"><a href="https://blog.yijialog.org/js/search.js">search.js</a></td>
 <td class="org-left">2.9 KiB</td>
 <td class="org-left">Opens the search panel and loads Pagefind when needed.</td>
 </tr>
 
 <tr>
-<td class="org-left"><a href="file:///js/tags.js">tags.js</a></td>
+<td class="org-left"><a href="https://blog.yijialog.org/js/tags.js">tags.js</a></td>
 <td class="org-left">1.9 KiB</td>
 <td class="org-left">Filters the post list by tag and keeps the selected tag in the URL.</td>
 </tr>
 
 <tr>
-<td class="org-left"><a href="file:///js/theme.js">theme.js</a></td>
+<td class="org-left"><a href="https://blog.yijialog.org/js/theme.js">theme.js</a></td>
 <td class="org-left">1.8 KiB</td>
 <td class="org-left">Switches between light, dark, and system themes and remembers the selection.</td>
 </tr>
 
 <tr>
-<td class="org-left"><a href="file:///js/toc.js">toc.js</a></td>
+<td class="org-left"><a href="https://blog.yijialog.org/js/reading-return.js">reading-return.js</a></td>
+<td class="org-left">4.4 KiB</td>
+<td class="org-left">Shows a bottom-left return button after following a reference on the same page or another page. Can be disabled in reading settings.</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://blog.yijialog.org/js/toc.js">toc.js</a></td>
 <td class="org-left">3.6 KiB</td>
 <td class="org-left">Provides a floating table of contents and highlights the current section.</td>
 </tr>
 </tbody>
 </table>
+
+<p>
+The return-to-reading feature is enabled by default and remembers only the latest reference jump in the current tab. Table-of-contents links do not trigger it. The Enable return to reading setting is saved between visits.
+</p>
 
 <p>
 A small inline script also applies the saved theme before the page is displayed, helping to avoid a flash of the wrong theme.

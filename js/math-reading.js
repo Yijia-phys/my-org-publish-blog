@@ -2,7 +2,7 @@
   'use strict';
   function init() {
     var content = document.getElementById('content');
-    if (!content || !content.querySelector('.math-env') || content.dataset.mathReadingReady) return;
+    if (!content || (!content.querySelector('.math-env') && !/^\/(posts|notes)\//.test(location.pathname)) || content.dataset.mathReadingReady) return;
     content.dataset.mathReadingReady = 'true';
     document.documentElement.classList.add('has-math-reading');
     var dock = document.createElement('div');
@@ -16,7 +16,8 @@
       '<label><span>Show proofs</span><input type="checkbox" name="proof" checked></label>' +
       '<label><span>Show examples</span><input type="checkbox" name="example" checked></label></div>' +
       '<div class="math-settings-group"><span class="math-settings-caption">INTERACTION</span>' +
-      '<label><span>Enable individual folding<small>Fold proofs and examples by title</small></span><input type="checkbox" name="folding" checked></label></div>' +
+      '<label><span>Enable individual folding<small>Fold proofs and examples by title</small></span><input type="checkbox" name="folding" checked></label>' +
+      '<label><span>Enable return to reading<small>Return after following a reference</small></span><input type="checkbox" name="returnPosition" checked></label></div>' +
       '<p class="math-settings-note">Definitions and results stay visible.</p></section>';
     document.body.appendChild(dock);
     var panel = dock.querySelector('.math-settings');
@@ -37,8 +38,8 @@
     var examples = panel.querySelector('[name="example"]');
     var folding = panel.querySelector('[name="folding"]');
     var storageKey = 'math-reading-preferences-v1';
-    var controls = {content: showContent, proof: proofs, example: examples, folding: folding};
-    var preferences = {content: true, proof: true, example: true, folding: true};
+    var controls = {content: showContent, proof: proofs, example: examples, folding: folding, returnPosition: panel.querySelector('[name="returnPosition"]')};
+    var preferences = {content: true, proof: true, example: true, folding: true, returnPosition: true};
     try {
       var saved = JSON.parse(localStorage.getItem(storageKey));
       if (saved && typeof saved === 'object' && !Array.isArray(saved)) {
@@ -96,6 +97,7 @@
       preferences[key] = event.target.checked;
       try { localStorage.setItem(storageKey, JSON.stringify(preferences)); } catch (_) {}
       apply(event.target);
+      if (key === "returnPosition") document.dispatchEvent(new CustomEvent("reading-return-preference", {detail: event.target.checked}));
     });
     function reveal(hash) {
       if (!hash || hash === '#') return;
@@ -121,6 +123,11 @@
       if (!link) return;
       var url = new URL(link.href, location.href);
       if (url.origin === location.origin && url.pathname === location.pathname && url.search === location.search) reveal(url.hash);
+    });
+    document.addEventListener('reading-return-reveal', function (event) {
+      var target = event.detail;
+      if (!target.id) target.id = 'reading-return-source';
+      reveal('#' + encodeURIComponent(target.id));
     });
     window.addEventListener('hashchange', function () { reveal(location.hash); });
     apply();
