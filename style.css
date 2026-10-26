@@ -48,13 +48,12 @@
 }
 .math-name { color: var(--text); font-weight: 400; }
 .math-env > p { margin: .45em 0 0; }
-.math-definition { background: var(--tint); border-radius: 0 5px 5px 0; }
+.math-definition, .math-axiom { background: var(--tint); border-radius: 0 5px 5px 0; }
 .math-axiom { border-left-width: 1px; }
 .math-lemma, .math-corollary { border-left: 1px solid var(--hairline); }
 .math-examp { border-left: 1px solid var(--primary); }
 .math-remark { border-left: 1px solid var(--hairline); background: transparent; font-style: normal; }
 .math-remark > .math-heading { color: var(--text); }
-.math-theorem > p, .math-lemma > p, .math-corollary > p { font-style: italic; }
 .math-proof { border: 0; padding: 0 0 0 calc(1.1em + 3px); }
 .math-proof .math-heading {
   color: var(--text);
@@ -66,7 +65,7 @@
 .math-qed { display: block; text-align: right; }
 a.math-ref { color: var(--primary); text-underline-offset: .18em; }
 @media print {
-  .math-definition { background: transparent; }
+  .math-definition, .math-axiom { background: transparent; }
   .math-env { border-radius: 0; }
 }
 
