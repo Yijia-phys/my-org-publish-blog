@@ -351,6 +351,10 @@ nav.site-drawer a[aria-current='page'] {
 
 .search-modal-panel {
   width: min(36em, 100%);
+  box-sizing: border-box;
+  max-height: 100%;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
   background: var(--fill);
   border-radius: 12px;
   padding: 1rem 1.25rem 1.25rem;
