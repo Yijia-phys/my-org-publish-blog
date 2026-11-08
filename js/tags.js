@@ -3,17 +3,17 @@
   // reload/back-forward, without any server-side tag pages.
 
   function readTag() {
-    var m = location.search.match(/[?&]tag=([^&]+)/);
-    return m ? decodeURIComponent(m[1]) : 'all';
+    return new URL(location.href).searchParams.get('tag') || 'all';
   }
 
-  function applyFilter(tag, cards, buttons) {
+  function applyFilter(tag, cards, buttons, showMisc) {
     buttons.forEach(function (b) {
       b.classList.toggle('active', b.dataset.tag === tag);
     });
     cards.forEach(function (card) {
       var tags = (card.dataset.tags || '').split(' ');
-      card.style.display = (tag === 'all' || tags.indexOf(tag) !== -1) ? '' : 'none';
+      var matches = tag === 'all' || tags.indexOf(tag) !== -1;
+      card.style.display = matches && (showMisc || !card.hasAttribute('data-misc')) ? '' : 'none';
     });
   }
 
@@ -30,24 +30,34 @@
     var cards = Array.prototype.slice.call(document.querySelectorAll('.post-card'));
     var buttons = Array.prototype.slice.call(bar.querySelectorAll('button'));
 
-    // Apply the tag from the URL on load.
-    applyFilter(validTag(readTag(), buttons), cards, buttons);
-
-    // Keep the filter in sync when navigating back/forward.
-    window.addEventListener('popstate', function () {
-      applyFilter(validTag(readTag(), buttons), cards, buttons);
-    });
+    var toggle = document.createElement('input');
+    toggle.type = 'checkbox';
+    toggle.checked = true;
+    if (cards.some(function (card) { return card.hasAttribute('data-misc'); })) {
+      var label = document.createElement('label');
+      label.className = 'misc-filter';
+      label.append(toggle, 'Show misc posts');
+      bar.appendChild(label);
+      try { toggle.checked = localStorage.getItem('posts-show-misc') !== 'false'; } catch (_) {}
+      toggle.addEventListener('change', function () {
+        try { localStorage.setItem('posts-show-misc', String(toggle.checked)); } catch (_) {}
+        refresh();
+      });
+    }
+    function refresh() { applyFilter(validTag(readTag(), buttons), cards, buttons, toggle.checked); }
+    refresh();
+    window.addEventListener('popstate', refresh);
 
     bar.addEventListener('click', function (e) {
       var btn = e.target.closest('button');
       if (!btn) return;
       var tag = btn.dataset.tag;
-      applyFilter(tag, cards, buttons);
       // Sync the tag into the URL (shareable, no reload).
       var url = new URL(window.location.href);
       if (tag === 'all') url.searchParams.delete('tag');
       else url.searchParams.set('tag', tag);
       history.pushState(null, '', url.toString());
+      refresh();
     });
   });
 })();

@@ -739,6 +739,8 @@ pre.src::before {
   border-radius: 999px; padding: .2em .8em; margin-right: .4em;
   cursor: pointer;
 }
+.misc-filter { display: inline-flex; align-items: center; gap: .4em; font: .9rem var(--font-sans); color: var(--text); cursor: pointer; }
+.misc-filter input { accent-color: var(--primary); }
 .tag-filter button.active { background: var(--primary); color: var(--fill); border-color: var(--primary); }
 
 #content:has(.tag-filter) .tag-filter button {
